@@ -321,50 +321,7 @@ include 'header.php';
 
 
 <!-- Video section -->
-<div id="sp-video"></div>
-<section class="section-video">
-	<div class="container"
-		style="max-width: 1700px; padding-top: 80px; padding-bottom: 50px; border-right: 1px solid rgba(153, 153, 153, 0.9);  border-left: 1px solid rgba(153, 153, 153, 0.9);">
-		<div class="row justify-content-center">
-			<div class="col-md-9">
-				<h2><span>01</span> / Посмотрите нашу видеопрезентацию</h2>
-				<div class="row justify-content-center">
-					<div class="col-md-10">
-						<div style="position: relative">
-							<video id="video-player" style="width: 100%; overflow: hidden; border-radius: 25px;"
-								playsinline="playsinline" loop="loop">
-								<!-- muted="muted" autoplay="autoplay" -->
-								<!-- <source src="header-bg.ogv" type='video/ogg; codecs="theora, vorbis"'> -->
-								<source src="<?php echo get_stylesheet_directory_uri(); ?>/videos/video.mp4"
-									type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"' />
-								<!-- <source src="header-bg.webm" type='video/webm; codecs="vp8, vorbis"'> -->
-							</video>
-							<div id="play-circle">
-								<div id="play" onclick="play();"></div>
-							</div>
-							<div id="stop-circle" onclick="pause();">
-								<div><i class="far fa-stop-circle"></i></div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<script>
-					function play() {
-						document.getElementById("video-player").play();
-						document.getElementById("play-circle").style.display = "none";
-						document.getElementById("stop-circle").style.display = "block";
-					}
-
-					function pause() {
-						document.getElementById("video-player").pause();
-						document.getElementById("stop-circle").style.display = "none";
-						document.getElementById("play-circle").style.display = "block";
-					}
-				</script>
-			</div>
-		</div>
-	</div>
-</section>
+<?php get_template_part('template-parts/video-section/video-section'); ?>
 <!-- End video section -->
 
 
