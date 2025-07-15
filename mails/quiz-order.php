@@ -25,7 +25,8 @@
 	$mail .= "Количество дверей: ".$answer3."\n\n";
 
 	/* Send mails */
-	mail( "garantshkaf@mail.ru", "Заявка на расчет шкафа с сайта гарантшкаф.рф.", $mail );
+	// mail( "garantshkaf@mail.ru", "Заявка на расчет шкафа с сайта гарантшкаф.рф.", $mail );
+	mail( "sidorov-vv3@mail.ru", "Заявка на расчет шкафа с сайта гарантшкаф.рф.", $mail );
 	mail( "vasilyev-r@mail.ru", "Заявка на расчет шкафа с сайта гарантшкаф.рф.", $mail );
 
 	$_SESSION['win'] = 1;
