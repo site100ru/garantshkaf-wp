@@ -336,7 +336,8 @@ include 'header.php';
 					<div class="single-image-wrapper">
 						<div class="approximation img-wrapper position-relative gallery-2691">
 							<img src="<?php echo get_template_directory_uri(); ?>/img/card/action-card.jpg"
-								class="d-block w-100 single-product-img rounded" loading="lazy" alt="Беспроцентная рассрочка на 1 год. Акция до 30 августа">
+								class="d-block w-100 single-product-img rounded" loading="lazy"
+								alt="Беспроцентная рассрочка на 1 год. Акция до 30 августа">
 						</div>
 					</div>
 				</div>
@@ -656,6 +657,58 @@ include 'header.php';
 	});
 </script>
 
+<!-- Video section -->
+<div id="sp-video"></div>
+<section class="section-video">
+	<div class="container"
+		style="max-width: 1700px;  padding-top: 80px; padding-bottom: 50px; border-right: 1px solid rgba(153, 153, 153, 0.9);  border-left: 1px solid rgba(153, 153, 153, 0.9);">
+		<div class="row justify-content-center">
+			<div class="section-title-wrapper text-center">
+				<h2 class="section-title">Посмотрите нашу видеопрезентацию</h2>
+				<img src="<?php echo get_template_directory_uri(); ?>/img/ico/points.svg" alt="Точки" class="img-fluid" />
+			</div>
+			<div class="col-md-9">
+				<div class="row justify-content-center">
+					<div class="col-md-10">
+						<div style="position: relative">
+							<video id="video-player" style="width: 100%; overflow: hidden; border-radius: 25px;"
+								playsinline="playsinline" loop="loop"
+								poster="https://garantshkaf.ru/wp-content/themes/garantshkaf-3/img/video-poster.jpg">
+								<!-- muted="muted" autoplay="autoplay" -->
+								<!-- <source src="header-bg.ogv" type='video/ogg; codecs="theora, vorbis"'> -->
+								<source src="<?php echo get_template_directory_uri(); ?>/videos/video.mp4"
+									type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"' />
+								<!-- <source src="header-bg.webm" type='video/webm; codecs="vp8, vorbis"'> -->
+							</video>
+							<div id="play-circle">
+								<div id="play" onclick="play();"></div>
+							</div>
+							<div id="stop-circle" onclick="pause();">
+								<div><i class="far fa-stop-circle"></i></div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<script>
+					function play() {
+						document.getElementById("video-player").play();
+						document.getElementById("play-circle").style.display = "none";
+						document.getElementById("stop-circle").style.display = "block";
+					}
+
+					function pause() {
+						document.getElementById("video-player").pause();
+						document.getElementById("stop-circle").style.display = "none";
+						document.getElementById("play-circle").style.display = "block";
+					}
+				</script>
+			</div>
+		</div>
+	</div>
+</section>
+<!-- End video section -->
+ 
+
 <!-- SECTION ORDER 1 -->
 <section class="section-order-1 pt-md-0">
 	<div class="container"
@@ -663,7 +716,7 @@ include 'header.php';
 		<div class="row">
 			<div class="section-title-wrapper text-center">
 				<h2 class="section-title">Рассчитате стоимость Вашего шкафа-купе на нашей фабрике!</h2>
-				<p class="text-center mb-5">Это бесплатно и ни к чему Вас не обязывает</p>
+				<!-- <p class="text-center mb-5">Это бесплатно и ни к чему Вас не обязывает</p> -->
 
 				<img src="<?php echo get_template_directory_uri(); ?>/img/ico/points.svg" alt="Точки" class="img-fluid" />
 			</div>
@@ -1195,56 +1248,7 @@ include 'header.php';
 </section>
 <!-- /SECTION ORDER 1 -->
 
-<!-- Video section -->
-<div id="sp-video"></div>
-<section class="section-video">
-	<div class="container"
-		style="max-width: 1700px;  padding-top: 80px; padding-bottom: 50px; border-right: 1px solid rgba(153, 153, 153, 0.9);  border-left: 1px solid rgba(153, 153, 153, 0.9);">
-		<div class="row justify-content-center">
-			<div class="section-title-wrapper text-center">
-				<h2 class="section-title">Посмотрите нашу видеопрезентацию</h2>
-				<img src="<?php echo get_template_directory_uri(); ?>/img/ico/points.svg" alt="Точки" class="img-fluid" />
-			</div>
-			<div class="col-md-9">
-				<div class="row justify-content-center">
-					<div class="col-md-10">
-						<div style="position: relative">
-							<video id="video-player" style="width: 100%; overflow: hidden; border-radius: 25px;"
-								playsinline="playsinline" loop="loop"
-								poster="https://garantshkaf.ru/wp-content/themes/garantshkaf-3/img/video-poster.jpg">
-								<!-- muted="muted" autoplay="autoplay" -->
-								<!-- <source src="header-bg.ogv" type='video/ogg; codecs="theora, vorbis"'> -->
-								<source src="<?php echo get_template_directory_uri(); ?>/videos/video.mp4"
-									type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"' />
-								<!-- <source src="header-bg.webm" type='video/webm; codecs="vp8, vorbis"'> -->
-							</video>
-							<div id="play-circle">
-								<div id="play" onclick="play();"></div>
-							</div>
-							<div id="stop-circle" onclick="pause();">
-								<div><i class="far fa-stop-circle"></i></div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<script>
-					function play() {
-						document.getElementById("video-player").play();
-						document.getElementById("play-circle").style.display = "none";
-						document.getElementById("stop-circle").style.display = "block";
-					}
 
-					function pause() {
-						document.getElementById("video-player").pause();
-						document.getElementById("stop-circle").style.display = "none";
-						document.getElementById("play-circle").style.display = "block";
-					}
-				</script>
-			</div>
-		</div>
-	</div>
-</section>
-<!-- End video section -->
 
 
 <!-- SECTION ORDER 1 -->
@@ -1254,7 +1258,7 @@ include 'header.php';
 		<div class="row">
 			<div class="section-title-wrapper text-center">
 				<h2 class="section-title">Рассчитаем точную стоимость шкафа-купе за 15 минут!</h2>
-				<p class="text-center ">Это бесплатно и ни к чему Вас не обязывает</p>
+				<!-- <p class="text-center ">Это бесплатно и ни к чему Вас не обязывает</p> -->
 
 				<img src="<?php echo get_template_directory_uri(); ?>/img/ico/points.svg" alt="Точки" class="img-fluid" />
 			</div>
@@ -1324,7 +1328,7 @@ include 'header.php';
 		<div class="row justify-content-center">
 			<div class="section-title-wrapper text-center">
 				<h2 class="section-title">Узнайте о нас больше</h2>
-				<p class="text-center mb-5">Это бесплатно и ни к чему Вас не обязывает</p>
+				<!-- <p class="text-center mb-5">Это бесплатно и ни к чему Вас не обязывает</p> -->
 
 				<img src="<?php echo get_template_directory_uri(); ?>/img/ico/points.svg" alt="Точки" class="img-fluid" />
 			</div>
@@ -1693,7 +1697,7 @@ include 'header.php';
 		<div class="row">
 			<div class="section-title-wrapper text-center">
 				<h2 class="section-title">Рассчитаем точную стоимость шкафа-купе за 15 минут!</h2>
-				<p class="text-center ">Это бесплатно и ни к чему Вас не обязывает</p>
+				<!-- <p class="text-center ">Это бесплатно и ни к чему Вас не обязывает</p> -->
 
 				<img src="<?php echo get_template_directory_uri(); ?>/img/ico/points.svg" alt="Точки" class="img-fluid" />
 			</div>
@@ -1854,66 +1858,66 @@ include 'header.php';
 
 <style>
 	:root {
-	--section-margin-bottom: 3.75rem;
+		--section-margin-bottom: 3.75rem;
 
-	/* Цвета */
-	--title-color: #323232;
-	--subtitle-color: #5f5f5f;
+		/* Цвета */
+		--title-color: #323232;
+		--subtitle-color: #5f5f5f;
 
-	/* Размеры */
-	--title-font-size: 1.875rem;
-	--subtitle-font-size: 1.25rem;
-	--text-font-size: 1.125rem;
-	--text-font-size-sm: 0.875rem;
+		/* Размеры */
+		--title-font-size: 1.875rem;
+		--subtitle-font-size: 1.25rem;
+		--text-font-size: 1.125rem;
+		--text-font-size-sm: 0.875rem;
 
-	/* Шрифт */
-	--font-family: 'Helvetica Neue', sans-serif;
-	--line-height: 1;
-	--line-height-big: 1.35;
-	--title-font-weight: 700;
-	--subtitle-font-weight: 500;
-	--title-line-height: 1;
-}
-
-/* Адаптивные стили */
-@media (max-width: 767.98px) {
-	:root {
-		--section-margin-bottom: 2rem;
-		--title-font-size: 1.5rem;
-		--text-font-size: 1rem;
+		/* Шрифт */
+		--font-family: 'Helvetica Neue', sans-serif;
+		--line-height: 1;
+		--line-height-big: 1.35;
+		--title-font-weight: 700;
+		--subtitle-font-weight: 500;
+		--title-line-height: 1;
 	}
-}
 
-@media (max-width: 575.98px) {
-	:root {
-		--section-margin-bottom: 1.5rem;
-		--title-font-size: 1.25rem;
-		--text-font-size: 0.9rem;
+	/* Адаптивные стили */
+	@media (max-width: 767.98px) {
+		:root {
+			--section-margin-bottom: 2rem;
+			--title-font-size: 1.5rem;
+			--text-font-size: 1rem;
+		}
 	}
-}
 
-.section-title-wrapper {
-	margin-bottom: var(--section-margin-bottom);
-}
+	@media (max-width: 575.98px) {
+		:root {
+			--section-margin-bottom: 1.5rem;
+			--title-font-size: 1.25rem;
+			--text-font-size: 0.9rem;
+		}
+	}
 
-.section-title-wrapper  h2.section-title {
-	font-family: var(--font-family);
-	font-size: var(--title-font-size);
-	line-height: var(--title-line-height);
-	font-weight: var(--title-font-weight);
-	margin-bottom: 1rem;
-	color: var(--title-color);
-	text-transform: initial;
-}
+	.section-title-wrapper {
+		margin-bottom: var(--section-margin-bottom);
+	}
 
-.section-subtitle {
-	font-family: var(--font-family);
-	font-size: var(--subtitle-font-size);
-	line-height: var(--subtitle-line-height);
-	font-weight: var(--subtitle-font-weight);
-	margin-bottom: 1rem;
-	color: var(--subtitle-color);
-}
+	.section-title-wrapper h2.section-title {
+		font-family: var(--font-family);
+		font-size: var(--title-font-size);
+		line-height: var(--title-line-height);
+		font-weight: var(--title-font-weight);
+		margin-bottom: 1rem;
+		color: var(--title-color);
+		text-transform: initial;
+	}
+
+	.section-subtitle {
+		font-family: var(--font-family);
+		font-size: var(--subtitle-font-size);
+		line-height: var(--subtitle-line-height);
+		font-weight: var(--subtitle-font-weight);
+		margin-bottom: 1rem;
+		color: var(--subtitle-color);
+	}
 </style>
 
 
