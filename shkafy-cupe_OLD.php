@@ -320,39 +320,318 @@ include 'header.php';
 	</header>
 </section>
 
-<!-- Stock section -->
-<div id="sp-stock"></div>
-<section class="section-stock">
+
+
+<!-- Video section -->
+<div id="sp-video"></div>
+<section class="section-video">
 	<div class="container"
-		style="max-width: 1700px;  padding-top: 80px; padding-bottom: 50px; border-right: 1px solid rgba(153, 153, 153, 0.9);  border-left: 1px solid rgba(153, 153, 153, 0.9);">
-		<div class="container">
-			<div class="row justify-content-center">
-				<div class="section-title-wrapper text-center">
-					<h2 class="section-title">Акции от нашей фабрики</h2>
-					<img src="<?php echo get_template_directory_uri(); ?>/img/ico/points.svg" alt="Точки" class="img-fluid" />
-				</div>
-				<div class="col-12 col-md-6 mb-3 mb-md-0 section-image order-1 order-md-0">
-					<div class="single-image-wrapper">
-						<div class="approximation img-wrapper position-relative gallery-2691">
-							<img src="<?php echo get_template_directory_uri(); ?>/img/card/action-card.jpg"
-								class="d-block w-100 single-product-img rounded" loading="lazy" alt="О нашей компании">
+		style="max-width: 1700px; padding-top: 80px; padding-bottom: 50px; border-right: 1px solid rgba(153, 153, 153, 0.9);  border-left: 1px solid rgba(153, 153, 153, 0.9);">
+		<div class="row justify-content-center">
+			<div class="col-md-9">
+				<h2><span>01</span> / Посмотрите нашу видеопрезентацию</h2>
+				<div class="row justify-content-center">
+					<div class="col-md-10">
+						<div style="position: relative">
+							<video id="video-player" style="width: 100%; overflow: hidden; border-radius: 25px;"
+								playsinline="playsinline" loop="loop"
+								poster="https://garantshkaf.ru/wp-content/themes/garantshkaf-3/img/video-poster.jpg">
+								<!-- muted="muted" autoplay="autoplay" -->
+								<!-- <source src="header-bg.ogv" type='video/ogg; codecs="theora, vorbis"'> -->
+								<source src="<?php echo get_template_directory_uri(); ?>/videos/video.mp4"
+									type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"' />
+								<!-- <source src="header-bg.webm" type='video/webm; codecs="vp8, vorbis"'> -->
+							</video>
+							<div id="play-circle">
+								<div id="play" onclick="play();"></div>
+							</div>
+							<div id="stop-circle" onclick="pause();">
+								<div><i class="far fa-stop-circle"></i></div>
+							</div>
 						</div>
 					</div>
 				</div>
+				<script>
+					function play() {
+						document.getElementById("video-player").play();
+						document.getElementById("play-circle").style.display = "none";
+						document.getElementById("stop-circle").style.display = "block";
+					}
 
-				<div class="col-12 col-md-6 mb-0 section-image order-1 order-md-0">
-					<div class="single-image-wrapper">
-						<div class="approximation img-wrapper position-relative gallery-2691">
-							<img src="<?php echo get_template_directory_uri(); ?>/img/card/action-card-1.jpg"
-								class="d-block w-100 single-product-img rounded" loading="lazy" alt="О нашей компании">
-						</div>
+					function pause() {
+						document.getElementById("video-player").pause();
+						document.getElementById("stop-circle").style.display = "none";
+						document.getElementById("play-circle").style.display = "block";
+					}
+				</script>
+			</div>
+		</div>
+	</div>
+</section>
+<!-- End video section -->
+
+
+<!-- Archive portfolio section -->
+<!-- <div id="sp-portfolio"></div>
+<section class="portfolio-section">
+	<div class="container" style="max-width: 1700px;  padding-top: 80px; padding-bottom: 50px; border-right: 1px solid rgba(153, 153, 153, 0.9);  border-left: 1px solid rgba(153, 153, 153, 0.9);">
+		<div class="row justify-content-center">
+			<div class="col-md-9">
+				<h2><span>02</span> / Наши последние работы</h2>	
+				<div class="row justify-content-center">
+					<?php
+					$args = [
+						'post_type' => 'portfolio',
+						'numberposts' => 15,
+						'posts_per_page' => 15,
+						'portfolio-cat' => '021-шкафы-купе'
+					];
+
+					$query = new WP_Query($args);
+					$count = 1;
+					while ($query->have_posts()):
+						$query->the_post(); ?>
+							<div class="col-md-4">
+								<div id="carouselExampleIndicators<?php echo $post->ID; ?>" class="carousel slide mb-4" data-bs-ride="carousel" data-bs-interval="999999999">
+									<div class="carousel-indicators" style="bottom: 5%;">
+										<?php
+										$count2 = 0;
+										for ($i = 1; $i <= 9; $i++) {
+											if (get_post_meta($post->ID, '_img-' . $i)) { ?>
+													<button type="button" data-bs-target="#carouselExampleIndicators<?php echo $post->ID; ?>" data-bs-slide-to="<?php echo $i - 1; ?>" <?php if ($i == 1)
+																		echo ' class="active"'; ?> aria-current="true" aria-label="Slide <?php echo $i; ?>"></button>
+												<?php $count2 = $count2 + 1;
+											}
+										}
+										?>
+									</div>
+									<div class="carousel-inner">
+										<?php
+										$count2 = 0;
+										for ($i = 1; $i <= 9; $i++) {
+											if (get_post_meta($post->ID, '_img-' . $i)) { ?>
+													<div class="carousel-item <?php if ($i == 1)
+														echo ' active'; ?>" data-bs-interval="999999999">
+														<a onClick="galleryOn('gallery-<?php echo $post->ID; ?>','img-<?php echo $post->ID; ?>-<?php echo $count2; ?>');">	
+															<div class="single-product-img approximation">
+																<img src="<?php echo get_post_meta($post->ID, '_img-' . $i)[0]; ?>" class="shadow rounded" alt="..." loading="lazy">
+																<div class="magnifier"></div>
+															</div>
+														</a>
+													</div>
+												<?php $count2 = $count2 + 1;
+											}
+										}
+										?>	
+									</div>
+									<button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators<?php echo $post->ID; ?>"  data-bs-slide="prev">
+										<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+										<span class="visually-hidden">Previous</span>
+									</button>
+									<button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators<?php echo $post->ID; ?>"  data-bs-slide="next">
+										<span class="carousel-control-next-icon" aria-hidden="true"></span>
+										<span class="visually-hidden">Next</span>
+									</button>
+								</div>
+							</div>
+						
+						<?php $count = $count + 1; endwhile;
+
+					wp_reset_postdata();
+					?>
+					
+				</div>	
+				<div class="row text-md-center">
+					<div class="col">
+						<a href="/portfolio-cat/021-шкафы-купе/" class="btn btn-danger mt-4">Все работы</a>
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
-</section>
-<!-- End stock section -->
+</section>				 -->
+<!-- /Archive-portfolio section -->
+
+<!-- Gallery wrapper-->
+<!-- <div id="galleryWrapper"
+	style="background: rgba(0,0,0,0.85); display: none; position: fixed; top: 0; bottom: 0; left: 0; right: 0; z-index: 9999;">
+	<?php
+	// параметры по умолчанию
+	$posts = get_posts(array(
+		'numberposts' => 999,
+		'orderby' => 'date',
+		'order' => 'DESC',
+		'post_type' => 'portfolio',
+	));
+
+	foreach ($posts as $post) {
+		setup_postdata($post); ?>
+
+		<div id="gallery-<?php echo $post->ID; ?>" class="carousel slide" data-bs-ride="carousel"
+			style="display: none; position: fixed; top: 0; height: 100%; width: 100%;">
+			<div class="carousel-indicators">
+				<?php
+				$count2 = 0;
+				for ($i = 1; $i <= 9; $i++) {
+					if (get_post_meta($post->ID, '_img-' . $i)) {
+						if ($count2 == 0) { ?>
+
+							<button id="ind-<?php echo $post->ID; ?>-<?php echo $count2; ?>" type="button"
+								data-bs-target="#gallery-<?php echo $post->ID; ?>" data-bs-slide-to="<?php echo $count2; ?>"
+								aria-label="Slide 3"></button>
+
+							<?php $count2 = $count2 + 1;
+						} else { ?>
+
+							<button id="ind-<?php echo $post->ID; ?>-<?php echo $count2; ?>" type="button"
+								data-bs-target="#gallery-<?php echo $post->ID; ?>" data-bs-slide-to="<?php echo $count2; ?>"
+								aria-label="Slide 3"></button>
+
+							<?php $count2 = $count2 + 1;
+						}
+					}
+				}
+				?>
+
+			</div>
+			<div class="carousel-inner h-100">
+				<?php
+				$count2 = 0;
+				for ($i = 1; $i <= 9; $i++) {
+					if (get_post_meta($post->ID, '_img-' . $i)) { ?>
+						<div id="img-<?php echo $post->ID; ?>-<?php echo $count2; ?>"
+							class="carousel-item h-100 <?php // if ( $i == 1 ) echo ' active'; ?>" data-bs-interval="999999999">
+							<div class="row align-items-center h-100">
+								<div class="col text-center">
+									<img src="<?php echo get_post_meta($post->ID, '_img-' . $i)[0]; ?>" class="img-fluid"
+										style="max-width: 90vw; max-height: 90vh;" alt="...">
+								</div>
+							</div>
+						</div>
+						<?php $count2 = $count2 + 1;
+					}
+				}
+
+				?>
+			</div>
+			<button class="carousel-control-prev" type="button" data-bs-target="#gallery-<?php echo $post->ID; ?>"
+				data-bs-slide="prev">
+				<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+				<span class="visually-hidden">Previous</span>
+			</button>
+			<button class="carousel-control-next" type="button" data-bs-target="#gallery-<?php echo $post->ID; ?>"
+				data-bs-slide="next">
+				<span class="carousel-control-next-icon" aria-hidden="true"></span>
+				<span class="visually-hidden">Next</span>
+			</button>
+		</div>
+	<?php }
+	wp_reset_postdata();
+	?>
+
+	<button type="button" onClick="closeGallery();" class="btn-close btn-close-white"
+		style="position: fixed; top: 25px; right: 25px; z-index: 99999;" aria-label="Close"></button>
+</div> -->
+
+<!-- <script>
+	/* Функция открытия галереи */
+	function galleryOn(gal, img) {
+		var gallery = gal; // Получаем ID галереи
+		var image = img; // Получаем ID картинки
+		// Открываем обертку галереи
+		document.getElementById('galleryWrapper').style.display = 'block';
+
+		// Проверяем какие данные передаются для открытия галереи и картинки
+		//alert(gallery+' '+image); 
+
+
+		<?php // Открываем галерею
+		$posts = get_posts(array(
+			'numberposts' => 999,
+			'orderby' => 'date',
+			'order' => 'DESC',
+			'post_type' => 'portfolio',
+			//'post__not_in' => array( 42 ) // Выводим все категории портфолио кроме Разное
+		));
+
+		foreach ($posts as $post) {
+			setup_postdata($post);
+
+			echo 'if ( gallery == "gallery-' . $post->ID . '" ) { document.getElementById("gallery-' . $post->ID . '").style.display = "block"; }';
+
+		}
+		wp_reset_postdata();
+		?>
+
+
+		<?php // Открываем изображения
+		$posts = get_posts(array(
+			'numberposts' => 999,
+			'orderby' => 'date',
+			'order' => 'DESC',
+			'post_type' => 'portfolio',
+			//'post__not_in' => array( 42 ) // Выводим все категории портфолио кроме Разное
+		));
+
+		foreach ($posts as $post) {
+			setup_postdata($post);
+			$count2 = 0;
+			for ($i = 1; $i <= 9; $i++) {
+				echo 'if ( image == "img-' . $post->ID . '-' . $count2 . '" ) { document.getElementById("img-' . $post->ID . '-' . $count2 . '").classList.add("active"); document.getElementById("ind-' . $post->ID . '-' . $count2 . '").classList.add("active"); } ';
+				$count2 = $count2 + 1;
+			}
+		}
+		wp_reset_postdata();
+		?>
+	}
+
+
+	// Кнопка закрытия галереи
+	function closeGallery() {
+		// Закрываем обертку галереи
+		document.getElementById('galleryWrapper').style.display = 'none';
+
+		<?php // Открываем галерею
+		$posts = get_posts(array(
+			'numberposts' => 999,
+			'orderby' => 'date',
+			'order' => 'DESC',
+			'post_type' => 'portfolio',
+			//'post__not_in' => array( 42 ) // Выводим все категории портфолио кроме Разное
+		));
+
+		foreach ($posts as $post) {
+			setup_postdata($post);
+
+			echo 'document.getElementById("gallery-' . $post->ID . '").style.display = "none";';
+
+		}
+		wp_reset_postdata();
+		?>
+
+		<?php
+		// Закрываем изображения
+		$posts = get_posts(array(
+			'numberposts' => 999,
+			'orderby' => 'date',
+			'order' => 'DESC',
+			'post_type' => 'portfolio',
+		));
+
+		foreach ($posts as $post) {
+			setup_postdata($post);
+			$count2 = 0;
+			for ($i = 1; $i <= 9; $i++) {
+				echo 'document.getElementById("img-' . $post->ID . '-' . $count2 . '").classList.remove("active"); document.getElementById("ind-' . $post->ID . '-' . $count2 . '").classList.remove("active");';
+
+				$count2 = $count2 + 1;
+			}
+		}
+		wp_reset_postdata();
+		?>
+	}
+</script> -->
+
 
 <!-- Archive portfolio section -->
 <div id="sp-portfolio"></div>
@@ -361,7 +640,7 @@ include 'header.php';
 		style="max-width: 1700px;  padding-top: 80px; padding-bottom: 50px; border-right: 1px solid rgba(153, 153, 153, 0.9);  border-left: 1px solid rgba(153, 153, 153, 0.9);">
 		<div class="row justify-content-center">
 			<div class="col-md-9">
-				<h2><span>01</span> / Наши последние работы</h2>
+				<h2><span>02</span> / Наши последние работы</h2>
 				<div class="row justify-content-center">
 					<?php
 					// Получаем все записи портфолио
@@ -592,54 +871,6 @@ include 'header.php';
 		}
 	});
 </script>
-
-<!-- Video section -->
-<div id="sp-video"></div>
-<section class="section-video">
-	<div class="container"
-		style="max-width: 1700px; padding-top: 80px; padding-bottom: 50px; border-right: 1px solid rgba(153, 153, 153, 0.9);  border-left: 1px solid rgba(153, 153, 153, 0.9);">
-		<div class="row justify-content-center">
-			<div class="col-md-9">
-				<h2><span>02</span> / Посмотрите нашу видеопрезентацию</h2>
-				<div class="row justify-content-center">
-					<div class="col-md-10">
-						<div style="position: relative">
-							<video id="video-player" style="width: 100%; overflow: hidden; border-radius: 25px;"
-								playsinline="playsinline" loop="loop"
-								poster="https://garantshkaf.ru/wp-content/themes/garantshkaf-3/img/video-poster.jpg">
-								<!-- muted="muted" autoplay="autoplay" -->
-								<!-- <source src="header-bg.ogv" type='video/ogg; codecs="theora, vorbis"'> -->
-								<source src="<?php echo get_template_directory_uri(); ?>/videos/video.mp4"
-									type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"' />
-								<!-- <source src="header-bg.webm" type='video/webm; codecs="vp8, vorbis"'> -->
-							</video>
-							<div id="play-circle">
-								<div id="play" onclick="play();"></div>
-							</div>
-							<div id="stop-circle" onclick="pause();">
-								<div><i class="far fa-stop-circle"></i></div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<script>
-					function play() {
-						document.getElementById("video-player").play();
-						document.getElementById("play-circle").style.display = "none";
-						document.getElementById("stop-circle").style.display = "block";
-					}
-
-					function pause() {
-						document.getElementById("video-player").pause();
-						document.getElementById("stop-circle").style.display = "none";
-						document.getElementById("play-circle").style.display = "block";
-					}
-				</script>
-			</div>
-		</div>
-	</div>
-</section>
-<!-- End video section -->
 
 
 <!-- SECTION ORDER 1 -->
