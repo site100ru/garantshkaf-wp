@@ -3,6 +3,7 @@
 /**
  * Template Name: Шкафы-купе
  * Template Post Type: page
+ * Description: Test 3
  */
 
 include 'header.php';
@@ -320,6 +321,7 @@ include 'header.php';
 	</header>
 </section>
 
+
 <!-- Stock section -->
 <div id="sp-stock"></div>
 <section class="section-stock">
@@ -335,7 +337,8 @@ include 'header.php';
 					<div class="single-image-wrapper">
 						<div class="approximation img-wrapper position-relative gallery-2691">
 							<img src="<?php echo get_template_directory_uri(); ?>/img/card/action-card.jpg"
-								class="d-block w-100 single-product-img rounded" loading="lazy" alt="О нашей компании">
+								class="d-block w-100 single-product-img rounded" loading="lazy"
+								alt="Беспроцентная рассрочка на 1 год. Акция до 30 августа">
 						</div>
 					</div>
 				</div>
@@ -343,8 +346,8 @@ include 'header.php';
 				<div class="col-12 col-md-6 mb-0 section-image order-1 order-md-0">
 					<div class="single-image-wrapper">
 						<div class="approximation img-wrapper position-relative gallery-2691">
-							<img src="<?php echo get_template_directory_uri(); ?>/img/card/action-card-1.jpg"
-								class="d-block w-100 single-product-img rounded" loading="lazy" alt="О нашей компании">
+							<img src="<?php echo get_template_directory_uri(); ?>/img/card/action-card-2.jpg"
+								class="d-block w-100 single-product-img rounded" loading="lazy" alt="Скидка до 25%. Акция до 31 июля">
 						</div>
 					</div>
 				</div>
@@ -352,7 +355,8 @@ include 'header.php';
 		</div>
 	</div>
 </section>
-<!-- End stock section -->
+<!-- End video section -->
+
 
 <!-- Archive portfolio section -->
 <div id="sp-portfolio"></div>
@@ -360,112 +364,166 @@ include 'header.php';
 	<div class="container"
 		style="max-width: 1700px;  padding-top: 80px; padding-bottom: 50px; border-right: 1px solid rgba(153, 153, 153, 0.9);  border-left: 1px solid rgba(153, 153, 153, 0.9);">
 		<div class="row justify-content-center">
+			<div class="section-title-wrapper text-center">
+				<h2 class="section-title">Наши последние работы</h2>
+				<img src="<?php echo get_template_directory_uri(); ?>/img/ico/points.svg" alt="Точки" class="img-fluid" />
+			</div>
+
 			<div class="col-md-9">
-				<h2><span>01</span> / Наши последние работы</h2>
-				<div class="row justify-content-center">
-					<?php
-					// Получаем все записи портфолио
-					$args = [
-						'post_type' => 'portfolio',
-						'numberposts' => 15,
-						'posts_per_page' => 15,
-						'portfolio-cat' => '021-шкафы-купе'
-					];
+				<?php
+				// Получаем все записи портфолио
+				$args = [
+					'post_type' => 'portfolio',
+					'numberposts' => 15,
+					'posts_per_page' => 15,
+					'portfolio-cat' => '021-шкафы-купе'
+				];
 
-					$query = new WP_Query($args);
-					$all_images = []; // Массив всех изображений
-					$portfolio_data = []; // Данные портфолио
-					$image_index = 0; // Глобальный индекс изображений
-					
-					// Собираем все изображения в один массив
-					while ($query->have_posts()):
-						$query->the_post();
-						$portfolio_images = [];
+				$query = new WP_Query($args);
+				$all_images = []; // Массив всех изображений
+				$portfolio_data = []; // Данные портфолио
+				$image_index = 0; // Глобальный индекс изображений
+				
+				// Собираем все изображения в один массив
+				while ($query->have_posts()):
+					$query->the_post();
+					$portfolio_images = [];
 
-						// Собираем изображения текущего портфолио
-						for ($i = 1; $i <= 9; $i++) {
-							$img_url = get_post_meta($post->ID, '_img-' . $i, true);
-							if ($img_url) {
-								$portfolio_images[] = $img_url;
-								$all_images[] = [
-									'url' => $img_url,
-									'portfolio_id' => $post->ID,
-									'portfolio_title' => get_the_title()
-								];
-							}
-						}
-
-						// Сохраняем данные портфолио
-						if (!empty($portfolio_images)) {
-							$portfolio_data[] = [
-								'id' => $post->ID,
-								'title' => get_the_title(),
-								'images' => $portfolio_images,
-								'start_index' => $image_index // С какого индекса начинается в общем массиве
+					// Собираем изображения текущего портфолио
+					for ($i = 1; $i <= 9; $i++) {
+						$img_url = get_post_meta($post->ID, '_img-' . $i, true);
+						if ($img_url) {
+							$portfolio_images[] = $img_url;
+							$all_images[] = [
+								'url' => $img_url,
+								'portfolio_id' => $post->ID,
+								'portfolio_title' => get_the_title()
 							];
-							$image_index += count($portfolio_images);
 						}
-					endwhile;
-					wp_reset_postdata();
-					?>
+					}
 
-					<!-- Отображение портфолио -->
-					<div class="row justify-content-center">
-						<?php foreach ($portfolio_data as $portfolio): ?>
-							<div class="col-md-4">
-								<?php $image_count = count($portfolio['images']); ?>
+					// Сохраняем данные портфолио
+					if (!empty($portfolio_images)) {
+						$portfolio_data[] = [
+							'id' => $post->ID,
+							'title' => get_the_title(),
+							'images' => $portfolio_images,
+							'start_index' => $image_index // С какого индекса начинается в общем массиве
+						];
+						$image_index += count($portfolio_images);
+					}
+				endwhile;
+				wp_reset_postdata();
 
-								<?php if ($image_count > 1): ?>
-									<!-- Карусель для нескольких изображений -->
-									<div id="carousel-<?php echo $portfolio['id']; ?>" class="carousel slide mb-4" data-bs-ride="carousel"
-										data-bs-interval="999999999">
-										<!-- Индикаторы показываем только если больше 1 изображения -->
-										<div class="carousel-indicators" style="bottom: 5%;">
-											<?php for ($i = 0; $i < $image_count; $i++): ?>
-												<button type="button" data-bs-target="#carousel-<?php echo $portfolio['id']; ?>"
-													data-bs-slide-to="<?php echo $i; ?>" <?php echo $i === 0 ? 'class="active"' : ''; ?>
-													aria-label="Slide <?php echo $i + 1; ?>"></button>
-											<?php endfor; ?>
-										</div>
+				/**
+				 * Алгоритм равномерного распределения элементов по колонкам (Balanced Column Distribution)
+				 * 
+				 * Принцип работы: каждый новый элемент добавляется в колонку с наименьшей текущей высотой.
+				 * Это помогает избежать ситуации, когда одна колонка становится значительно выше других.
+				 * 
+				 * @var array $columns Массив колонок с элементами
+				 * @var array $column_heights Счетчики высоты каждой колонки в пикселях
+				 */
 
-										<div class="carousel-inner">
-											<?php foreach ($portfolio['images'] as $index => $img_url): ?>
-												<div class="carousel-item <?php echo $index === 0 ? 'active' : ''; ?>">
-													<a href="#" onclick="openGallery(<?php echo $portfolio['start_index'] + $index; ?>); return false;">
-														<div class="single-product-img approximation position-relative">
-															<img src="<?php echo $img_url; ?>" class="shadow rounded" alt="..." loading="lazy">
-															<div class="magnifier"></div>
-														</div>
-													</a>
+				// Умное распределение постов по 3 колонкам для выравнивания высоты
+				$columns = [[], [], []];
+				$column_heights = [0, 0, 0]; // Примерная высота каждой колонки
+				
+				foreach ($portfolio_data as $portfolio) {
+					// Находим колонку с наименьшей высотой
+					$min_height_column = array_search(min($column_heights), $column_heights);
+
+					// Добавляем пост в эту колонку
+					$columns[$min_height_column][] = $portfolio;
+
+					// Более точная оценка высоты на основе первого изображения
+					$first_image = $portfolio['images'][0];
+					$estimated_height = 250; // Базовая высота
+				
+					// Пытаемся получить размеры изображения для более точного расчета
+					$image_path = str_replace(home_url(), ABSPATH, $first_image);
+					if (file_exists($image_path)) {
+						$image_size = getimagesize($image_path);
+						if ($image_size) {
+							$width = $image_size[0];
+							$height = $image_size[1];
+							// Рассчитываем высоту при фиксированной ширине колонки (примерно 400px)
+							$estimated_height = ($height / $width) * 400;
+							// Ограничиваем минимум и максимум
+							$estimated_height = max(200, min(400, $estimated_height));
+						}
+					}
+
+					// Добавляем небольшой отступ
+					$estimated_height += 30;
+
+					$column_heights[$min_height_column] += $estimated_height;
+				}
+				?>
+
+				<!-- Отображение портфолио в 3 равные колонки -->
+				<div class="row portfolio-columns">
+					<?php foreach ($columns as $column_posts): ?>
+						<?php if (!empty($column_posts)): ?>
+							<div class="col-lg-4 col-md-6 col-sm-12 portfolio-column">
+								<?php foreach ($column_posts as $portfolio): ?>
+									<div class="portfolio-item mb-4">
+										<?php $image_count = count($portfolio['images']); ?>
+
+										<?php if ($image_count > 1): ?>
+											<!-- Карусель для нескольких изображений -->
+											<div id="carousel-<?php echo $portfolio['id']; ?>" class="carousel slide" data-bs-ride="carousel"
+												data-bs-interval="999999999">
+												<!-- Индикаторы показываем только если больше 1 изображения -->
+												<div class="carousel-indicators" style="bottom: 5%;">
+													<?php for ($i = 0; $i < $image_count; $i++): ?>
+														<button type="button" data-bs-target="#carousel-<?php echo $portfolio['id']; ?>"
+															data-bs-slide-to="<?php echo $i; ?>" <?php echo $i === 0 ? 'class="active"' : ''; ?>
+															aria-label="Slide <?php echo $i + 1; ?>"></button>
+													<?php endfor; ?>
 												</div>
-											<?php endforeach; ?>
-										</div>
 
-										<button class="carousel-control-prev" type="button"
-											data-bs-target="#carousel-<?php echo $portfolio['id']; ?>" data-bs-slide="prev">
-											<span class="carousel-control-prev-icon"></span>
-										</button>
-										<button class="carousel-control-next" type="button"
-											data-bs-target="#carousel-<?php echo $portfolio['id']; ?>" data-bs-slide="next">
-											<span class="carousel-control-next-icon"></span>
-										</button>
-									</div>
-								<?php else: ?>
-									<!-- Одно изображение без карусели и индикаторов -->
-									<div class="mb-4">
-										<a href="#" onclick="openGallery(<?php echo $portfolio['start_index']; ?>); return false;">
-											<div class="single-product-img approximation position-relative">
-												<img src="<?php echo $portfolio['images'][0]; ?>" class="shadow rounded" alt="..." loading="lazy">
-												<div class="magnifier"></div>
+												<div class="carousel-inner">
+													<?php foreach ($portfolio['images'] as $index => $img_url): ?>
+														<div class="carousel-item <?php echo $index === 0 ? 'active' : ''; ?>">
+															<a href="#" onclick="openGallery(<?php echo $portfolio['start_index'] + $index; ?>); return false;">
+																<div class="single-product-img approximation position-relative">
+																	<img src="<?php echo $img_url; ?>" class="shadow rounded w-100" alt="..." loading="lazy">
+																	<div class="magnifier"></div>
+																</div>
+															</a>
+														</div>
+													<?php endforeach; ?>
+												</div>
+
+												<button class="carousel-control-prev" type="button"
+													data-bs-target="#carousel-<?php echo $portfolio['id']; ?>" data-bs-slide="prev">
+													<span class="carousel-control-prev-icon"></span>
+												</button>
+												<button class="carousel-control-next" type="button"
+													data-bs-target="#carousel-<?php echo $portfolio['id']; ?>" data-bs-slide="next">
+													<span class="carousel-control-next-icon"></span>
+												</button>
 											</div>
-										</a>
+										<?php else: ?>
+											<!-- Одно изображение без карусели и индикаторов -->
+											<div>
+												<a href="#" onclick="openGallery(<?php echo $portfolio['start_index']; ?>); return false;">
+													<div class="single-product-img approximation position-relative">
+														<img src="<?php echo $portfolio['images'][0]; ?>" class="shadow rounded w-100" alt="..."
+															loading="lazy">
+														<div class="magnifier"></div>
+													</div>
+												</a>
+											</div>
+										<?php endif; ?>
 									</div>
-								<?php endif; ?>
+								<?php endforeach; ?>
 							</div>
-						<?php endforeach; ?>
-					</div>
-
+						<?php endif; ?>
+					<?php endforeach; ?>
 				</div>
+
 				<div class="row text-md-center">
 					<div class="col">
 						<a href="/portfolio-cat/021-шкафы-купе/" class="btn btn-danger mt-4">Все работы</a>
@@ -475,6 +533,13 @@ include 'header.php';
 		</div>
 	</div>
 </section>
+
+<!-- CSS стили для выравнивания колонок -->
+<style>
+	.portfolio-section .single-product-img {
+		height: auto !important;
+	}
+</style>
 <!-- /Archive-portfolio section -->
 
 <div id="galleryModal"
@@ -597,10 +662,13 @@ include 'header.php';
 <div id="sp-video"></div>
 <section class="section-video">
 	<div class="container"
-		style="max-width: 1700px; padding-top: 80px; padding-bottom: 50px; border-right: 1px solid rgba(153, 153, 153, 0.9);  border-left: 1px solid rgba(153, 153, 153, 0.9);">
+		style="max-width: 1700px;  padding-top: 80px; padding-bottom: 50px; border-right: 1px solid rgba(153, 153, 153, 0.9);  border-left: 1px solid rgba(153, 153, 153, 0.9);">
 		<div class="row justify-content-center">
+			<div class="section-title-wrapper text-center">
+				<h2 class="section-title">Посмотрите нашу видеопрезентацию</h2>
+				<img src="<?php echo get_template_directory_uri(); ?>/img/ico/points.svg" alt="Точки" class="img-fluid" />
+			</div>
 			<div class="col-md-9">
-				<h2><span>02</span> / Посмотрите нашу видеопрезентацию</h2>
 				<div class="row justify-content-center">
 					<div class="col-md-10">
 						<div style="position: relative">
@@ -640,19 +708,20 @@ include 'header.php';
 	</div>
 </section>
 <!-- End video section -->
-
+ 
 
 <!-- SECTION ORDER 1 -->
 <section class="section-order-1 pt-md-0">
 	<div class="container"
-		style="max-width: 1700px; padding-bottom: 50px; border-right: 1px solid rgba(153, 153, 153, 0.9);  border-left: 1px solid rgba(153, 153, 153, 0.9);">
+		style="max-width: 1700px;  padding-top: 80px; padding-bottom: 50px; border-right: 1px solid rgba(153, 153, 153, 0.9);  border-left: 1px solid rgba(153, 153, 153, 0.9);">
 		<div class="row">
+			<div class="section-title-wrapper text-center">
+				<h2 class="section-title">Рассчитате стоимость Вашего шкафа-купе на нашей фабрике!</h2>
+				<!-- <p class="text-center mb-5">Это бесплатно и ни к чему Вас не обязывает</p> -->
+
+				<img src="<?php echo get_template_directory_uri(); ?>/img/ico/points.svg" alt="Точки" class="img-fluid" />
+			</div>
 			<div class="col-md-8 offset-md-2">
-				<h3 class="text-center">Рассчитате стоимость Вашего шкафа-купе на нашей фабрике!</h3>
-				<div class="section-title-decoration"></div>
-				<p class="text-center mb-5">Это бесплатно и ни к чему Вас не обязывает</p>
-
-
 				<!-- ВОПРОСЫ ПО ШКАФАМ -->
 				<div class="row justify-content-center">
 					<div class="col-12" id="2-2">
@@ -1157,7 +1226,7 @@ include 'header.php';
 									<p>
 										<input  type="text"  name="tel" id="phone_mask_3"  class="form-control telMask"  style="margin-top: 15px"  placeholder="Ваш телефон"  required/>
 									</p>
-									<!--label class="form-check-label" for="exampleCheck11">
+									<!abel class="form-check-label" for="exampleCheck11">
 										<input  type="checkbox" class="form-check-input" id="exampleCheck11" checked>
 										Я согласен на обработку моих <a href="#">персональных данных</a>.
 									</label--
@@ -1182,14 +1251,87 @@ include 'header.php';
 
 
 
+
+<!-- SECTION ORDER 1 -->
+<section class="section-order-1 pt-md-0">
+	<div class="container"
+		style="max-width: 1700px;  padding-top: 80px; padding-bottom: 50px; border-right: 1px solid rgba(153, 153, 153, 0.9);  border-left: 1px solid rgba(153, 153, 153, 0.9);">
+		<div class="row">
+			<div class="section-title-wrapper text-center">
+				<h2 class="section-title">Рассчитаем точную стоимость шкафа-купе за 15 минут!</h2>
+				<!-- <p class="text-center ">Это бесплатно и ни к чему Вас не обязывает</p> -->
+
+				<img src="<?php echo get_template_directory_uri(); ?>/img/ico/points.svg" alt="Точки" class="img-fluid" />
+			</div>
+
+			<div class="col-md-8 offset-md-2">
+				<div class="row">
+					<div class="col-lg-6">
+						<div class="row">
+							<div class="col-2">
+								<img src="<?php echo get_stylesheet_directory_uri(); ?>/img/ico/question.png" class="img-fluid" />
+							</div>
+							<div class="col-10">
+								<p class="mb-2">Для расчета опишите двери-купе своими словами. При возможности прикрепите изображение
+								</p>
+								<form method="post" action="<?php echo get_stylesheet_directory_uri(); ?>/mails/get_calculate.php"
+									enctype="multipart/form-data">
+									<textarea type="text" rows="3" name="mes" class="form-control"
+										placeholder="Например: длина, ширина, глубина, количество дверей, материал дверей, форма, вид шкафа и т.д."
+										style="height: auto;  margin-top: 15px;  margin-bottom: 15px;"></textarea>
+									<p class="input-group custom-file-button">
+										<label class="input-group-text" for="inputGroupFile3">
+											Прикрепить
+										</label>
+										<input type="file" name="file[]" class="form-control" style="border: none" id="inputGroupFile3"
+											accept=".jpg,.jpeg,.png,.pdf,.heic" multiple="" />
+									</p>
+
+									<p>
+										<input type="text" name="name" class="form-control" style="margin-top: 15px"
+											placeholder="Ваше Имя" />
+									</p>
+
+									<p>
+										<input type="text" name="tel" id="phone_mask_3" class="form-control telMask"
+											style="margin-top: 15px" placeholder="Ваш телефон" required />
+									</p>
+									<label class="form-check-label" for="exampleCheck11">
+										<input type="checkbox" class="form-check-input" id="exampleCheck11" checked>
+										Я согласен на обработку моих <a href="index.html">персональных данных</a>.
+									</label>
+
+									<input type="hidden" id="g-recaptcha-response-order-2" name="g-recaptcha-response">
+									<button type="submit" class="btn btn-danger" style="width: 100%">
+										Отправить
+									</button>
+								</form>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-6 text-center">
+						<img src="<?php echo get_stylesheet_directory_uri(); ?>/img/question-shkaf.png"
+							class="question-img img-fluid" />
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<!-- /SECTION ORDER 1 -->
+
+
 <!-- SECTION ABOUT -->
 <div id="sp-about"></div>
 <section class="section-about">
 	<div class="container"
-		style="max-width: 1700px; padding-top: 80px; border-right: 1px solid rgba(153, 153, 153, 0.9);  border-left: 1px solid rgba(153, 153, 153, 0.9);">
+		style="max-width: 1700px;  padding-top: 80px; padding-bottom: 50px; border-right: 1px solid rgba(153, 153, 153, 0.9);  border-left: 1px solid rgba(153, 153, 153, 0.9);">
 		<div class="row justify-content-center">
-			<div class="col-md-9">
-				<h2 class="pb-0"><span>03</span> / Узнайте о нас больше</h2>
+			<div class="section-title-wrapper text-center">
+				<h2 class="section-title">Узнайте о нас больше</h2>
+				<!-- <p class="text-center mb-5">Это бесплатно и ни к чему Вас не обязывает</p> -->
+
+				<img src="<?php echo get_template_directory_uri(); ?>/img/ico/points.svg" alt="Точки" class="img-fluid" />
 			</div>
 		</div>
 		<div class="row justify-content-end">
@@ -1224,10 +1366,15 @@ include 'header.php';
 <!-- SECTION ADVANTAGES -->
 <section class="section-about">
 	<div class="container"
-		style="max-width: 1700px; padding-top: 80px; padding-bottom: 50px; border-right: 1px solid rgba(153, 153, 153, 0.9);  border-left: 1px solid rgba(153, 153, 153, 0.9);">
+		style="max-width: 1700px;  padding-top: 80px; padding-bottom: 50px; border-right: 1px solid rgba(153, 153, 153, 0.9);  border-left: 1px solid rgba(153, 153, 153, 0.9);">
 		<div class="row justify-content-center">
+			<div class="section-title-wrapper text-center">
+				<h2 class="section-title">За что нас выбирают</h2>
+
+				<img src="<?php echo get_template_directory_uri(); ?>/img/ico/points.svg" alt="Точки" class="img-fluid" />
+			</div>
+
 			<div class="col-md-9">
-				<h2><span>04</span> / За что нас выбирают</h2>
 				<div class="row">
 					<div class="col-md-12">
 						<div class="row">
@@ -1302,13 +1449,16 @@ include 'header.php';
 <!-- DERECTOR SECTION -->
 <section class="section-director">
 	<div class="container"
-		style="max-width: 1700px;  padding-bottom: 50px; border-right: 1px solid rgba(153, 153, 153, 0.9);  border-left: 1px solid rgba(153, 153, 153, 0.9);">
+		style="max-width: 1700px;  padding-top: 80px; padding-bottom: 50px; border-right: 1px solid rgba(153, 153, 153, 0.9);  border-left: 1px solid rgba(153, 153, 153, 0.9);">
 		<div class="row justify-content-center">
-			<div class="col-md-9">
-				<h2><span>05</span> / Обращение руководителя фабрики</h2>
+			<div class="section-title-wrapper text-center">
+				<h2 class="section-title">Обращение руководителя фабрики</h2>
+
+				<img src="<?php echo get_template_directory_uri(); ?>/img/ico/points.svg" alt="Точки" class="img-fluid" />
 			</div>
-			<div class="col-lg-4 offset-lg-2 text-center">
-				<img src="<?php echo get_template_directory_uri(); ?>/img/director.jpg" class="img-fluid question-img" />
+
+			<div class="col-lg-4 offset-lg-2 text-center"> <img
+					src="<?php echo get_template_directory_uri(); ?>/img/director.jpg" class="img-fluid question-img" />
 			</div>
 			<div class="col-lg-4 offset-lg-1">
 				<p class="text-director"><i>«Мы производим шкафы-купе и другую корпусную мебель с 2011 года. Нам нравится наша
@@ -1326,10 +1476,15 @@ include 'header.php';
 <div id="sp-testimonials"></div>
 <section class="section-testimonials">
 	<div class="container"
-		style="max-width: 1700px; padding-top: 80px; padding-bottom: 50px; border-right: 1px solid rgba(153, 153, 153, 0.9);  border-left: 1px solid rgba(153, 153, 153, 0.9);">
+		style="max-width: 1700px;  padding-top: 80px; padding-bottom: 50px; border-right: 1px solid rgba(153, 153, 153, 0.9);  border-left: 1px solid rgba(153, 153, 153, 0.9);">
 		<div class="row justify-content-center">
+			<div class="section-title-wrapper text-center">
+				<h2 class="section-title">Отзывы о нас в Яндексе</h2>
+
+				<img src="<?php echo get_template_directory_uri(); ?>/img/ico/points.svg" alt="Точки" class="img-fluid" />
+			</div>
+
 			<div class="col-md-9">
-				<h2><span>06</span> / Отзывы о нас в Яндексе</h2>
 				<div class="row justify-content-center text-center text-md-start">
 					<div class="col-md-7 mb-5 mb-md-0 text-center">
 						<div style="width: 100%; height: 800px; overflow: hidden; position: relative;">
@@ -1360,42 +1515,47 @@ include 'header.php';
 <div id="sp-kak-zakazat"></div>
 <section id="process">
 	<div class="container"
-		style=" max-width: 1700px; padding-top: 80px; border-right: 1px solid rgba(153, 153, 153, 0.9);  border-left: 1px solid rgba(153, 153, 153, 0.9);">
+		style=" max-width: 1700px;  padding-top: 80px; padding-bottom: 50px; border-right: 1px solid rgba(153, 153, 153, 0.9);  border-left: 1px solid rgba(153, 153, 153, 0.9);">
 		<div class="row justify-content-center">
+			<div class="section-title-wrapper text-center">
+				<h2 class="section-title">Процесс заказа, оплаты и установки шкафа-купе</h2>
+
+				<img src="<?php echo get_template_directory_uri(); ?>/img/ico/points.svg" alt="Точки" class="img-fluid" />
+			</div>
+
 			<div class="col-md-9">
-				<h2><span>07</span> / Процесс заказа, оплаты и установки шкафа-купе</h2>
 				<div class="row">
-					<div class="col-lg-3 text-center step">
-						<img src="<?php echo get_template_directory_uri(); ?>/img/ico/step-1.png" class="img-fluid" />
+					<div class="col-lg-3 text-center step"> <img
+							src="<?php echo get_template_directory_uri(); ?>/img/ico/step-1.png" class="img-fluid" />
 						<p>Звонок или заявка <br />на сайте</p>
 					</div>
-					<div class="col-lg-3 text-center step">
-						<img src="<?php echo get_template_directory_uri(); ?>/img/ico/step-2.png" class="img-fluid" />
+					<div class="col-lg-3 text-center step"> <img
+							src="<?php echo get_template_directory_uri(); ?>/img/ico/step-2.png" class="img-fluid" />
 						<p>Консультация менеджера и выезд замерщика</p>
 					</div>
-					<div class="col-lg-3 text-center step">
-						<img src="<?php echo get_template_directory_uri(); ?>/img/ico/step-3.png" class="img-fluid" />
+					<div class="col-lg-3 text-center step"> <img
+							src="<?php echo get_template_directory_uri(); ?>/img/ico/step-3.png" class="img-fluid" />
 						<p>Замер и выбор <br />материалов</p>
 					</div>
-					<div class="col-lg-3 text-center">
-						<img src="<?php echo get_template_directory_uri(); ?>/img/ico/step-4.png" class="img-fluid" />
+					<div class="col-lg-3 text-center"> <img src="<?php echo get_template_directory_uri(); ?>/img/ico/step-4.png"
+							class="img-fluid" />
 						<p>Определение окончательной стоимости</p>
 					</div>
-					<div class="col-lg-3 text-center step">
-						<img src="<?php echo get_template_directory_uri(); ?>/img/ico/step-5.png" class="img-fluid" />
+					<div class="col-lg-3 text-center step"> <img
+							src="<?php echo get_template_directory_uri(); ?>/img/ico/step-5.png" class="img-fluid" />
 						<p>Принятие Вами решения о заказе шкафа купе у нас. Только здесь Вы вносите предоплату 30% по Договору
 							(любой удобный для Вас способ предоплаты)</p>
 					</div>
-					<div class="col-lg-3 text-center step">
-						<img src="<?php echo get_template_directory_uri(); ?>/img/ico/step-6.png" class="img-fluid" />
+					<div class="col-lg-3 text-center step"> <img
+							src="<?php echo get_template_directory_uri(); ?>/img/ico/step-6.png" class="img-fluid" />
 						<p>Создание и <br />согласование 3D проекта и запуск его в производство</p>
 					</div>
-					<div class="col-lg-3 text-center step">
-						<img src="<?php echo get_template_directory_uri(); ?>/img/ico/step-7.png" class="img-fluid" />
+					<div class="col-lg-3 text-center step"> <img
+							src="<?php echo get_template_directory_uri(); ?>/img/ico/step-7.png" class="img-fluid" />
 						<p>Доставка и установка <br />одним днем</p>
 					</div>
-					<div class="col-lg-3 text-center">
-						<img src="<?php echo get_template_directory_uri(); ?>/img/ico/step-8.png" class="img-fluid" />
+					<div class="col-lg-3 text-center"> <img src="<?php echo get_template_directory_uri(); ?>/img/ico/step-8.png"
+							class="img-fluid" />
 						<p>Прием работы и окончательные расчеты</p>
 					</div>
 				</div>
@@ -1410,10 +1570,15 @@ include 'header.php';
 <div id="sp-faq"></div>
 <section id="answers">
 	<div class="container"
-		style="max-width: 1700px; padding-top: 80px; border-right: 1px solid rgba(153, 153, 153, 0.9);  border-left: 1px solid rgba(153, 153, 153, 0.9);">
+		style="max-width: 1700px;  padding-top: 80px; padding-bottom: 50px; border-right: 1px solid rgba(153, 153, 153, 0.9);  border-left: 1px solid rgba(153, 153, 153, 0.9);">
 		<div class="row justify-content-center">
+			<div class="section-title-wrapper text-center">
+				<h2 class="section-title">Наши ответы на часто задаваемые вопросы</h2>
+
+				<img src="<?php echo get_template_directory_uri(); ?>/img/ico/points.svg" alt="Точки" class="img-fluid" />
+			</div>
+
 			<div class="col-md-9">
-				<h2><span>08</span> / Наши ответы на часто задаваемые вопросы</h2>
 				<div class="row">
 					<div class="col-lg-5 offset-lg-1 order-2 order-lg-1">
 						<div class="accordion" id="accordionExample">
@@ -1531,19 +1696,22 @@ include 'header.php';
 	<div class="container"
 		style="max-width: 1700px; padding-top: 80px; padding-bottom: 80px; border-right: 1px solid rgba(153, 153, 153, 0.9);  border-left: 1px solid rgba(153, 153, 153, 0.9);">
 		<div class="row">
+			<div class="section-title-wrapper text-center">
+				<h2 class="section-title">Рассчитаем точную стоимость шкафа-купе за 15 минут!</h2>
+				<!-- <p class="text-center ">Это бесплатно и ни к чему Вас не обязывает</p> -->
+
+				<img src="<?php echo get_template_directory_uri(); ?>/img/ico/points.svg" alt="Точки" class="img-fluid" />
+			</div>
+
 			<div class="col-md-8 offset-md-2">
-				<h3 class="text-center">Рассчитаем точную стоимость шкафа-купе за 15 минут!</h3>
-				<div class="section-title-decoration"></div>
-				<p class="text-center mb-5">Это бесплатно и ни к чему Вас не обязывает</p>
 				<div class="row">
-					<div class="col-lg-6 text-center">
-						<img src="<?php echo get_template_directory_uri(); ?>/img/question-shkaf.png"
-							class="question-img img-fluid" />
+					<div class="col-lg-6 text-center"> <img
+							src="<?php echo get_template_directory_uri(); ?>/img/question-shkaf.png" class="question-img img-fluid" />
 					</div>
 					<div class="col-lg-6">
 						<div class="row">
-							<div class="col-2">
-								<img src="<?php echo get_template_directory_uri(); ?>/img/ico/question.png" class="img-fluid" />
+							<div class="col-2"> <img src="<?php echo get_template_directory_uri(); ?>/img/ico/question.png"
+									class="img-fluid" />
 							</div>
 							<div class="col-10">
 								<p class="mb-2">Для расчета опишите шкаф-купе своими словами. При возможности прикрепите изображение.
@@ -1689,6 +1857,69 @@ include 'header.php';
 </script>
 <!-- End quiz script -->
 
+<style>
+	:root {
+		--section-margin-bottom: 3.75rem;
+
+		/* Цвета */
+		--title-color: #323232;
+		--subtitle-color: #5f5f5f;
+
+		/* Размеры */
+		--title-font-size: 1.875rem;
+		--subtitle-font-size: 1.25rem;
+		--text-font-size: 1.125rem;
+		--text-font-size-sm: 0.875rem;
+
+		/* Шрифт */
+		--font-family: 'Helvetica Neue', sans-serif;
+		--line-height: 1;
+		--line-height-big: 1.35;
+		--title-font-weight: 700;
+		--subtitle-font-weight: 500;
+		--title-line-height: 1;
+	}
+
+	/* Адаптивные стили */
+	@media (max-width: 767.98px) {
+		:root {
+			--section-margin-bottom: 2rem;
+			--title-font-size: 1.5rem;
+			--text-font-size: 1rem;
+		}
+	}
+
+	@media (max-width: 575.98px) {
+		:root {
+			--section-margin-bottom: 1.5rem;
+			--title-font-size: 1.25rem;
+			--text-font-size: 0.9rem;
+		}
+	}
+
+	.section-title-wrapper {
+		margin-bottom: var(--section-margin-bottom);
+	}
+
+	.section-title-wrapper h2.section-title {
+		font-family: var(--font-family);
+		font-size: var(--title-font-size);
+		line-height: var(--title-line-height);
+		font-weight: var(--title-font-weight);
+		margin-bottom: 1rem;
+		color: var(--title-color);
+		text-transform: initial;
+	}
+
+	.section-subtitle {
+		font-family: var(--font-family);
+		font-size: var(--subtitle-font-size);
+		line-height: var(--subtitle-line-height);
+		font-weight: var(--subtitle-font-weight);
+		margin-bottom: 1rem;
+		color: var(--subtitle-color);
+	}
+</style>
 
 
 <div id="sp-contacts"></div>
@@ -1696,8 +1927,8 @@ include 'header.php';
 	<div class="container"
 		style="max-width: 1700px; border-right: 1px solid rgba(153, 153, 153, 0.9);  border-left: 1px solid rgba(153, 153, 153, 0.9);">
 		<div class="row">
-			<div class="col-md-3 offset-md-1">
-				<img src="<?php echo get_template_directory_uri(); ?>/img/ico/logo.png" class="img-fluid logo" />
+			<div class="col-md-3 offset-md-1"> <img src="<?php echo get_template_directory_uri(); ?>/img/ico/logo.png"
+					class="img-fluid logo" />
 				<p><span>Время работы:</span></p>
 				<p>Пн. - Вс. с 8:00 до 22:00</p>
 				<p><span>Адрес производства:</span></p>
@@ -1746,7 +1977,7 @@ include 'header.php';
 						<img src="<?php echo get_template_directory_uri(); ?>/img/ico/vk.png" class="img-fluid" />
 					</a -->
 					<a href="https://t.me/+79856445775" target="_blank">
-						<img src="<?php echo get_template_directory_uri(); ?>/img/ico/telegram-ico.svg" class="ico-button" />
+						<img src=" <?php echo get_template_directory_uri(); ?>/img/ico/telegram-ico.svg" class="ico-button" />
 					</a>
 					<!-- a href="#">
 						<img src="<?php echo get_template_directory_uri(); ?>/img/ico/telega.png" class="img-fluid" />
@@ -1761,7 +1992,9 @@ include 'header.php';
 		</div>
 		<div id="footer1" class="row align-items-center">
 			<div class="col">
-				<p class="font-weight-bold text-center mb-0">©<?php echo date('Y'); ?>г. Мебельная фабрика «Гарантшкаф»</p>
+				<p class="font-weight-bold text-center mb-0">©
+					<?php echo date('Y'); ?>г. Мебельная фабрика «Гарантшкаф»
+				</p>
 				<p class="font-weight-light m-0 text-center fs-16">Создание и продвижение: <a href="https://site100.ru"
 						target="_blank">site<span class="text-danger">100</span>.ru</a></p>
 			</div>

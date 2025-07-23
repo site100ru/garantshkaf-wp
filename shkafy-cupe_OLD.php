@@ -1,7 +1,11 @@
 <?php
 
 /**
+<<<<<<< HEAD
  * Template Name: Шкафы-купе
+=======
+ * Template Name: Шкафы-купе old
+>>>>>>> ac4e19af7f075e5af1e904bbe6934eb440a71c4f
  * Template Post Type: page
  */
 
