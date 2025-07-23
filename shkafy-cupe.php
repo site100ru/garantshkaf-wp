@@ -3,6 +3,7 @@
 /**
  * Template Name: Шкафы-купе
  * Template Post Type: page
+ * Description: Test 3
  */
 
 include 'header.php';
