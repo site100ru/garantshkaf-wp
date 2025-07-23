@@ -3,6 +3,7 @@
 	/**
 	 * Template Name: Главная
 	 * Template Post Type: page
+	 * Description: Test 2
 	 */
 	
 	session_start();
