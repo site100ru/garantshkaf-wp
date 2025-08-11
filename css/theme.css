@@ -312,6 +312,22 @@ a.btn.btn-danger:focus {
 	padding-right: 0;
 }
 
+.navbar-light .navbar-nav .menu-item .nav-link {
+	transition: color 0.3s ease;
+}
+
+.navbar-light .navbar-nav .menu-item .nav-link:hover {
+	color: #ffe600;
+}
+
+.phone-number {
+	transition: color 0.3s ease;
+}
+
+.phone-number:hover {
+	color: #ffe600 !important;
+}
+
 .navbar-light .navbar-nav .bottom_link {
 	font-family: Gilroy-Medium;
 	font-size: 14px;
@@ -810,7 +826,7 @@ a.btn.btn-danger:focus {
 /*** PORTFOLIO SECTION ***/
 .portfolio-section .carousel-item {
 	overflow: hidden;
-	border-radius: 25px;
+	border-radius: var(--bs-border-radius) !important;
 }
 
 .portfolio-section .single-product-img {
@@ -2288,6 +2304,12 @@ footer#footer a {
 	color: #ffffff;
 	display: block;
 	text-decoration: none;
+	transition: color 0.3s ease;
+}
+
+footer#footer ul li a:hover,
+footer#footer a:hover {
+	color: #ffe600 !important;
 }
 
 .social a img {
@@ -2319,6 +2341,7 @@ div#footer1 a {
 div#footer1 a:hover {
 	display: inline;
 	border-bottom: 1px solid #fff;
+	color: inherit !important;
 }
 /*** END FOOTER ***/
 
@@ -3099,6 +3122,11 @@ li.nav-item:first-child a.nav-link {
 	font-family: Gilroy-Medium;
 	font-size: 14px;
 	color: #000;
+	transition: color 0.3s ease;
+}
+
+#sliding-header .nav-link:hover {
+	color: #ffe600;
 }
 
 #sliding-header .mobile-item .top-menu-tel {
