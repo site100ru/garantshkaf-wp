@@ -488,7 +488,7 @@ include 'header.php';
 														<div class="carousel-item <?php echo $index === 0 ? 'active' : ''; ?>">
 															<a href="#" onclick="openGallery(<?php echo $portfolio['start_index'] + $index; ?>); return false;">
 																<div class="single-product-img approximation position-relative">
-																	<img src="<?php echo $img_url; ?>" class="shadow rounded w-100" alt="..." loading="lazy">
+																	<img src="<?php echo $img_url; ?>" class="rounded w-100" alt="..." loading="lazy">
 																	<div class="magnifier"></div>
 																</div>
 															</a>
@@ -510,7 +510,7 @@ include 'header.php';
 											<div>
 												<a href="#" onclick="openGallery(<?php echo $portfolio['start_index']; ?>); return false;">
 													<div class="single-product-img approximation position-relative">
-														<img src="<?php echo $portfolio['images'][0]; ?>" class="shadow rounded w-100" alt="..."
+														<img src="<?php echo $portfolio['images'][0]; ?>" class="rounded w-100" alt="..."
 															loading="lazy">
 														<div class="magnifier"></div>
 													</div>
