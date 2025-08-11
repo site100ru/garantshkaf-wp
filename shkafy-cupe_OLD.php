@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Template Name: Шкафы-купе
+ * Template Name: Шкафы-купе old
  * Template Post Type: page
  */
 
