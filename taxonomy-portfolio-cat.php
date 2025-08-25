@@ -310,7 +310,6 @@
 
 
 <!-- Portfolio -->
-<?php /*
 <section class="portfolio-section pt-4 bg-white" style="padding-bottom: 145px;">
 	<div class="container">
 		<div class="row">
@@ -467,7 +466,7 @@
 								<button id="ind-<?php echo $post->ID; ?>-<?php echo $count2; ?>" type="button" data-bs-target="#gallery-<?php echo $post->ID; ?>" data-bs-slide-to="<?php echo $count2; ?>" aria-label="Slide 3"></button>
 								
 							<?php $count2 = $count2 + 1; }
-						}
+						}*/
 						
 						
 						
@@ -507,7 +506,7 @@
 								</div>
 							</div>
 							
-						<?php  $count2 = $count2 + 1; } 
+						<?php  $count2 = $count2 + 1; } */
 						
 						
 						$count2 = 0;
@@ -543,6 +542,7 @@
 
 
 <script>
+	/* Функция открытия галереи */
 	function galleryOn(gal, img) {
 		var gallery = gal; // Получаем ID галереи
 		var image = img; // Получаем ID картинки
@@ -631,7 +631,7 @@
 				
 				$count2 = $count2 + 1;
 			}
-		} wp_reset_postdata();
+		} wp_reset_postdata(); */
 		
 		
 		foreach( $posts as $post ) {
@@ -645,291 +645,9 @@
 		} wp_reset_postdata(); ?>
 		
 	}
-</script> 
-*/ ?>
-		
-<?php
-// Получаем текущую категорию
-$obj = get_queried_object();
-$portfolio_cat = $obj->slug;
-
-// Получаем записи портфолио для текущей категории
-$args = [
-	'post_type'      => 'portfolio',
-	'numberposts'    => 999,
-	'posts_per_page' => 999,
-	'portfolio-cat'  => $portfolio_cat
-];
-
-$query = new WP_Query($args);
-$all_images = []; // Массив всех изображений
-$portfolio_data = []; // Данные портфолио
-$image_index = 0; // Глобальный индекс изображений
-
-// Собираем все изображения в один массив
-while ($query->have_posts()):
-	$query->the_post();
-	$portfolio_images = [];
-
-	// Собираем изображения текущего портфолио
-	for ($i = 1; $i <= 9; $i++) {
-		$img_url = get_post_meta($post->ID, '_img-' . $i, true);
-		if ($img_url) {
-			$portfolio_images[] = $img_url;
-			$all_images[] = [
-				'url' => $img_url,
-				'portfolio_id' => $post->ID,
-				'portfolio_title' => get_the_title()
-			];
-		}
-	}
-
-	// Сохраняем данные портфолио
-	if (!empty($portfolio_images)) {
-		$portfolio_data[] = [
-			'id' => $post->ID,
-			'title' => get_the_title(),
-			'images' => $portfolio_images,
-			'start_index' => $image_index // С какого индекса начинается в общем массиве
-		];
-		$image_index += count($portfolio_images);
-	}
-endwhile;
-wp_reset_postdata();
-?>
-
-<!-- Portfolio -->
-<section class="portfolio-section pt-4 bg-white" style="padding-bottom: 145px;">
-	<div class="container">
-		<div class="row">
-			<div class="col">
-				<div class="breadcrumbs">
-					<nav class="woocommerce-breadcrumb" itemprop="breadcrumb">
-						<a href="/"><img src="<?php echo get_template_directory_uri(); ?>/img/ico/breadcrumbs-ico.svg"></a> / <a href="#">Наши работы</a>
-					</nav>
-				</div>
-			</div>
-		</div>
-		<div class="row">
-			<div class="col">
-				<div class="row">
-					<div class="col text-center">
-						<h2 class="section-title">Наши работы</h2>
-						<svg class="mb-5" width="62" height="14" viewBox="0 0 62 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-							<rect x="48" width="14" height="14" rx="3" fill="#DC3545"></rect>
-							<rect x="24" width="14" height="14" rx="3" fill="#DC3545"></rect>
-							<rect width="14" height="14" rx="3" fill="#DC3545"></rect>
-						</svg>
-					</div>
-				</div>
-				<div class="row">
-					<div class="col text-center mb-4 mb-md-5">
-						<div class="nav-scroller mb-0" style="text-transform: uppercase; font-family: 'HelveticaNeueCyr-Light'; font-weight: bold;">
-							<ul class="nav justify-content-md-center d-flex m-auto">
-								<li class="nav-item">
-									<a class="nav-link" href="https://garantshkaf.ru/portfolio/">Все</a>
-								</li>
-								<?php
-									$obj = get_queried_object();
-									$current_category_name = $obj->name;
-									
-									$args = [
-										'taxonomy' => ['portfolio-cat'],
-										'orderby'  => 'slug',
-										'order'    => 'ASC',
-									];
-									
-									$terms = get_terms($args);
-									
-									foreach($terms as $term) { ?>
-										<li class="nav-item">
-											<a class="nav-link<?php if ($current_category_name == $term->name) { echo ' active'; } ?>" href="<?php echo get_term_link($term->term_id); ?>"><?php echo $term->name; ?></a>
-										</li>
-									<?php }
-								?>
-							</ul>
-						</div>
-						<div class="d-md-none text-center mb-4">
-							<img src="<?php echo get_template_directory_uri(); ?>/img/ico/left-right-finger.svg" style="opacity: 1; max-width: 25px;">
-						</div>
-					</div>
-				</div>
-				<div class="row">
-					<?php foreach ($portfolio_data as $portfolio): ?>
-						<div class="col-md-4">
-							<?php $image_count = count($portfolio['images']); ?>
-
-							<?php if ($image_count > 1): ?>
-								<!-- Карусель для нескольких изображений -->
-								<div id="carousel-<?php echo $portfolio['id']; ?>" class="carousel slide mb-4" data-bs-ride="carousel"
-									data-bs-interval="999999999">
-									<!-- Индикаторы показываем только если больше 1 изображения -->
-									<div class="carousel-indicators" style="bottom: 5%;">
-										<?php for ($i = 0; $i < $image_count; $i++): ?>
-											<button type="button" data-bs-target="#carousel-<?php echo $portfolio['id']; ?>"
-												data-bs-slide-to="<?php echo $i; ?>" <?php echo $i === 0 ? 'class="active"' : ''; ?>
-												aria-label="Slide <?php echo $i + 1; ?>"></button>
-										<?php endfor; ?>
-									</div>
-
-									<div class="carousel-inner rounded">
-										<?php foreach ($portfolio['images'] as $index => $img_url): ?>
-											<div class="carousel-item <?php echo $index === 0 ? 'active' : ''; ?>" data-bs-interval="999999999">
-												<a href="#" onclick="openGallery(<?php echo $portfolio['start_index'] + $index; ?>); return false;">
-													<div class="single-product-img approximation position-relative">
-														<img src="<?php echo $img_url; ?>" class="shadow rounded" alt="..." loading="lazy">
-														<div class="magnifier"></div>
-													</div>
-												</a>
-											</div>
-										<?php endforeach; ?>
-									</div>
-
-									<button class="carousel-control-prev" type="button"
-										data-bs-target="#carousel-<?php echo $portfolio['id']; ?>" data-bs-slide="prev">
-										<span class="carousel-control-prev-icon"></span>
-									</button>
-									<button class="carousel-control-next" type="button"
-										data-bs-target="#carousel-<?php echo $portfolio['id']; ?>" data-bs-slide="next">
-										<span class="carousel-control-next-icon"></span>
-									</button>
-								</div>
-							<?php else: ?>
-								<!-- Одно изображение без карусели и индикаторов -->
-								<div class="mb-4">
-									<a href="#" onclick="openGallery(<?php echo $portfolio['start_index']; ?>); return false;">
-										<div class="single-product-img approximation position-relative">
-											<img src="<?php echo $portfolio['images'][0]; ?>" class="shadow rounded" alt="..." loading="lazy">
-											<div class="magnifier"></div>
-										</div>
-									</a>
-								</div>
-							<?php endif; ?>
-						</div>
-					<?php endforeach; ?>
-				</div>
-			</div>
-		</div>
-	</div>
-</section>
-<!-- /Portfolio -->
-
-<!-- Единое модальное окно для всех изображений -->
-<div id="galleryModal"
-	style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.9); z-index: 9999;">
-	<div id="mainGallery" class="carousel slide h-100" data-bs-ride="carousel" data-bs-interval="999999999">
-		<div class="carousel-indicators">
-			<?php foreach ($all_images as $index => $image): ?>
-				<button type="button" data-bs-target="#mainGallery" data-bs-slide-to="<?php echo $index; ?>"
-					aria-label="Slide <?php echo $index + 1; ?>"></button>
-			<?php endforeach; ?>
-		</div>
-
-		<div class="carousel-inner h-100">
-			<?php foreach ($all_images as $index => $image): ?>
-				<div class="carousel-item h-100" data-bs-interval="999999999">
-					<div class="d-flex align-items-center justify-content-center h-100">
-						<img src="<?php echo $image['url']; ?>" class="img-fluid" style="max-width: 90vw; max-height: 90vh;"
-							alt="<?php echo $image['portfolio_title']; ?>">
-					</div>
-				</div>
-			<?php endforeach; ?>
-		</div>
-
-		<button class="carousel-control-prev" type="button" data-bs-target="#mainGallery" data-bs-slide="prev">
-			<span class="carousel-control-prev-icon"></span>
-		</button>
-		<button class="carousel-control-next" type="button" data-bs-target="#mainGallery" data-bs-slide="next">
-			<span class="carousel-control-next-icon"></span>
-		</button>
-	</div>
-
-	<!-- Кнопка закрытия -->
-	<button type="button" onclick="closeGallery();" class="btn-close btn-close-white"
-		style="position: fixed; top: 25px; right: 25px; z-index: 99999;"></button>
-</div>
-
-<script>
-	let galleryCarousel = null;
-
-	// Простые функции для управления галереей
-	function openGallery(startIndex) {
-		const modal = document.getElementById('galleryModal');
-		const carouselElement = document.getElementById('mainGallery');
-
-		// Показываем модальное окно
-		modal.style.display = 'block';
-
-		// Уничтожаем предыдущий экземпляр карусели если есть
-		if (galleryCarousel) {
-			galleryCarousel.dispose();
-		}
-
-		// Сначала устанавливаем активные элементы
-		updateActiveIndicator(startIndex);
-
-		// Создаем новый экземпляр карусели
-		galleryCarousel = new bootstrap.Carousel(carouselElement, {
-			interval: false,
-			wrap: true
-		});
-	}
-
-	function closeGallery() {
-		const modal = document.getElementById('galleryModal');
-		modal.style.display = 'none';
-
-		// Уничтожаем карусель при закрытии
-		if (galleryCarousel) {
-			galleryCarousel.dispose();
-			galleryCarousel = null;
-		}
-	}
-
-	function updateActiveIndicator(index) {
-		// Убираем active у всех индикаторов
-		document.querySelectorAll('#mainGallery .carousel-indicators button').forEach(btn => {
-			btn.classList.remove('active');
-		});
-
-		// Убираем active у всех слайдов
-		document.querySelectorAll('#mainGallery .carousel-item').forEach(item => {
-			item.classList.remove('active');
-		});
-
-		// Добавляем active к нужным элементам
-		const indicators = document.querySelectorAll('#mainGallery .carousel-indicators button');
-		const slides = document.querySelectorAll('#mainGallery .carousel-item');
-
-		if (indicators[index]) indicators[index].classList.add('active');
-		if (slides[index]) slides[index].classList.add('active');
-	}
-
-	// Закрытие по клику на фон
-	document.getElementById('galleryModal').addEventListener('click', function (e) {
-		if (e.target === this) {
-			closeGallery();
-		}
-	});
-
-	// Закрытие по ESC и навигация стрелками
-	document.addEventListener('keydown', function (e) {
-		if (e.key === 'Escape') {
-			closeGallery();
-		}
-
-		// Навигация стрелками только если модальное окно открыто
-		if (document.getElementById('galleryModal').style.display === 'block' && galleryCarousel) {
-			if (e.key === 'ArrowLeft') {
-				e.preventDefault();
-				galleryCarousel.prev();
-			} else if (e.key === 'ArrowRight') {
-				e.preventDefault();
-				galleryCarousel.next();
-			}
-		}
-	});
 </script>
+		
+		
 		
 <div id="sp-contacts"></div>
 <footer id="footer">
