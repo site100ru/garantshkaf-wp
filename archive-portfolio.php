@@ -88,10 +88,14 @@ include 'header.php';
 												<img src="<?php echo get_template_directory_uri(); ?>/img/ico/telegram-ico.svg" />
 											</a>
 										</li>
-										<li class="nav-item">
-											<a class="nav-link ico-button" href="https://wa.me/79856445775?web=1&amp;app_absent=1"
-												target="_blank">
+										<li class="nav-item me-2">
+											<a class="nav-link ico-button" href="https://wa.me/79856445775?web=1&amp;app_absent=1" target="_blank">
 												<img src="<?php echo get_template_directory_uri(); ?>/img/ico/whatsapp-ico.svg" />
+											</a>
+										</li>
+										<li class="nav-item">
+											<a class="nav-link ico-button" href="https://max.ru/u/f9LHodD0cOJpxVina4POaWorB_iFOHaIWOB_hVCMqBZT5lketcgqeZcBwAc" target="_blank">
+												<img src="<?php echo get_template_directory_uri(); ?>/img/ico/max-ico.svg" />
 											</a>
 										</li>
 									</ul>
@@ -126,7 +130,7 @@ include 'header.php';
 												<ul id="%1$s" class="navbar-nav align-items-center ms-auto mb-2 mb-lg-0 %2$s">%3$s
 													<!-- Mobile menu -->
 													<li class="nav-item d-lg-none mobile-item">
-														<a  class="nav-link active"  href="#" data-bs-toggle="modal" data-bs-target="#callback">
+														<a  class="nav-link active"  href="#" data-bs-toggle="modal" data-bs-target="#callback-measurer">
 															Вызов замерщика (Бесплатно)
 														</a>
 													</li>
@@ -147,8 +151,11 @@ include 'header.php';
 														<a class="ico-button pe-2" href="https://wa.me/79856445775?web=1&app_absent=1" target="blank">
 															<img src="' . get_template_directory_uri() . '/img/ico/whatsapp-ico.svg"/>
 														</a>
-														<a class="ico-button pe-0" href="https://t.me/+79856445775" target="blank">
-															<img src="' . get_template_directory_uri() . '/img/ico/telegram-ico.svg" />
+														<a class="ico-button pe-2" href="https://t.me/+79856445775" target="blank">
+															<img src="'.get_template_directory_uri().'/img/ico/telegram-ico.svg" />
+														</a>
+														<a class="ico-button pe-0" href="https://max.ru/u/f9LHodD0cOJpxVina4POaWorB_iFOHaIWOB_hVCMqBZT5lketcgqeZcBwAc" target="blank">
+															<img src="'.get_template_directory_uri().'/img/ico/max-ico.svg" />
 														</a>
 													</li>
 													<!-- End mobile menu -->
@@ -236,10 +243,10 @@ include 'header.php';
 								<input type="text" name="tel" id="phone_mask_3" class="form-control telMask" style="margin-top: 15px"
 									placeholder="Ваш телефон" required />
 							</p>
-							<!--label class="form-check-label" for="exampleCheck11">
+							<!-- <label class="form-check-label" for="exampleCheck11">
 								<input type="checkbox" class="form-check-input" id="exampleCheck11" checked>
 								Я согласен на обработку моих <a href="#">персональных данных</a>.
-							</label-->
+							</label> -->
 
 							<input type="hidden" id="g-recaptcha-response-order-2" name="g-recaptcha-response">
 
@@ -285,7 +292,7 @@ include 'header.php';
 								<ul id="%1$s" class="navbar-nav ms-auto mb-2 mb-lg-0 %2$s">%3$s
 									<!-- Mobile menu -->
 									<li class="nav-item d-lg-none mobile-item">
-										<a  class="nav-link active modal-link"  href="#"  data-bs-toggle="modal"  data-bs-target="#callback">
+										<a  class="nav-link active modal-link"  href="#"  data-bs-toggle="modal"  data-bs-target="#callback-measurer">
 											Вызов замерщика (Бесплатно)
 										</a>
 									</li>
@@ -304,8 +311,11 @@ include 'header.php';
 										<a class="ico-button pe-2 text-decoration-none" href="https://wa.me/79856445775?web=1&app_absent=1" target="blank">
 											<img src="' . get_template_directory_uri() . '/img/ico/whatsapp-ico.svg" />
 										</a>
-										<a class="ico-button pe-0 text-decoration-none" href="https://t.me/+79856445775" target="blank">
-											<img src="' . get_template_directory_uri() . '/img/ico/telegram-ico.svg" />
+										<a class="ico-button pe-2 text-decoration-none" href="https://t.me/+79856445775" target="blank">
+											<img src="'.get_template_directory_uri().'/img/ico/telegram-ico.svg" />
+										</a>
+										<a class="ico-button pe-0 text-decoration-none" href="https://max.ru/u/f9LHodD0cOJpxVina4POaWorB_iFOHaIWOB_hVCMqBZT5lketcgqeZcBwAc" target="blank">
+											<img src="'.get_template_directory_uri().'/img/ico/max-ico.svg" />
 										</a>
 									</li>
 									<!-- End mobile menu -->
@@ -698,7 +708,6 @@ include 'header.php';
 					<div class="col-md-6">
 						<ul>
 							<li><a href="/">Главная</a></li>
-							<li><a href="#sp-video">Видеопрезентация</a></li>
 							<li><a href="/portfolio" class="active">Наши работы</a></li>
 							<li><a href="#sp-about">О нас</a></li>
 							<li><a href="#sp-testimonials">Отзывы</a></li>
@@ -737,6 +746,9 @@ include 'header.php';
 					<a href="https://t.me/+79856445775" target="_blank">
 						<img src="<?php echo get_template_directory_uri(); ?>/img/ico/telegram-ico.svg" class="ico-button" />
 					</a>
+					<a href="https://max.ru/u/f9LHodD0cOJpxVina4POaWorB_iFOHaIWOB_hVCMqBZT5lketcgqeZcBwAc" target="_blank">
+						<img src="<?php echo get_template_directory_uri(); ?>/img/ico/max-ico.svg" class="ico-button" />
+					</a>
 					<!-- a href="#">
 						<img src="<?php echo get_template_directory_uri(); ?>/img/ico/telega.png" class="img-fluid" />
 					</a -->
@@ -757,5 +769,25 @@ include 'header.php';
 		</div>
 	</div>
 </footer>
+
+<script>
+	function replaceAnchorLinks() {
+		const anchors = [
+			'#sp-about',
+			'#sp-testimonials',
+			'#sp-kak-zakazat',
+			'#sp-faq'
+		];
+		const baseUrl = 'https://garantshkaf.ru/';
+
+		anchors.forEach(anchor => {
+			document.querySelectorAll(`a[href="${anchor}"]`).forEach(link => {
+				link.href = baseUrl + anchor;
+			});
+		});
+	}
+
+	document.addEventListener('DOMContentLoaded', replaceAnchorLinks);
+</script>
 
 <?php include 'footer.php'; ?>

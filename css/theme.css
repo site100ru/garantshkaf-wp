@@ -1279,7 +1279,7 @@ a.btn.btn-danger:focus {
 		transform: rotate(360deg);
 		opacity: 1;
 	}
-	24% {
+	19% {
 		background-image: url(../img/ico/callback-button-ico.png);
 		background-position: center;
 		background-repeat: no-repeat;
@@ -1293,7 +1293,7 @@ a.btn.btn-danger:focus {
 		transform: rotate(360deg);
 		opacity: 1;
 	}
-	25% {
+	20% {
 		background-image: url(../img/ico/callback-button-ico.png);
 		background-position: center;
 		background-repeat: no-repeat;
@@ -1306,7 +1306,7 @@ a.btn.btn-danger:focus {
 		-ms-transform: rotate(0deg);
 		opacity: 0;
 	}
-	26% {
+	21% {
 		background-image: url(../img/ico/callback-phone-ico.png);
 		background-position: center;
 		background-repeat: no-repeat;
@@ -1319,7 +1319,7 @@ a.btn.btn-danger:focus {
 		-ms-transform: rotate(0deg);
 		opacity: 0;
 	}
-	27% {
+	22% {
 		background-image: url(../img/ico/callback-phone-ico.png);
 		background-position: center;
 		background-repeat: no-repeat;
@@ -1332,7 +1332,7 @@ a.btn.btn-danger:focus {
 		-ms-transform: rotate(360deg);
 		opacity: 1;
 	}
-	49% {
+	39% {
 		background-image: url(../img/ico/callback-phone-ico.png);
 		background-position: center;
 		background-repeat: no-repeat;
@@ -1345,7 +1345,7 @@ a.btn.btn-danger:focus {
 		-webkit-transform: rotate(360deg);
 		-ms-transform: rotate(360deg);
 	}
-	50% {
+	40% {
 		background-image: url(../img/ico/callback-phone-ico.png);
 		background-position: center;
 		background-repeat: no-repeat;
@@ -1358,7 +1358,7 @@ a.btn.btn-danger:focus {
 		-ms-transform: rotate(0deg);
 		opacity: 0;
 	}
-	51% {
+	41% {
 		background-image: url(../img/ico/callback-whatsapp-ico.svg);
 		background-position: center;
 		background-repeat: no-repeat;
@@ -1369,7 +1369,7 @@ a.btn.btn-danger:focus {
 		transform: rotate(0deg);
 		opacity: 0;
 	}
-	52% {
+	42% {
 		background-image: url(../img/ico/callback-whatsapp-ico.svg);
 		background-position: center;
 		background-repeat: no-repeat;
@@ -1380,7 +1380,7 @@ a.btn.btn-danger:focus {
 		opacity: 1;
 		transform: rotate(360deg);
 	}
-	74% {
+	59% {
 		background-image: url(../img/ico/callback-whatsapp-ico.svg);
 		background-position: center;
 		background-repeat: no-repeat;
@@ -1391,7 +1391,7 @@ a.btn.btn-danger:focus {
 		opacity: 1;
 		transform: rotate(360deg);
 	}
-	75% {
+	60% {
 		background-image: url(../img/ico/callback-whatsapp-ico.svg);
 		background-position: center;
 		background-repeat: no-repeat;
@@ -1403,7 +1403,7 @@ a.btn.btn-danger:focus {
 		transform: rotate(0deg);
 		opacity: 0;
 	}
-	76% {
+	61% {
 		background-image: url(../img/ico/callback-telegram-ico.svg);
 		background-position: center;
 		background-repeat: no-repeat;
@@ -1415,8 +1415,56 @@ a.btn.btn-danger:focus {
 		transform: rotate(0deg);
 		opacity: 0;
 	}
-	77% {
+	62% {
 		background-image: url(../img/ico/callback-telegram-ico.svg);
+		background-position: center;
+		background-repeat: no-repeat;
+		-moz-background-size: cover;
+		-webkit-background-size: cover;
+		-o-background-size: cover;
+		background-size: cover;
+		-webkit-transform: rotate(360deg);
+		transform: rotate(360deg);
+		opacity: 1;
+	}
+	79% {
+		background-image: url(../img/ico/callback-telegram-ico.svg);
+		background-position: center;
+		background-repeat: no-repeat;
+		-webkit-background-size: cover;
+		-moz-background-size: cover;
+		-o-background-size: cover;
+		background-size: cover;
+		-webkit-transform: rotate(360deg);
+		transform: rotate(360deg);
+		opacity: 1;
+	}
+	80% {
+		background-image: url(../img/ico/callback-whatsapp-ico.svg);
+		background-position: center;
+		background-repeat: no-repeat;
+		-webkit-background-size: cover;
+		-moz-background-size: cover;
+		-o-background-size: cover;
+		background-size: cover;
+		-webkit-transform: rotate(0deg);
+		transform: rotate(0deg);
+		opacity: 0;
+	}
+	81% {
+		background-image: url(../img/ico/callback-max-ico.png);
+		background-position: center;
+		background-repeat: no-repeat;
+		-moz-background-size: cover;
+		-webkit-background-size: cover;
+		-o-background-size: cover;
+		background-size: cover;
+		-webkit-transform: rotate(0deg);
+		transform: rotate(0deg);
+		opacity: 0;
+	}
+	82% {
+		background-image: url(../img/ico/callback-max-ico.png);
 		background-position: center;
 		background-repeat: no-repeat;
 		-moz-background-size: cover;
@@ -1428,19 +1476,18 @@ a.btn.btn-danger:focus {
 		opacity: 1;
 	}
 	99% {
-		background-image: url(../img/ico/callback-telegram-ico.svg);
+		background-image: url(../img/ico/callback-max-ico.png);
 		background-position: center;
 		background-repeat: no-repeat;
-		-webkit-background-size: cover;
-		-moz-background-size: cover;
-		-o-background-size: cover;
 		background-size: cover;
-		-webkit-transform: rotate(360deg);
-		transform: rotate(360deg);
+		-moz-background-size: cover;
+		-webkit-background-size: cover;
+		-o-background-size: cover;
 		opacity: 1;
+		transform: rotate(360deg);
 	}
 	100% {
-		background-image: url(../img/ico/callback-telegram-ico.svg);
+		background-image: url(../img/ico/callback-max-ico.png);
 		background-position: center;
 		background-repeat: no-repeat;
 		-webkit-background-size: cover;
@@ -1592,6 +1639,36 @@ a.btn.btn-danger:focus {
 	height: 30px;
 	filter: invert();
 	background: url(../img/ico/callback-telegram-ico.svg) center no-repeat;
+	background-size: contain;
+	-moz-background-size: contain;
+	-webkit-background-size: contain;
+	-o-background-size: contain;
+}
+
+.callback-max-button {
+	width: 50px;
+	height: 50px;
+	background: var(--corporate-color-1);
+	border-radius: 50%;
+	cursor: pointer;
+	padding-top: 10px;
+	padding-left: 10px;
+	position: absolute;
+	left: 10px;
+	top: 10px;
+	z-index: 1;
+	transition: 0.25s;
+}
+
+.callback-max-button:hover {
+	background: var(--corporate-color-hover-1);
+}
+
+.callback-max-button-ico {
+	width: 40px;
+	height: 40px;
+	filter: invert();
+	background: url(../img/ico/callback-max-ico.png) center no-repeat;
 	background-size: contain;
 	-moz-background-size: contain;
 	-webkit-background-size: contain;
