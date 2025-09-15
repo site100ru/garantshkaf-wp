@@ -335,6 +335,20 @@ a.btn.btn-danger:focus {
 	padding-left: 0;
 }
 
+.home-section .bg-ligh {
+	background-color: #fff;
+}
+
+.home-section .bg-ligh a {
+	--bs-text-opacity: 1;
+	color: rgba(var(--bs-dark-rgb), var(--bs-text-opacity)) !important;
+	transition: color 0.3s ease;
+}
+
+.home-section .bg-ligh a:hover {
+	color: #ffe600 !important;
+}
+
 .home-section .item-none {
 	display: inline;
 }
@@ -886,6 +900,11 @@ a.btn.btn-danger:focus {
 	opacity: 0.75;
 	transition: 0.25s;
 	font-size: 14px;
+	transition: color 0.3s ease;
+}
+
+.portfolio-section .nav-item a:hover {
+	color: #ffe600;
 }
 
 .portfolio-section .nav-item a.active {
