@@ -1282,7 +1282,7 @@ include 'header.php';
 								<img src="<?php echo get_stylesheet_directory_uri(); ?>/img/ico/question.png" class="img-fluid" />
 							</div>
 							<div class="col-10">
-								<p class="mb-2">Для расчета опишите двери-купе своими словами. При возможности прикрепите изображение
+								<p class="mb-2">Для расчета опишите шкаф-купе своими словами. При возможности прикрепите изображение
 								</p>
 								<form method="post" action="<?php echo get_stylesheet_directory_uri(); ?>/mails/get_calculate.php"
 									enctype="multipart/form-data">

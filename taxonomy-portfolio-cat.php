@@ -10,11 +10,11 @@
 ?>
 <!-- SECTION HOME -->
 <div id="sp-home"></div>
-<section class="home-section home-section-shafy-cupe">
+<section class="home-section home-section-shafy-cupe" style="background-position: center;">
 	<div class="container" id="main-divider">
 		
 		<div class="row row-nav">
-			<div class="col-md-12 d-flex justify-content-end col-nav">
+			<div class="col-md-12 d-flex justify-content-end col-nav" style="background-color:#F5F5F5; border-bottom: 1px solid #E1E1E1;">
 				<nav class="navbar navbar-expand-lg navbar-dark d-none d-lg-block py-0">
 					<div class="container-fluid px-0">
 						<!-- <a class="navbar-brand" href="#"><img src="<?php echo get_template_directory_uri(); ?>/img/ico/logo-dark.svg" class="img-fluid" style="max-width: 225px;"></a> -->
@@ -29,7 +29,7 @@
 								<div class="collapse navbar-collapse" id="navbarSupportedContent">
 									<ul class="navbar-nav ms-auto align-items-center top-navbar">
 										<li class="nav-item me-3">
-											<a class="nav-link" href="archive-product-portfolio.html#">
+											<a class="nav-link text-dark" href="archive-product-portfolio.html#">
 												<div class="d-flex nav-link-inner">
 													<div class="nav-li-float-left">
 														<img src="<?php echo get_template_directory_uri(); ?>/img/ico/location-ico.svg" />
@@ -40,7 +40,7 @@
 											</a>
 										</li>
 										<li class="nav-item me-3">
-											<a class="nav-link" href="archive-product-portfolio.html#">
+											<a class="nav-link text-dark" href="archive-product-portfolio.html#">
 												<div class="d-flex nav-link-inner">
 													<div class="nav-li-float-left">
 														<img src="<?php echo get_template_directory_uri(); ?>/img/ico/clock-ico.svg" />
@@ -53,7 +53,7 @@
 											</a>
 										</li>
 										<li class="nav-item me-3">
-											<a href="archive-product-portfolio.html#" class="nav-link" data-bs-toggle="modal" data-bs-target="#callback">
+											<a href="archive-product-portfolio.html#" class="nav-link text-dark" data-bs-toggle="modal" data-bs-target="#callback">
 												<div class="d-flex nav-link-inner">
 													<div class="nav-li-float-left">
 														<img src="<?php echo get_template_directory_uri(); ?>/img/ico/callback-ico.svg" />
@@ -66,7 +66,7 @@
 											</a>
 										</li>
 										<li class="nav-item me-4">
-											<a class="top-menu-tel nav-link"  href="tel:89856445775">
+											<a class="top-menu-tel nav-link text-dark"  href="tel:89856445775">
 												<div class="d-flex nav-link-inner">
 													<div class="nav-li-float-left">
 														<img src="<?php echo get_template_directory_uri(); ?>/img/ico/mobile-phone-ico.svg" />
@@ -101,13 +101,13 @@
 				</nav>
 			</div><!-- /.col-md-12 -->
 
-			<div class="container">
+			<div class="container" style="background-color:#FFFFFF;">
 				<div class="row row-bottom-nav d-flex">
 					<div class="col-md-12 bottom-nav">
 						<nav class="header-nav-bottom navbar navbar-expand-lg navbar-light header-bottom">
 							<div class="container bottom-container">
 								<a class="navbar-brand" href="#">
-									<img src="<?php echo get_template_directory_uri(); ?>/img/ico/logo.svg" />
+									<img src="<?php echo get_template_directory_uri(); ?>/img/ico/logo-dark-theme.svg" />
 								</a>
 								<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mobail-header-collapse" aria-controls="mobail-header-collapse" aria-expanded="false" aria-label="Toggle navigation">
 									<span class="navbar-toggler-icon"></span>
@@ -167,85 +167,15 @@
 		</div><!-- ./row -->
 	
 	
-		<div class="container">
-			<div class="row">
-				<div class="col-lg-7 offset-lg-1">
-					<h1>Наши <span>работы</span></h1>
-					<ul class="main-list">
-						<li>
-							<div class="row">
-								<div class="col-2 col-md-1 offset-md-1">
-									<img src="<?php echo get_template_directory_uri(); ?>/img/ico/check.png" />
-								</div>
-								<div class="col-10 col-md-7">
-									Замер и дизайн-проект — <span>бесплатно!</span>
-								</div>
-							</div>
-						</li>
-						<li>
-							<div class="row">
-								<div class="col-2 col-md-1 offset-md-1">
-									<img src="<?php echo get_template_directory_uri(); ?>/img/ico/check.png" />
-								</div>
-								<div class="col-10 col-md-7">
-									Доставка и монтаж — <span>бесплатно!</span>
-								</div>
-							</div>
-						</li>
-						<li>
-							<div class="row">
-								<div class="col-2 col-md-1 offset-md-1">
-									<img src="<?php echo get_template_directory_uri(); ?>/img/ico/check.png" />
-								</div>
-								<div class="col-10 col-md-8">
-									Беспроцентная <span>рассрочка&nbsp;на&nbsp;год!</span>
-								</div>
-							</div>
-						</li>
-						<li>
-							<div class="row">
-								<div class="col-2 col-md-1 offset-md-1">
-									<img src="<?php echo get_template_directory_uri(); ?>/img/ico/check.png" />
-								</div>
-								<div class="col-10 col-md-7">
-									Работаем в Москве и Московской области
-								</div>
-							</div>
-						</li>
-					</ul>
-				</div>
-				<div class="col-lg-4 px-0">
-					<div class="rasschet">
-						<h2 class="forma">Рассчитаем точную стоимость шкафа-купе за 15 минут!</h2>
-						<p>Опишите шкаф-купе своими словами. При возможности прикрепите изображение</p>
-						<form  method="post"  action="<?php echo get_template_directory_uri(); ?>/mails/get_calculate.php"  enctype="multipart/form-data">
-							<textarea  type="text"  rows="3"  name="mes"  class="form-control"  placeholder="Например: длина, ширина, глубина, количество дверей, материал дверей, форма, вид шкафа и т.д."  style="height: auto; margin-top: 15px; margin-bottom: 15px"></textarea>
-							<p class="input-group custom-file-button">
-								<label class="input-group-text" for="inputGroupFile">
-							  Прикрепить</label>
-								<input  type="file"  name="file[]"  class="form-control"  id="inputGroupFile"  accept=".jpg,.jpeg,.png,.pdf,.heic"  multiple/>
-							</p>
-							<p>
-								<input  type="text"  name="name"  class="form-control"  placeholder="Ваше Имя"/>
-							</p>
-							<p>
-								<input  type="text"  name="tel"  id="phone_mask_3"  class="form-control telMask"  style="margin-top: 15px"  placeholder="Ваш телефон"  required/>
-							</p>
-							<!-- <label class="form-check-label" for="exampleCheck11">
-								<input type="checkbox" class="form-check-input" id="exampleCheck11" checked>
-								Я согласен на обработку моих <a href="#">персональных данных</a>.
-							</label> -->
-
-							<input type="hidden" id="g-recaptcha-response-order-1-home" name="g-recaptcha-response">
-							
-							<button  type="submit"  class="btn btn-danger"  style="width: 100%">
-								Отправить
-							</button>
-						</form>
-					</div>
-				</div>
+	<header id="archive-portfolio-header">
+	<div class="container">
+		<div class="row align-items-center text-start">
+			<div class="col-lg-10 py-5">
+				<h1 class="my-5">Наши работы</h1>
 			</div>
-		</div><!-- /.container -->
+		</div>
+	</div>
+</header>
 	</div><!-- /.container #main-divider -->
 
 	<header id="sliding-header" class="shadow">
@@ -364,6 +294,7 @@
 									$terms = get_terms( $args );
 									
 									foreach( $terms as $term ) { ?>
+										<li class="nav-item d-none d-xl-inline"><span class="nav-link px-0"><img style="margin-bottom: 5px;" src="<?php echo get_template_directory_uri(); ?>/img/ico/menu-decoration.svg" alt=""></span></li>
 										<li class="nav-item">
 											<a class="nav-link<?php if ( $current_category_name == $term->name ) { echo ' active'; } ?>" href="<?php echo get_term_link( $term->term_id ); ?>"><?php echo $term->name; ?></a>
 										</li>
