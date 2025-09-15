@@ -101,7 +101,7 @@ include 'header.php';
 				</nav>
 			</div><!-- /.col-md-12 -->
 
-			<div class="container" style="background-color:#FFFFFF;">
+			<div class="container bg-ligh">
 				<div class="row row-bottom-nav d-flex">
 					<div class="col-md-12 bottom-nav">
 						<nav class="header-nav-bottom navbar navbar-expand-lg navbar-light header-bottom">
