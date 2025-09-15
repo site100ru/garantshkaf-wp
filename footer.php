@@ -28,6 +28,12 @@
 			<div class="callback-telegram-button-ico"></div>
 		</a>
 	</div>
+	<div id="maxBtn" class="callback-max-button" data-bs-toggle="tooltip" data-bs-placement="left"
+		data-bs-custom-class="custom-tooltip" data-bs-title="Max">
+		<a href="https://max.ru/u/f9LHodD0cOJpxVina4POaWorB_iFOHaIWOB_hVCMqBZT5lketcgqeZcBwAc" target="blank">
+			<div class="callback-max-button-ico"></div>
+		</a>
+	</div>
 </div>
 <!-- /Callback button HTML -->
 
@@ -67,6 +73,9 @@
 
 			document.getElementById('telegramBtn').style.top = "-240px";
 			document.getElementById('telegramBtn').style.opacity = "1";
+
+			document.getElementById('maxBtn').style.top = "-300px";
+			document.getElementById('maxBtn').style.opacity = "1";
 		} else {
 			document.getElementById('callbackBtn').style.animation = "waves linear 2s infinite";
 			document.getElementById('btnIco').style.animation = "change linear 16s infinite";
@@ -93,6 +102,9 @@
 
 			document.getElementById('telegramBtn').style.top = "0px";
 			document.getElementById('telegramBtn').style.opacity = "0";
+			
+			document.getElementById('maxBtn').style.top = "0px";
+			document.getElementById('maxBtn').style.opacity = "0";
 		}
 	}
 </script>
@@ -124,6 +136,30 @@
 </div>
 <!-- End callback modal -->
 
+<!-- Callback modal -->
+<div class="modal fade" id="callback-measurer" tabindex="-1" aria-labelledby="modalOrderLabel-1" aria-hidden="true">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h5 class="modal-title" id="modalOrderLabel-1">
+					Вызов замерщика
+				</h5>
+				<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+			</div>
+			<div class="modal-body">
+				<form method="post" action="<?php echo get_stylesheet_directory_uri(); ?>/mails/callback.php">
+					<p><input type="text" name="name" class="form-control" placeholder="Ваше имя" /></p>
+					<p><input type="text" id="phone_mask_2" name="tel" class="form-control telMask" placeholder="Ваш телефон"
+							required /></p>
+
+					<input type="hidden" id="g-recaptcha-response-callback" name="g-recaptcha-response">
+					<button type="submit" class="btn btn-danger" style="width: 100%">Отправить</button>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- End callback modal -->
 
 <!-- Modal Want This -->
 <div class="modal fade" id="want-this" tabindex="-1" aria-labelledby="modalOrderLabel-2" aria-hidden="true">

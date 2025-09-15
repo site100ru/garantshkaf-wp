@@ -89,10 +89,14 @@ include 'header.php';
 												<img src="<?php echo get_stylesheet_directory_uri(); ?>/img/ico/telegram-ico.svg" />
 											</a>
 										</li>
+										<li class="nav-item me-2">
+											<a class="nav-link ico-button" href="https://wa.me/79856445775?web=1&amp;app_absent=1" target="_blank">
+												<img src="<?php echo get_template_directory_uri(); ?>/img/ico/whatsapp-ico.svg" />
+											</a>
+										</li>
 										<li class="nav-item">
-											<a class="nav-link ico-button" href="https://wa.me/79856445775?web=1&amp;app_absent=1"
-												target="_blank">
-												<img src="<?php echo get_stylesheet_directory_uri(); ?>/img/ico/whatsapp-ico.svg" />
+											<a class="nav-link ico-button" href="https://max.ru/u/f9LHodD0cOJpxVina4POaWorB_iFOHaIWOB_hVCMqBZT5lketcgqeZcBwAc" target="_blank">
+												<img src="<?php echo get_template_directory_uri(); ?>/img/ico/max-ico.svg" />
 											</a>
 										</li>
 									</ul>
@@ -128,7 +132,7 @@ include 'header.php';
 												<ul id="%1$s" class="navbar-nav align-items-center ms-auto mb-2 mb-lg-0 %2$s">%3$s
 													<!-- Mobile menu -->
 													<li class="nav-item d-lg-none mobile-item">
-														<a  class="nav-link active"  href="#" data-bs-toggle="modal" data-bs-target="#callback">
+														<a  class="nav-link active"  href="#" data-bs-toggle="modal" data-bs-target="#callback-measurer">
 															Вызов замерщика (Бесплатно)
 														</a>
 													</li>
@@ -149,8 +153,11 @@ include 'header.php';
 														<a class="ico-button pe-2" href="https://wa.me/79856445775?web=1&app_absent=1" target="blank">
 															<img src="' . get_template_directory_uri() . '/img/ico/whatsapp-ico.svg"/>
 														</a>
-														<a class="ico-button pe-0" href="https://t.me/+79856445775" target="blank">
-															<img src="' . get_template_directory_uri() . '/img/ico/telegram-ico.svg" />
+														<a class="ico-button pe-2" href="https://t.me/+79856445775" target="blank">
+															<img src="'.get_template_directory_uri().'/img/ico/telegram-ico.svg" />
+														</a>
+														<a class="ico-button pe-0" href="https://max.ru/u/f9LHodD0cOJpxVina4POaWorB_iFOHaIWOB_hVCMqBZT5lketcgqeZcBwAc" target="blank">
+															<img src="'.get_template_directory_uri().'/img/ico/max-ico.svg" />
 														</a>
 													</li>
 													<!-- End mobile menu -->
@@ -238,10 +245,10 @@ include 'header.php';
 								<input type="text" name="tel" id="phone_mask_3" class="form-control telMask" style="margin-top: 15px"
 									placeholder="Ваш телефон" required />
 							</p>
-							<label class="form-check-label" for="exampleCheck11">
+							<!-- <label class="form-check-label" for="exampleCheck11">
 								<input type="checkbox" class="form-check-input" id="exampleCheck11" checked>
 								Я согласен на обработку моих <a href="#">персональных данных</a>.
-							</label>
+							</label> -->
 							<input type="hidden" id="g-recaptcha-response-order-1-home" name="g-recaptcha-response">
 							<button type="submit" class="btn btn-danger" style="width: 100%">
 								Отправить
@@ -284,7 +291,7 @@ include 'header.php';
 								<ul id="%1$s" class="navbar-nav ms-auto mb-2 mb-lg-0 %2$s">%3$s
 									<!-- Mobile menu -->
 									<li class="nav-item d-lg-none mobile-item">
-										<a  class="nav-link active modal-link"  href="#"  data-bs-toggle="modal"  data-bs-target="#callback">
+										<a  class="nav-link active modal-link"  href="#"  data-bs-toggle="modal"  data-bs-target="#callback-measurer">
 											Вызов замерщика (Бесплатно)
 										</a>
 									</li>
@@ -303,8 +310,11 @@ include 'header.php';
 										<a class="ico-button pe-2 text-decoration-none" href="https://wa.me/79856445775?web=1&app_absent=1" target="blank">
 											<img src="' . get_template_directory_uri() . '/img/ico/whatsapp-ico.svg" />
 										</a>
-										<a class="ico-button pe-0 text-decoration-none" href="https://t.me/+79856445775" target="blank">
-											<img src="' . get_template_directory_uri() . '/img/ico/telegram-ico.svg" />
+										<a class="ico-button pe-2 text-decoration-none" href="https://t.me/+79856445775" target="blank">
+											<img src="'.get_template_directory_uri().'/img/ico/telegram-ico.svg" />
+										</a>
+										<a class="ico-button pe-0 text-decoration-none" href="https://max.ru/u/f9LHodD0cOJpxVina4POaWorB_iFOHaIWOB_hVCMqBZT5lketcgqeZcBwAc" target="blank">
+											<img src="'.get_template_directory_uri().'/img/ico/max-ico.svg" />
 										</a>
 									</li>
 									<!-- End mobile menu -->
@@ -1086,6 +1096,7 @@ wp_reset_postdata();
 
 
 <!-- Testimonials section -->
+<div id="sp-testimonials"></div>
 <section class="section-testimonials">
 	<div class="container"
 		style="max-width: 1700px; padding-top: 80px; padding-bottom: 50px; border-right: 1px solid rgba(153, 153, 153, 0.9);  border-left: 1px solid rgba(153, 153, 153, 0.9);">
@@ -1165,6 +1176,7 @@ wp_reset_postdata();
 
 
 <!-- Answers section -->
+<div id="sp-faq"></div>
 <section id="answers">
 	<div class="container"
 		style="max-width: 1700px;  border-right: 1px solid rgba(153, 153, 153, 0.9);  border-left: 1px solid rgba(153, 153, 153, 0.9);">
@@ -1475,8 +1487,7 @@ wp_reset_postdata();
 					<div class="col-md-6">
 						<ul>
 							<li><a href="#sp-home">Главная</a></li>
-							<li><a href="#sp-video">Видеопрезентация</a></li>
-							<li><a href="#sp-portfolio">Наши работы</a></li>
+							<li><a href="/portfolio">Наши работы</a></li>
 							<li><a href="#sp-about">О нас</a></li>
 							<li><a href="#sp-testimonials">Отзывы</a></li>
 							<li><a href="#sp-kak-zakazat">Как заказать</a></li>
@@ -1513,6 +1524,9 @@ wp_reset_postdata();
 					</a -->
 					<a href="https://t.me/+79856445775" target="_blank">
 						<img src="<?php echo get_stylesheet_directory_uri(); ?>/img/ico/telegram-ico.svg" class="ico-button" />
+					</a>
+					<a href="https://max.ru/u/f9LHodD0cOJpxVina4POaWorB_iFOHaIWOB_hVCMqBZT5lketcgqeZcBwAc" target="_blank">
+						<img src="<?php echo get_template_directory_uri(); ?>/img/ico/max-ico.svg" class="ico-button" />
 					</a>
 					<!-- a href="#">
 						<img src="<?php echo get_stylesheet_directory_uri(); ?>/img/ico/telega.png" class="img-fluid" />

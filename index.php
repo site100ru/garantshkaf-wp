@@ -131,13 +131,17 @@
 						<div class="col-md-12 d-flex justify-content-end col-nav">
 							<nav class="navbar navbar-expand-lg navbar-dark d-none d-lg-block py-0">
 								<div class="container-fluid px-0">
-									<!-- <a class="navbar-brand" href="#"><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/ico/logo-dark.svg" class="img-fluid" style="max-width: 225px;"></a> -->
-									<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+									<!-- <a class="navbar-brand" href="#"><img src="<?php echo get_template_directory_uri(); ?>/img/ico/logo-dark.svg" class="img-fluid" style="max-width: 225px;"></a> -->
+									<button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+										data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+										aria-label="Toggle navigation">
 										<span class="navbar-toggler-icon"></span>
 									</button>
 									<nav class="header-nav-top navbar navbar-expand-lg navbar-light d-none d-lg-block">
 										<div class="container">
-											<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+											<button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+												data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+												aria-label="Toggle navigation">
 												<span class="navbar-toggler-icon"></span>
 											</button>
 											<div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -146,7 +150,7 @@
 														<a class="nav-link" href="archive-product-portfolio.html#">
 															<div class="d-flex nav-link-inner">
 																<div class="nav-li-float-left">
-																	<img src="<?php echo get_stylesheet_directory_uri(); ?>/img/ico/location-ico.svg" />
+																	<img src="<?php echo get_template_directory_uri(); ?>/img/ico/location-ico.svg" />
 																</div>
 																<div class="nav-li-float-right"><?php echo $address; ?></div>
 																<div style="clear: both"></div>
@@ -157,7 +161,7 @@
 														<a class="nav-link" href="archive-product-portfolio.html#">
 															<div class="d-flex nav-link-inner">
 																<div class="nav-li-float-left">
-																	<img src="<?php echo get_stylesheet_directory_uri(); ?>/img/ico/clock-ico.svg" />
+																	<img src="<?php echo get_template_directory_uri(); ?>/img/ico/clock-ico.svg" />
 																</div>
 																<div class="nav-li-float-right">
 																	Пн - Вс <br />с 8:00 до 22:00
@@ -170,7 +174,7 @@
 														<a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#callback">
 															<div class="d-flex nav-link-inner">
 																<div class="nav-li-float-left">
-																	<img src="<?php echo get_stylesheet_directory_uri(); ?>/img/ico/callback-ico.svg" />
+																	<img src="<?php echo get_template_directory_uri(); ?>/img/ico/callback-ico.svg" />
 																</div>
 																<div class="nav-li-float-right">
 																	Обратный звонок
@@ -180,10 +184,10 @@
 														</a>
 													</li>
 													<li class="nav-item me-4">
-														<a class="top-menu-tel nav-link"  href="tel:89856445775">
+														<a class="top-menu-tel nav-link" href="tel:89856445775">
 															<div class="d-flex nav-link-inner">
 																<div class="nav-li-float-left">
-																	<img src="<?php echo get_stylesheet_directory_uri(); ?>/img/ico/mobile-phone-ico.svg" />
+																	<img src="<?php echo get_template_directory_uri(); ?>/img/ico/mobile-phone-ico.svg" />
 																</div>
 																<div class="nav-li-float-right phone-number">
 																	8 (985) 644-57-75
@@ -194,12 +198,17 @@
 													</li>
 													<li class="nav-item me-2">
 														<a class="nav-link ico-button" href="https://t.me/+79856445775" target="_blank">
-															<img src="<?php echo get_stylesheet_directory_uri(); ?>/img/ico/telegram-ico.svg" />
+															<img src="<?php echo get_template_directory_uri(); ?>/img/ico/telegram-ico.svg" />
+														</a>
+													</li>
+													<li class="nav-item me-2">
+														<a class="nav-link ico-button" href="https://wa.me/79856445775?web=1&amp;app_absent=1" target="_blank">
+															<img src="<?php echo get_template_directory_uri(); ?>/img/ico/whatsapp-ico.svg" />
 														</a>
 													</li>
 													<li class="nav-item">
-														<a class="nav-link ico-button" href="https://wa.me/79856445775?web=1&amp;app_absent=1" target="_blank">
-															<img src="<?php echo get_stylesheet_directory_uri(); ?>/img/ico/whatsapp-ico.svg" />
+														<a class="nav-link ico-button" href="https://max.ru/u/f9LHodD0cOJpxVina4POaWorB_iFOHaIWOB_hVCMqBZT5lketcgqeZcBwAc" target="_blank">
+															<img src="<?php echo get_template_directory_uri(); ?>/img/ico/max-ico.svg" />
 														</a>
 													</li>
 												</ul>
@@ -222,321 +231,197 @@
 											<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mobail-header-collapse" aria-controls="mobail-header-collapse" aria-expanded="false" aria-label="Toggle navigation">
 												<span class="navbar-toggler-icon"></span>
 											</button>
-											<div class="collapse navbar-collapse" id="mobail-header-collapse" aria-expanded="true">
-											<ul  class="navbar-nav align-items-center ms-auto mb-2 mb-lg-0">
-												<li class="nav-item bottom-menu_item">
-													<a class="nav-link bottom_link" href="#sp-home" style="transition: 0.25s">Главная</a>
-												</li>
-												<li class="nav-item d-none d-lg-inline">
-													<span class="nav-link">
-														<img src="<?php echo get_stylesheet_directory_uri(); ?>/img/ico/menu-decoration.svg"/>
-													</span>
-												</li>
-												<li class="nav-item bottom-menu_item item-none">
-													<a class="nav-link bottom_link" href="#sp-video">
-														Видеопрезентация
-													</a>
-												</li>
-												<li class="nav-item d-lg-inline">
-													<span class="nav-link item-none">
-														<img src="<?php echo get_stylesheet_directory_uri(); ?>/img/ico/menu-decoration.svg" />
-													</span>
-												</li>
-												<li class="nav-item bottom-menu_item">
-													<a class="nav-link bottom_link" href="#sp-portfolio">
-														Наши работы
-													</a>
-												</li>
-												<li class="nav-item d-none d-lg-inline">
-													<span class="nav-link">
-														<img src="<?php echo get_stylesheet_directory_uri(); ?>/img/ico/menu-decoration.svg" />
-													</span>
-												</li>
-												<li class="nav-item bottom-menu_item">
-													<a class="nav-link bottom_link" href="#sp-about">
-														О нас
-													</a>
-												</li>
-												<li class="nav-item d-none d-lg-inline">
-													<span class="nav-link">
-														<img src="<?php echo get_stylesheet_directory_uri(); ?>/img/ico/menu-decoration.svg" />
-													</span>
-												</li>
-												<li class="nav-item bottom-menu_item">
-													<a class="nav-link bottom_link" href="#sp-testimonials">
-														Отзывы
-													</a>
-												</li>
-												<li class="nav-item d-none d-lg-inline">
-													<span class="nav-link">
-														<img src="<?php echo get_stylesheet_directory_uri(); ?>/img/ico/menu-decoration.svg" />
-													</span>
-												</li>
-												<li class="nav-item bottom-menu_item">
-													<a class="nav-link bottom_link" href="#sp-faq">
-														Частые вопросы
-													</a>
-												</li>
-												<li class="nav-item d-none d-lg-inline">
-													<span class="nav-link">
-														<img src="<?php echo get_stylesheet_directory_uri(); ?>/img/ico/menu-decoration.svg" />
-													</span>
-												</li>
-												<li class="nav-item bottom-menu_item">
-													<a class="nav-link bottom_link" href="#sp-kak-zakazat">
-														Как заказать
-													</a>
-												</li>
-												<li class="nav-item d-none d-lg-inline">
-													<span class="nav-link">
-														<img src="<?php echo get_stylesheet_directory_uri(); ?>/img/ico/menu-decoration.svg" />
-													</span>
-												</li>
-												<li class="nav-item bottom-menu_item">
-													<a class="nav-link bottom_link" href="#sp-contacts">
-														Контакты
-													</a>
-												</li>
+											<div class="collapse navbar-collapse" id="mobail-header-collapse">
+												<?php
+												wp_nav_menu(array(
+													'theme_location' => 'mobail-header-collapse',
+													'container' => false,
+													'menu_class' => '',
+													'fallback_cb' => '__return_false',
+													'items_wrap' => '
+															<ul id="%1$s" class="navbar-nav align-items-center ms-auto mb-2 mb-lg-0 %2$s">%3$s
+																<!-- Mobile menu -->
+																<li class="nav-item d-lg-none mobile-item">
+																	<a  class="nav-link active"  href="#" data-bs-toggle="modal" data-bs-target="#callback-measurer">
+																		Вызов замерщика (Бесплатно)
+																	</a>
+																</li>
+																<li class="nav-item d-lg-none mobile-item">
+																	<div>
+																		<img  src="' . get_template_directory_uri() . '/img/ico/location-ico.svg"  style="width: 10px" class="me-1"/>
+																		<span><?php echo $address; ?></span>
+																	</div>
+																	<a  class="nav-link top-menu-tel pt-1 pb-1"  href="tel:89856445775">
+																		8 (985) 644-57-75
+																	</a>
+																	<div  class="mb-2"  style="font-size: 12px;  font-family: Gilroy-Light;  text-transform: none;">
+																		<img  src="' . get_template_directory_uri() . '/img/ico/clock-ico.svg"  style="width: 10px; position: relative; top: 3px"  class="me-1 mb-2"/>
+																		Ежедневно с 8:00 до 22:00
+																	</div>
+																</li>
+																<li class="nav-item d-lg-none pb-4">
+																	<a class="ico-button pe-2" href="https://wa.me/79856445775?web=1&app_absent=1" target="blank">
+																		<img src="' . get_template_directory_uri() . '/img/ico/whatsapp-ico.svg"/>
+																	</a>
+																	<a class="ico-button pe-2" href="https://t.me/+79856445775" target="blank">
+																		<img src="'.get_template_directory_uri().'/img/ico/telegram-ico.svg" />
+																	</a>
+																	<a class="ico-button pe-0" href="https://max.ru/u/f9LHodD0cOJpxVina4POaWorB_iFOHaIWOB_hVCMqBZT5lketcgqeZcBwAc" target="blank">
+																		<img src="'.get_template_directory_uri().'/img/ico/max-ico.svg" />
+																	</a>
+																</li>
+																<!-- End mobile menu -->
+															</ul>
+														',
+													'depth' => 2,
+													'walker' => new bootstrap_5_wp_nav_menu_walker()
+												));
+												?>
+											</div><!-- /#mobail-header-collapse -->
+										</div><!-- /.container -->
+									</nav>
+								</div><!-- /.col-md-12 -->
+							</div><!-- /.row -->
+						</div><!-- /.container -->
+					</div><!-- ./row -->
+					<div class="container">
+						<div class="row">
+							<div class="col-lg-7 offset-lg-1">
+								<h1><span><?php echo $product; ?></span> и&nbsp;другая <span>корпусная&nbsp;мебель</span> на&nbsp;заказ от&nbsp;производителя <span><?php echo $location; ?></span></h1>
+								<ul class="main-list">
+									<li>
+										<div class="row">
+											<div class="col-2 col-md-1 offset-md-1">
+												<img src="<?php echo get_stylesheet_directory_uri(); ?>/img/ico/check.png" />
+											</div>
+											<div class="col-10 col-md-7">
+												Замер, дизайн-проект, доставка и монтаж — <span>бесплатно!</span>
+											</div>
+										</div>
+									</li>
+									<li>
+										<div class="row">
+											<div class="col-2 col-md-1 offset-md-1">
+												<img src="<?php echo get_stylesheet_directory_uri(); ?>/img/ico/check.png" />
+											</div>
+											<div class="col-10 col-md-8">
+												Беспроцентная <span>рассрочка&nbsp;на&nbsp;год!</span>
+											</div>
+										</div>
+									</li>
+									<li>
+										<div class="row">
+											<div class="col-2 col-md-1 offset-md-1">
+												<img src="<?php echo get_stylesheet_directory_uri(); ?>/img/ico/check.png" />
+											</div>
+											<div class="col-10 col-md-7">
+												Работаем в Москве и Московской области
+											</div>
+										</div>
+									</li>
+								</ul>
+							</div>
+							<div class="col-lg-4 px-0">
+								<div class="rasschet">
+									<h2 class="forma">Рассчитаем точную стоимость шкафа за 15 минут!<!-- Хотите сразу рассчитать стоимость Вашего шкафа? --></h2>
+									<p class="mb-2">Опишите шкаф-купе своими словами. При возможности прикрепите изображение</p>
+									<form  method="post"  action="<?php echo get_stylesheet_directory_uri(); ?>/mails/get_calculate.php"  enctype="multipart/form-data">
+										<textarea  type="text"  rows="3"  name="mes"  class="form-control"  placeholder="Например: длина, ширина, глубина, количество дверей, материал дверей, форма, вид шкафа и т.д."  style="height: auto; margin-top: 15px; margin-bottom: 15px"></textarea>
+										<p class="input-group custom-file-button">
+											<label class="input-group-text" for="inputGroupFile">Прикрепить</label>
+											<input  type="file"  name="file[]"  class="form-control"  id="inputGroupFile"  accept=".jpg,.jpeg,.png,.pdf,.heic"  multiple />
+										</p>
+										<p>
+											<input  type="text"  name="name"  class="form-control"  style="margin-top: 15px"  placeholder="Ваше Имя"/>
+										</p>
+										<p>
+											<input  type="text"  name="tel"  id="phone_mask_3"  class="form-control telMask"  style="margin-top: 15px"  placeholder="Ваш телефон"  required/>
+										</p>
+
+										<!-- <label class="form-check-label" for="exampleCheck11">
+											<input type="checkbox"  class="form-check-input"  id="exampleCheck11"  checked />
+											Я согласен на обработку моих <a href="">персональных данных</a>.
+										</label> -->
+								
+										<input type="hidden" id="g-recaptcha-response-order-1-home" name="g-recaptcha-response">
+										<button  type="submit"  class="btn btn-danger"  style="width: 100%">
+											Отправить
+										</button>
+									</form>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<header id="sliding-header" class="shadow">
+					<!-- Header nav bottom -->
+					<nav class="header-nav-bottom navbar navbar-expand-lg navbar-light py-1 py-lg-0">
+						<div class="container">
+							<a class="navbar-brand" href="archive-product-portfolio.html#">
+								<img src="<?php echo get_template_directory_uri(); ?>/img/ico/logo-dark-theme.svg" />
+							</a>
+							<div class="d-lg-none">
+								<a  class="top-menu-tel pt-1 pb-0"  style="font-size: 14px"  href="tel:89856445775">
+									8 (985) 644-57-75
+								</a>
+								<div style="font-size: 10px;  font-family: Gilroy-Light;  text-transform: none;">
+									<img  src="<?php echo get_template_directory_uri(); ?>/img/ico/clock-ico.svg" style="width: 12px; position: relative; top: -1px"  class="me-1"/>
+									Пн-Вс 8:00-22:00
+								</div>
+							</div>
+							<button  class="navbar-toggler"  type="button"  data-bs-toggle="collapse"  data-bs-target="#sliding-header-collapse"  aria-controls="sliding-header-collapse"  aria-expanded="false"  aria-label="Toggle navigation">
+								<span class="navbar-toggler-icon"></span>
+							</button>
+							<div class="collapse navbar-collapse" id="sliding-header-collapse">
+								<?php
+									wp_nav_menu(array(
+										'theme_location' => 'sliding-header-collapse',
+										'container' => false,
+										'menu_class' => '',
+										'fallback_cb' => '__return_false',
+										'items_wrap' => '
+											<ul id="%1$s" class="navbar-nav ms-auto mb-2 mb-lg-0 %2$s">%3$s
 												<!-- Mobile menu -->
 												<li class="nav-item d-lg-none mobile-item">
-													<a  class="nav-link active"  href="#" data-bs-toggle="modal" data-bs-target="#callback">
-														Вызов замерщика
+													<a  class="nav-link active modal-link"  href="#"  data-bs-toggle="modal"  data-bs-target="#callback-measurer">
+														Вызов замерщика (Бесплатно)
 													</a>
 												</li>
-												<li class="nav-item d-lg-none mobile-item">
-													<div>
-														<img  src="<?php echo get_stylesheet_directory_uri(); ?>/img/ico/location-ico.svg"  style="width: 10px" class="me-1"/>
-														<span><?php echo $address; ?></span>
+												<li  class="nav-item d-lg-none mobile-item mobile-schedule mb-md-2">
+													<div class="location-block">
+														<img  src="'.get_template_directory_uri().'/img/ico/location-ico.svg"  style="width: 10px" class="me-1"/>
+														<span>'.$address.'</span>
 													</div>
 													<a  class="nav-link top-menu-tel pt-1 pb-1"  href="tel:89856445775">
 														8 (985) 644-57-75
 													</a>
-													<div  class="mb-2"  style="font-size: 12px;  font-family: Gilroy-Light;  text-transform: none;">
-														<img  src="<?php echo get_stylesheet_directory_uri(); ?>/img/ico/clock-ico.svg"  style="width: 10px; position: relative; top: 3px"  class="me-1 mb-2"/>
-														Ежедневно с 8:00 до 22:00
-													</div>
+													<img  src="'.get_template_directory_uri().'/img/ico/clock-ico.svg"  style="width: 10px; position: relative; top: 2px"  class="me-1 mb-2"/>
+													Ежедневно с 8:00 до 22:00
 												</li>
-												<li class="nav-item d-lg-none pb-4">
-													<a  class="ico-button pe-2"  href="https://wa.me/79856445775?web=1&app_absent=1" >
-														<img src="<?php echo get_stylesheet_directory_uri(); ?>/img/ico/whatsapp-ico.svg"/>
+												<li class="nav-item d-lg-none pt-2 pb-4">
+													<a class="ico-button pe-2 text-decoration-none" href="https://wa.me/79856445775?web=1&app_absent=1" target="blank">
+														<img src="'.get_template_directory_uri().'/img/ico/whatsapp-ico.svg" />
 													</a>
-													<a  class="ico-button pe-0"  href="https://t.me/+79856445775">
-														<img src="<?php echo get_stylesheet_directory_uri(); ?>/img/ico/telegram-ico.svg" />
+													<a class="ico-button pe-2 text-decoration-none" href="https://t.me/+79856445775" target="blank">
+														<img src="'.get_template_directory_uri().'/img/ico/telegram-ico.svg" />
+													</a>
+													<a class="ico-button pe-0 text-decoration-none" href="https://max.ru/u/f9LHodD0cOJpxVina4POaWorB_iFOHaIWOB_hVCMqBZT5lketcgqeZcBwAc" target="blank">
+														<img src="'.get_template_directory_uri().'/img/ico/max-ico.svg" />
 													</a>
 												</li>
 												<!-- End mobile menu -->
 											</ul>
-										</div>
-									</div>
-								</nav>
+										',
+										'depth' => 2,
+										'walker' => new bootstrap_5_wp_nav_menu_walker()
+									));
+								?>
 							</div>
 						</div>
-					</div>
-				</div>
-				<div class="container">
-					<div class="row">
-						<div class="col-lg-7 offset-lg-1">
-							<h1><span><?php echo $product; ?></span> и&nbsp;другая <span>корпусная&nbsp;мебель</span> на&nbsp;заказ от&nbsp;производителя <span><?php echo $location; ?></span></h1>
-							<ul class="main-list">
-								<li>
-									<div class="row">
-										<div class="col-2 col-md-1 offset-md-1">
-											<img src="<?php echo get_stylesheet_directory_uri(); ?>/img/ico/check.png" />
-										</div>
-										<div class="col-10 col-md-7">
-											Замер, дизайн-проект, доставка и монтаж — <span>бесплатно!</span>
-										</div>
-									</div>
-								</li>
-								<li>
-									<div class="row">
-										<div class="col-2 col-md-1 offset-md-1">
-											<img src="<?php echo get_stylesheet_directory_uri(); ?>/img/ico/check.png" />
-										</div>
-										<div class="col-10 col-md-8">
-											Беспроцентная <span>рассрочка&nbsp;на&nbsp;год!</span>
-										</div>
-									</div>
-								</li>
-								<li>
-									<div class="row">
-										<div class="col-2 col-md-1 offset-md-1">
-											<img src="<?php echo get_stylesheet_directory_uri(); ?>/img/ico/check.png" />
-										</div>
-										<div class="col-10 col-md-7">
-											Работаем в Москве и Московской области
-										</div>
-									</div>
-								</li>
-							</ul>
-						</div>
-						<div class="col-lg-4 px-0">
-							<div class="rasschet">
-								<h2 class="forma">
-									Рассчитаем точную стоимость шкафа за 15 минут!
-									<!-- Хотите сразу рассчитать стоимость Вашего шкафа? -->
-								</h2>
-								<p class="mb-2">
-									Опишите шкаф своими словами. При необходимости прикрепите изображение
-								</p>
-								<form  method="post"  action="<?php echo get_stylesheet_directory_uri(); ?>/mails/get_calculate.php"  enctype="multipart/form-data">
-									<textarea  type="text"  rows="3"  name="mes"  class="form-control"  placeholder="Например: длина, ширина, глубина, количество дверей, материал дверей, форма, вид шкафа и т.д."  style="height: auto; margin-top: 15px; margin-bottom: 15px"></textarea>
-									<p class="input-group custom-file-button">
-										<label class="input-group-text" for="inputGroupFile">Прикрепить</label>
-										<input  type="file"  name="file[]"  class="form-control"  id="inputGroupFile"  accept=".jpg,.jpeg,.png,.pdf,.heic"  multiple />
-									</p>
-									<p>
-										<input  type="text"  name="name"  class="form-control"  style="margin-top: 15px"  placeholder="Ваше Имя"/>
-									</p>
-									<p>
-										<input  type="text"  name="tel"  id="phone_mask_3"  class="form-control telMask"  style="margin-top: 15px"  placeholder="Ваш телефон"  required/>
-									</p>
-
-									<label class="form-check-label" for="exampleCheck11">
-										<input type="checkbox"  class="form-check-input"  id="exampleCheck11"  checked />
-										Я согласен на обработку моих <a href="">персональных данных</a>.
-									</label>
-							
-									<input type="hidden" id="g-recaptcha-response-order-1-home" name="g-recaptcha-response">
-									<button  type="submit"  class="btn btn-danger"  style="width: 100%">
-										Отправить
-									</button>
-								</form>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<header id="sliding-header" class="shadow">
-			  <!-- Header nav bottom -->
-				<nav class="header-nav-bottom navbar navbar-expand-lg navbar-light py-1 py-lg-0">
-					<div class="container">
-						<a class="navbar-brand" href="archive-product-portfolio.html#">
-						  <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/ico/logo-dark-theme.svg" />
-						</a>
-						<div class="d-lg-none">
-						  <a  class="top-menu-tel pt-1 pb-0"  style="font-size: 14px"  href="tel:89856445775">
-							8 (985) 644-57-75
-						  </a>
-						  <div style="font-size: 10px;  font-family: Gilroy-Light;  text-transform: none;">
-							<img  src="<?php echo get_stylesheet_directory_uri(); ?>/img/ico/clock-ico.svg" style="width: 12px; position: relative; top: -1px"  class="me-1"/>
-							Пн-Вс 8:00-22:00
-						  </div>
-						</div>
-						<button  class="navbar-toggler"  type="button"  data-bs-toggle="collapse"  data-bs-target="#sliding-header-collapse"  aria-controls="sliding-header-collapse"  aria-expanded="false"  aria-label="Toggle navigation">
-						  <span class="navbar-toggler-icon"></span>
-						</button>
-						<div class="collapse navbar-collapse" id="sliding-header-collapse">
-							<ul class="navbar-nav ms-auto mb-lg-0">
-							  <li class="nav-item bottom-menu_item">
-								<a  class="nav-link bottom_link"  href="#sp-home" style="transition: 0.25s">
-								  Главная
-								</a>
-							  </li>
-							  <li class="nav-item d-none d-lg-inline">
-								<span class="nav-link">
-								  <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/ico/menu-decoration.svg" />
-								</span>
-							  </li>
-							  <li class="nav-item bottom-menu_item item-none">
-								<a class="nav-link bottom_link" href="#sp-video">
-								  Видеопрезентация
-								</a>
-							  </li>
-							  <li class="nav-item d-lg-inline">
-								<span class="nav-link item-none">
-								  <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/ico/menu-decoration.svg" />
-								</span>
-							  </li>
-							  <li class="nav-item bottom-menu_item">
-								<a class="nav-link bottom_link" href="#sp-portfolio">
-								  Наши работы
-								</a>
-							  </li>
-							  <li class="nav-item d-none d-lg-inline">
-								<span class="nav-link">
-								  <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/ico/menu-decoration.svg" />
-								</span>
-							  </li>
-							  <li class="nav-item bottom-menu_item">
-								<a class="nav-link bottom_link" href="#sp-about"> 
-								  О нас
-								</a>
-							  </li>
-							  <li class="nav-item d-none d-lg-inline">
-								<span class="nav-link">
-								  <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/ico/menu-decoration.svg" />
-								</span>
-							  </li>
-							  <li class="nav-item bottom-menu_item">
-								<a class="nav-link bottom_link" href="#sp-testimonials">Отзывы</a>
-							  </li>
-							  <li class="nav-item d-none d-lg-inline">
-								<span class="nav-link">
-								  <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/ico/menu-decoration.svg" />
-								</span>
-							  </li>
-							  <li class="nav-item bottom-menu_item">
-								<a class="nav-link bottom_link" href="#sp-faq">
-								  Частые вопросы
-								  </a>
-							  </li>
-							  <li class="nav-item d-none d-lg-inline">
-								<span class="nav-link">
-								  <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/ico/menu-decoration.svg" />
-								</span>
-							  </li>
-							  <li class="nav-item bottom-menu_item">
-								<a class="nav-link bottom_link" href="#sp-kak-zakazat">
-								  Как заказать
-								</a>
-							  </li>
-							  <li class="nav-item d-none d-lg-inline">
-								<span class="nav-link">
-								  <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/ico/menu-decoration.svg" />
-								</span>
-							  </li>
-							  <li class="nav-item bottom-menu_item">
-								<a class="nav-link bottom_link" href="#sp-contacts">
-								  Контакты
-								</a>
-							  </li>
-							  <!-- Mobile menu -->
-
-							  <li class="nav-item d-lg-none mobile-item">
-								<a  class="nav-link active modal-link"  href="#"  data-bs-toggle="modal"  data-bs-target="#callback">
-								  Вызов замерщика
-								</a>
-							  </li>
-							  <li  class="nav-item d-lg-none mobile-item mobile-schedule mb-md-2">
-								<!-- <div style="font-size: 12px;
-							  font-family: HelveticaNeueCyr-Light;
-							  text-transform: none;"> -->
-								<div class="location-block">
-								  <img  src="<?php echo get_stylesheet_directory_uri(); ?>/img/ico/location-ico.svg"  style="width: 10px" class="me-1"/>
-								  <span><?php echo $address; ?></span>
-								</div>
-								<a  class="nav-link top-menu-tel pt-1 pb-1"  href="tel:89856445775">
-								  8 (985) 644-57-75
-								</a>
-								<img  src="<?php echo get_stylesheet_directory_uri(); ?>/img/ico/clock-ico.svg"  style="width: 10px; position: relative; top: 2px"  class="me-1 mb-2"/>
-								Ежедневно с 8:00 до 22:00
-							  </li>
-							  <li class="nav-item d-lg-none pt-2 pb-4">
-								<a class="ico-button pe-2 text-decoration-none"  href="https://wa.me/79856445775?web=1&app_absent=1">
-								  <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/ico/whatsapp-ico.svg" />
-								</a>
-								<a  class="ico-button pe-0 text-decoration-none"  href="https://t.me/+79856445775">
-								  <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/ico/telegram-ico.svg" />
-								</a>
-							  </li>
-							  <!-- End mobile menu -->
-							</ul>
-					  </div>
-					</div>
-				</nav>
-			  <!-- /Header nav bottom -->
-			</header>
+					</nav>
+					<!-- /Header nav bottom -->
+				</header>
 		</section>
 
 
@@ -1603,8 +1488,7 @@
 							<div class="col-md-6">
 								<ul>
 									<li><a href="#sp-home" class="active">Главная</a></li>
-									<li><a href="#sp-video">Видеопрезентация</a></li>
-									<li><a href="#sp-portfolio">Наши работы</a></li>
+									<li><a href="/portfolio">Наши работы</a></li>
 									<li><a href="#sp-about">О нас</a></li>
 									<li><a href="#sp-testimonials">Отзывы</a></li>
 									<li><a href="#sp-faq">Частые вопросы</a></li>
@@ -1642,6 +1526,9 @@
 							<a href="https://t.me/+79856445775" target="_blank">
 								<img src="<?php echo get_stylesheet_directory_uri(); ?>/img/ico/telegram-ico.svg" class="ico-button" />
 							</a>
+							<a href="https://max.ru/u/f9LHodD0cOJpxVina4POaWorB_iFOHaIWOB_hVCMqBZT5lketcgqeZcBwAc" target="_blank">
+								<img src="<?php echo get_template_directory_uri(); ?>/img/ico/max-ico.svg" class="ico-button" />
+							</a>		
 							<!-- a href="#">
 								<img src="<?php echo get_stylesheet_directory_uri(); ?>/img/ico/telega.png" class="img-fluid" />
 							</a -->
@@ -1666,7 +1553,7 @@
 			</div>
 		</footer>
 		
-		
+
 		<!-- Callback button HTML -->
 		<div class="callback-button-wrapper">
 			<div id="callbackBtn" class="callback-button" onclick="callbackButtonClick();">
@@ -1682,8 +1569,17 @@
 			<div id="whatsappBtn" class="callback-whatsapp-button" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-custom-class="custom-tooltip" data-bs-title="Whatsapp">
 				<a href="https://wa.me/79856445775?web=1&app_absent=1" target="blank"><div class="callback-whatsapp-button-ico"></div></a>
 			</div>
-			<div id="telegramBtn" class="callback-telegram-button" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-custom-class="custom-tooltip" data-bs-title="Telegram">
-				<a href="https://t.me/+79856445775" target="blank"><div class="callback-telegram-button-ico"></div></a>
+			<div id="telegramBtn" class="callback-telegram-button" data-bs-toggle="tooltip" data-bs-placement="left"
+				data-bs-custom-class="custom-tooltip" data-bs-title="Telegram">
+				<a href="https://t.me/+79856445775" target="blank">
+					<div class="callback-telegram-button-ico"></div>
+				</a>
+			</div>
+			<div id="maxBtn" class="callback-max-button" data-bs-toggle="tooltip" data-bs-placement="left"
+				data-bs-custom-class="custom-tooltip" data-bs-title="Max">
+				<a href="https://max.ru/u/f9LHodD0cOJpxVina4POaWorB_iFOHaIWOB_hVCMqBZT5lketcgqeZcBwAc" target="blank">
+					<div class="callback-max-button-ico"></div>
+				</a>
 			</div>
 		</div>
 		<!-- /Callback button HTML -->
@@ -1723,6 +1619,9 @@
 					
 					document.getElementById('telegramBtn').style.top = "-240px";
 					document.getElementById('telegramBtn').style.opacity = "1";
+
+					document.getElementById('maxBtn').style.top = "-300px";
+					document.getElementById('maxBtn').style.opacity = "1";
 				} else {
 					document.getElementById('callbackBtn').style.animation = "waves linear 2s infinite";
 					document.getElementById('btnIco').style.animation = "change linear 16s infinite";
@@ -1749,6 +1648,9 @@
 					
 					document.getElementById('telegramBtn').style.top = "0px";
 					document.getElementById('telegramBtn').style.opacity = "0";
+					
+					document.getElementById('maxBtn').style.top = "0px";
+					document.getElementById('maxBtn').style.opacity = "0";
 				}
 			}
 		</script>
