@@ -10,30 +10,26 @@ include 'header.php';
 ?>
 <!-- SECTION HOME -->
 <div id="sp-home"></div>
-<section class="home-section home-section-shafy-cupe">
+<section class="home-section home-section-shafy-cupe" style="background-position: center;">
 	<div class="container" id="main-divider">
-
+		
 		<div class="row row-nav">
-			<div class="col-md-12 d-flex justify-content-end col-nav">
+			<div class="col-md-12 d-flex justify-content-end col-nav" style="background-color:#F5F5F5; border-bottom: 1px solid #E1E1E1;">
 				<nav class="navbar navbar-expand-lg navbar-dark d-none d-lg-block py-0">
 					<div class="container-fluid px-0">
 						<!-- <a class="navbar-brand" href="#"><img src="<?php echo get_template_directory_uri(); ?>/img/ico/logo-dark.svg" class="img-fluid" style="max-width: 225px;"></a> -->
-						<button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-							data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-							aria-label="Toggle navigation">
+						<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 							<span class="navbar-toggler-icon"></span>
 						</button>
 						<nav class="header-nav-top navbar navbar-expand-lg navbar-light d-none d-lg-block">
 							<div class="container">
-								<button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-									data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-									aria-label="Toggle navigation">
+								<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 									<span class="navbar-toggler-icon"></span>
 								</button>
 								<div class="collapse navbar-collapse" id="navbarSupportedContent">
 									<ul class="navbar-nav ms-auto align-items-center top-navbar">
 										<li class="nav-item me-3">
-											<a class="nav-link" href="archive-product-portfolio.html#">
+											<a class="nav-link text-dark" href="archive-product-portfolio.html#">
 												<div class="d-flex nav-link-inner">
 													<div class="nav-li-float-left">
 														<img src="<?php echo get_template_directory_uri(); ?>/img/ico/location-ico.svg" />
@@ -44,7 +40,7 @@ include 'header.php';
 											</a>
 										</li>
 										<li class="nav-item me-3">
-											<a class="nav-link" href="archive-product-portfolio.html#">
+											<a class="nav-link text-dark" href="archive-product-portfolio.html#">
 												<div class="d-flex nav-link-inner">
 													<div class="nav-li-float-left">
 														<img src="<?php echo get_template_directory_uri(); ?>/img/ico/clock-ico.svg" />
@@ -57,8 +53,7 @@ include 'header.php';
 											</a>
 										</li>
 										<li class="nav-item me-3">
-											<a href="archive-product-portfolio.html#" class="nav-link" data-bs-toggle="modal"
-												data-bs-target="#callback">
+											<a href="archive-product-portfolio.html#" class="nav-link text-dark" data-bs-toggle="modal" data-bs-target="#callback">
 												<div class="d-flex nav-link-inner">
 													<div class="nav-li-float-left">
 														<img src="<?php echo get_template_directory_uri(); ?>/img/ico/callback-ico.svg" />
@@ -71,7 +66,7 @@ include 'header.php';
 											</a>
 										</li>
 										<li class="nav-item me-4">
-											<a class="top-menu-tel nav-link" href="tel:89856445775">
+											<a class="top-menu-tel nav-link text-dark"  href="tel:89856445775">
 												<div class="d-flex nav-link-inner">
 													<div class="nav-li-float-left">
 														<img src="<?php echo get_template_directory_uri(); ?>/img/ico/mobile-phone-ico.svg" />
@@ -106,27 +101,25 @@ include 'header.php';
 				</nav>
 			</div><!-- /.col-md-12 -->
 
-			<div class="container">
+			<div class="container" style="background-color:#FFFFFF;">
 				<div class="row row-bottom-nav d-flex">
 					<div class="col-md-12 bottom-nav">
 						<nav class="header-nav-bottom navbar navbar-expand-lg navbar-light header-bottom">
 							<div class="container bottom-container">
 								<a class="navbar-brand" href="#">
-									<img src="<?php echo get_template_directory_uri(); ?>/img/ico/logo.svg" />
+									<img src="<?php echo get_template_directory_uri(); ?>/img/ico/logo-dark-theme.svg" />
 								</a>
-								<button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-									data-bs-target="#mobail-header-collapse" aria-controls="mobail-header-collapse" aria-expanded="false"
-									aria-label="Toggle navigation">
+								<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mobail-header-collapse" aria-controls="mobail-header-collapse" aria-expanded="false" aria-label="Toggle navigation">
 									<span class="navbar-toggler-icon"></span>
 								</button>
 								<div class="collapse navbar-collapse" id="mobail-header-collapse">
 									<?php
-									wp_nav_menu(array(
-										'theme_location' => 'mobail-header-collapse',
-										'container' => false,
-										'menu_class' => '',
-										'fallback_cb' => '__return_false',
-										'items_wrap' => '
+										wp_nav_menu(array(
+											'theme_location' => 'mobail-header-collapse',
+											'container' => false,
+											'menu_class' => '',
+											'fallback_cb' => '__return_false',
+											'items_wrap' => '
 												<ul id="%1$s" class="navbar-nav align-items-center ms-auto mb-2 mb-lg-0 %2$s">%3$s
 													<!-- Mobile menu -->
 													<li class="nav-item d-lg-none mobile-item">
@@ -136,20 +129,20 @@ include 'header.php';
 													</li>
 													<li class="nav-item d-lg-none mobile-item">
 														<div>
-															<img  src="' . get_template_directory_uri() . '/img/ico/location-ico.svg"  style="width: 10px" class="me-1"/>
+															<img  src="'.get_template_directory_uri().'/img/ico/location-ico.svg"  style="width: 10px" class="me-1"/>
 															<span><?php echo $address; ?></span>
 														</div>
 														<a  class="nav-link top-menu-tel pt-1 pb-1"  href="tel:89856445775">
 															8 (985) 644-57-75
 														</a>
 														<div  class="mb-2"  style="font-size: 12px;  font-family: Gilroy-Light;  text-transform: none;">
-															<img  src="' . get_template_directory_uri() . '/img/ico/clock-ico.svg"  style="width: 10px; position: relative; top: 3px"  class="me-1 mb-2"/>
+															<img  src="'.get_template_directory_uri().'/img/ico/clock-ico.svg"  style="width: 10px; position: relative; top: 3px"  class="me-1 mb-2"/>
 															Ежедневно с 8:00 до 22:00
 														</div>
 													</li>
 													<li class="nav-item d-lg-none pb-4">
 														<a class="ico-button pe-2" href="https://wa.me/79856445775?web=1&app_absent=1" target="blank">
-															<img src="' . get_template_directory_uri() . '/img/ico/whatsapp-ico.svg"/>
+															<img src="'.get_template_directory_uri().'/img/ico/whatsapp-ico.svg"/>
 														</a>
 														<a class="ico-button pe-2" href="https://t.me/+79856445775" target="blank">
 															<img src="'.get_template_directory_uri().'/img/ico/telegram-ico.svg" />
@@ -161,9 +154,9 @@ include 'header.php';
 													<!-- End mobile menu -->
 												</ul>
 											',
-										'depth' => 2,
-										'walker' => new bootstrap_5_wp_nav_menu_walker()
-									));
+											'depth' => 2,
+											'walker' => new bootstrap_5_wp_nav_menu_walker()
+										));
 									?>
 								</div><!-- /.collapse -->
 							</div><!-- /.container -->
@@ -172,123 +165,46 @@ include 'header.php';
 				</div><!-- /.row -->
 			</div><!-- /.container -->
 		</div><!-- ./row -->
-
-
-		<div class="container">
-			<div class="row">
-				<div class="col-lg-7 offset-lg-1">
-					<h1>Наши <span>работы</span></h1>
-					<ul class="main-list">
-						<li>
-							<div class="row">
-								<div class="col-2 col-md-1 offset-md-1">
-									<img src="<?php echo get_template_directory_uri(); ?>/img/ico/check.png" />
-								</div>
-								<div class="col-10 col-md-7">
-									Замер и дизайн-проект — <span>бесплатно!</span>
-								</div>
-							</div>
-						</li>
-						<li>
-							<div class="row">
-								<div class="col-2 col-md-1 offset-md-1">
-									<img src="<?php echo get_template_directory_uri(); ?>/img/ico/check.png" />
-								</div>
-								<div class="col-10 col-md-7">
-									Доставка и монтаж — <span>бесплатно!</span>
-								</div>
-							</div>
-						</li>
-						<li>
-							<div class="row">
-								<div class="col-2 col-md-1 offset-md-1">
-									<img src="<?php echo get_template_directory_uri(); ?>/img/ico/check.png" />
-								</div>
-								<div class="col-10 col-md-8">
-									Беспроцентная <span>рассрочка&nbsp;на&nbsp;год!</span>
-								</div>
-							</div>
-						</li>
-						<li>
-							<div class="row">
-								<div class="col-2 col-md-1 offset-md-1">
-									<img src="<?php echo get_template_directory_uri(); ?>/img/ico/check.png" />
-								</div>
-								<div class="col-10 col-md-7">
-									Работаем в Москве и Московской области
-								</div>
-							</div>
-						</li>
-					</ul>
-				</div>
-				<div class="col-lg-4 px-0">
-					<div class="rasschet">
-						<h2 class="forma">Рассчитаем точную стоимость шкафа-купе за 15 минут!</h2>
-						<p>Опишите шкаф-купе своими словами. При возможности прикрепите изображение</p>
-						<form method="post" action="<?php echo get_template_directory_uri(); ?>/mails/get_calculate.php"
-							enctype="multipart/form-data">
-							<textarea type="text" rows="3" name="mes" class="form-control"
-								placeholder="Например: длина, ширина, глубина, количество дверей, материал дверей, форма, вид шкафа и т.д."
-								style="height: auto; margin-top: 15px; margin-bottom: 15px"></textarea>
-							<p class="input-group custom-file-button">
-								<label class="input-group-text" for="inputGroupFile">
-									Прикрепить</label>
-								<input type="file" name="file[]" class="form-control" id="inputGroupFile"
-									accept=".jpg,.jpeg,.png,.pdf,.heic" multiple />
-							</p>
-							<p>
-								<input type="text" name="name" class="form-control" placeholder="Ваше Имя" />
-							</p>
-							<p>
-								<input type="text" name="tel" id="phone_mask_3" class="form-control telMask" style="margin-top: 15px"
-									placeholder="Ваш телефон" required />
-							</p>
-							<!-- <label class="form-check-label" for="exampleCheck11">
-								<input type="checkbox" class="form-check-input" id="exampleCheck11" checked>
-								Я согласен на обработку моих <a href="#">персональных данных</a>.
-							</label> -->
-
-							<input type="hidden" id="g-recaptcha-response-order-2" name="g-recaptcha-response">
-
-							<button type="submit" class="btn btn-danger" style="width: 100%">
-								Отправить
-							</button>
-						</form>
-					</div>
-				</div>
+	
+	
+	<header id="archive-portfolio-header">
+	<div class="container">
+		<div class="row align-items-center text-start">
+			<div class="col-lg-10 py-5">
+				<h1 class="my-5">Наши работы</h1>
 			</div>
-		</div><!-- /.container -->
+		</div>
+	</div>
+</header>
 	</div><!-- /.container #main-divider -->
 
 	<header id="sliding-header" class="shadow">
-		<!-- Header nav bottom -->
+	  <!-- Header nav bottom -->
 		<nav class="header-nav-bottom navbar navbar-expand-lg navbar-light py-1 py-lg-0">
 			<div class="container">
 				<a class="navbar-brand" href="archive-product-portfolio.html#">
 					<img src="<?php echo get_template_directory_uri(); ?>/img/ico/logo-dark-theme.svg" />
 				</a>
 				<div class="d-lg-none">
-					<a class="top-menu-tel pt-1 pb-0" style="font-size: 14px" href="tel:89856445775">
+					<a  class="top-menu-tel pt-1 pb-0"  style="font-size: 14px"  href="tel:89856445775">
 						8 (985) 644-57-75
 					</a>
 					<div style="font-size: 10px;  font-family: Gilroy-Light;  text-transform: none;">
-						<img src="<?php echo get_template_directory_uri(); ?>/img/ico/clock-ico.svg"
-							style="width: 12px; position: relative; top: -1px" class="me-1" />
+						<img  src="<?php echo get_template_directory_uri(); ?>/img/ico/clock-ico.svg" style="width: 12px; position: relative; top: -1px"  class="me-1"/>
 						Пн-Вс 8:00-22:00
 					</div>
 				</div>
-				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#sliding-header-collapse"
-					aria-controls="sliding-header-collapse" aria-expanded="false" aria-label="Toggle navigation">
+				<button  class="navbar-toggler"  type="button"  data-bs-toggle="collapse"  data-bs-target="#sliding-header-collapse"  aria-controls="sliding-header-collapse"  aria-expanded="false"  aria-label="Toggle navigation">
 					<span class="navbar-toggler-icon"></span>
 				</button>
 				<div class="collapse navbar-collapse" id="sliding-header-collapse">
 					<?php
-					wp_nav_menu(array(
-						'theme_location' => 'sliding-header-collapse',
-						'container' => false,
-						'menu_class' => '',
-						'fallback_cb' => '__return_false',
-						'items_wrap' => '
+						wp_nav_menu(array(
+							'theme_location' => 'sliding-header-collapse',
+							'container' => false,
+							'menu_class' => '',
+							'fallback_cb' => '__return_false',
+							'items_wrap' => '
 								<ul id="%1$s" class="navbar-nav ms-auto mb-2 mb-lg-0 %2$s">%3$s
 									<!-- Mobile menu -->
 									<li class="nav-item d-lg-none mobile-item">
@@ -298,18 +214,18 @@ include 'header.php';
 									</li>
 									<li  class="nav-item d-lg-none mobile-item mobile-schedule mb-md-2">
 										<div class="location-block">
-											<img  src="' . get_template_directory_uri() . '/img/ico/location-ico.svg"  style="width: 10px" class="me-1"/>
-											<span>' . $address . '</span>
+											<img  src="'.get_template_directory_uri().'/img/ico/location-ico.svg"  style="width: 10px" class="me-1"/>
+											<span>'.$address.'</span>
 										</div>
 										<a  class="nav-link top-menu-tel pt-1 pb-1"  href="tel:89856445775">
 											8 (985) 644-57-75
 										</a>
-										<img  src="' . get_template_directory_uri() . '/img/ico/clock-ico.svg"  style="width: 10px; position: relative; top: 2px"  class="me-1 mb-2"/>
+										<img  src="'.get_template_directory_uri().'/img/ico/clock-ico.svg"  style="width: 10px; position: relative; top: 2px"  class="me-1 mb-2"/>
 										Ежедневно с 8:00 до 22:00
 									</li>
 									<li class="nav-item d-lg-none pt-2 pb-4">
 										<a class="ico-button pe-2 text-decoration-none" href="https://wa.me/79856445775?web=1&app_absent=1" target="blank">
-											<img src="' . get_template_directory_uri() . '/img/ico/whatsapp-ico.svg" />
+											<img src="'.get_template_directory_uri().'/img/ico/whatsapp-ico.svg" />
 										</a>
 										<a class="ico-button pe-2 text-decoration-none" href="https://t.me/+79856445775" target="blank">
 											<img src="'.get_template_directory_uri().'/img/ico/telegram-ico.svg" />
@@ -321,14 +237,14 @@ include 'header.php';
 									<!-- End mobile menu -->
 								</ul>
 							',
-						'depth' => 2,
-						'walker' => new bootstrap_5_wp_nav_menu_walker()
-					));
+							'depth' => 2,
+							'walker' => new bootstrap_5_wp_nav_menu_walker()
+						));
 					?>
 				</div>
 			</div>
 		</nav>
-		<!-- /Header nav bottom -->
+	  <!-- /Header nav bottom -->
 	</header>
 </section>
 <!-- END SECTION HOME -->
