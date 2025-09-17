@@ -3449,3 +3449,13 @@ section#uznat-stoimost label.form-check-label,
 	margin-bottom: 1rem;
 	color: var(--subtitle-color);
 }
+
+#archive-portfolio-header-light .navbar-light .navbar-nav .menu-item .nav-link {
+	--bs-text-opacity: 1;
+	color: rgba(var(--bs-dark-rgb), var(--bs-text-opacity)) !important;
+	transition: color 0.3s;
+}
+
+#archive-portfolio-header-light .navbar-light .navbar-nav .menu-item .nav-link:hover {
+	color: rgb(255, 230, 0) !important;
+}
