@@ -634,11 +634,10 @@ a.btn.btn-danger:focus {
 
 /*** #MAIN ***/
 #main {
-	background: url(../img/main.jpg);
+	background: url(../img/main.jpg) 70% 30%;
 	background-size: cover;
-	position: relative;
 }
-
+/* 
 #main h1 {
 	font-weight: 800;
 	font-size: 36px;
@@ -664,7 +663,7 @@ a.btn.btn-danger:focus {
 
 #main h1 span {
 	color: #ffe600;
-}
+} */
 
 #main form label.form-check-label,
 .home-section form label.form-check-label {

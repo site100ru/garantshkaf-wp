@@ -121,7 +121,7 @@
 	<body>
     
 		<div id="sp-home" class="scroll-points"></div>
-		<section id="main">
+		<section id="main" class="home-section">
 			<div class="parallax-home-section"></div>
 				<!-- <div class="divider-left"></div>
 				<div class="divider-right"></div> -->
