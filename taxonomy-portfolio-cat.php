@@ -9,120 +9,200 @@ include 'header.php';
 
 ?>
 <!-- SECTION HOME -->
+<!-- SECTION HOME -->
 <div id="sp-home"></div>
 <!-- Header 1 -->
 <div class="col-md-12 d-flex justify-content-end col-nav"
-	style="background-color:#F5F5F5; border-bottom: 1px solid #E1E1E1;">
-	<nav class="navbar navbar-expand-lg navbar-dark d-none d-lg-block py-0">
-		<div class="container-fluid px-0">
-			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-				aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-				<span class="navbar-toggler-icon"></span>
-			</button>
-			<nav class="header-nav-top navbar navbar-expand-lg navbar-light d-none d-lg-block">
-				<div class="container">
-					<button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-						data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-						aria-label="Toggle navigation">
-						<span class="navbar-toggler-icon"></span>
-					</button>
-					<div class="collapse navbar-collapse" id="navbarSupportedContent">
-						<ul class="navbar-nav ms-auto align-items-center top-navbar">
-							<li class="nav-item me-3">
-								<a class="nav-link text-dark" href="archive-product-portfolio.html#">
-									<div class="d-flex nav-link-inner">
-										<div class="nav-li-float-left">
-											<img src="<?php echo get_template_directory_uri(); ?>/img/ico/location-ico.svg" />
-										</div>
-										<div class="nav-li-float-right"><?php echo $address; ?></div>
-										<div style="clear: both"></div>
-									</div>
-								</a>
-							</li>
-							<li class="nav-item me-3">
-								<a class="nav-link text-dark" href="archive-product-portfolio.html#">
-									<div class="d-flex nav-link-inner">
-										<div class="nav-li-float-left">
-											<img src="<?php echo get_template_directory_uri(); ?>/img/ico/clock-ico.svg" />
-										</div>
-										<div class="nav-li-float-right">
-											Пн - Вс <br />с 8:00 до 22:00
-										</div>
-										<div style="clear: both"></div>
-									</div>
-								</a>
-							</li>
-							<li class="nav-item me-3">
-								<a href="archive-product-portfolio.html#" class="nav-link text-dark" data-bs-toggle="modal"
-									data-bs-target="#callback">
-									<div class="d-flex nav-link-inner">
-										<div class="nav-li-float-left">
-											<img src="<?php echo get_template_directory_uri(); ?>/img/ico/callback-ico.svg" />
-										</div>
-										<div class="nav-li-float-right">
-											Обратный звонок
-										</div>
-										<div style="clear: both"></div>
-									</div>
-								</a>
-							</li>
-							<li class="nav-item me-4">
-								<a class="top-menu-tel nav-link text-dark" href="tel:89856445775">
-									<div class="d-flex nav-link-inner">
-										<div class="nav-li-float-left">
-											<img src="<?php echo get_template_directory_uri(); ?>/img/ico/mobile-phone-ico.svg" />
-										</div>
-										<div class="nav-li-float-right phone-number">
-											8 (985) 644-57-75
-										</div>
-										<div style="clear: both"></div>
-									</div>
-								</a>
-							</li>
-							<li class="nav-item me-2">
-								<a class="nav-link ico-button" href="https://t.me/+79856445775" target="_blank">
-									<img src="<?php echo get_template_directory_uri(); ?>/img/ico/telegram-ico.svg" />
-								</a>
-							</li>
-							<li class="nav-item me-2">
-								<a class="nav-link ico-button" href="https://wa.me/79856445775?web=1&amp;app_absent=1" target="_blank">
-									<img src="<?php echo get_template_directory_uri(); ?>/img/ico/whatsapp-ico.svg" />
-								</a>
-							</li>
-							<li class="nav-item">
-								<a class="nav-link ico-button"
-									href="https://max.ru/u/f9LHodD0cOJpxVina4POaWorB_iFOHaIWOB_hVCMqBZT5lketcgqeZcBwAc" target="_blank">
-									<img src="<?php echo get_template_directory_uri(); ?>/img/ico/max-ico.svg" />
-								</a>
-							</li>
-						</ul>
-					</div>
-				</div>
-			</nav>
-		</div>
-	</nav>
+    style="background-color:#F5F5F5; border-bottom: 1px solid #E1E1E1;">
+    <nav class="navbar navbar-expand-lg navbar-dark d-none d-lg-block py-0">
+        <div class="container-fluid px-0">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <nav class="header-nav-top navbar navbar-expand-lg navbar-light d-none d-lg-block">
+                <div class="container">
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav ms-auto align-items-center top-navbar">
+                            <li class="nav-item me-3">
+                                <a class="nav-link text-dark" href="archive-product-portfolio.html#">
+                                    <div class="d-flex nav-link-inner">
+                                        <div class="nav-li-float-left">
+                                            <img
+                                                src="<?php echo get_template_directory_uri(); ?>/img/ico/location-ico.svg" />
+                                        </div>
+                                        <div class="nav-li-float-right"><?php echo $address; ?></div>
+                                        <div style="clear: both"></div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="nav-item me-3">
+                                <a class="nav-link text-dark" href="archive-product-portfolio.html#">
+                                    <div class="d-flex nav-link-inner">
+                                        <div class="nav-li-float-left">
+                                            <img
+                                                src="<?php echo get_template_directory_uri(); ?>/img/ico/clock-ico.svg" />
+                                        </div>
+                                        <div class="nav-li-float-right">
+                                            Пн - Вс <br />с 8:00 до 22:00
+                                        </div>
+                                        <div style="clear: both"></div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="nav-item me-3">
+                                <a href="archive-product-portfolio.html#" class="nav-link text-dark"
+                                    data-bs-toggle="modal" data-bs-target="#callback">
+                                    <div class="d-flex nav-link-inner">
+                                        <div class="nav-li-float-left">
+                                            <img
+                                                src="<?php echo get_template_directory_uri(); ?>/img/ico/callback-ico.svg" />
+                                        </div>
+                                        <div class="nav-li-float-right">
+                                            Обратный звонок
+                                        </div>
+                                        <div style="clear: both"></div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="nav-item me-4">
+                                <a class="top-menu-tel nav-link text-dark" href="tel:89856445775">
+                                    <div class="d-flex nav-link-inner">
+                                        <div class="nav-li-float-left">
+                                            <img
+                                                src="<?php echo get_template_directory_uri(); ?>/img/ico/mobile-phone-ico.svg" />
+                                        </div>
+                                        <div class="nav-li-float-right phone-number">
+                                            8 (985) 644-57-75
+                                        </div>
+                                        <div style="clear: both"></div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="nav-item me-2">
+                                <a class="nav-link ico-button" href="https://t.me/+79856445775" target="_blank">
+                                    <img src="<?php echo get_template_directory_uri(); ?>/img/ico/telegram-ico.svg" />
+                                </a>
+                            </li>
+                            <li class="nav-item me-2">
+                                <a class="nav-link ico-button" href="https://wa.me/79856445775?web=1&amp;app_absent=1"
+                                    target="_blank">
+                                    <img src="<?php echo get_template_directory_uri(); ?>/img/ico/whatsapp-ico.svg" />
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link ico-button"
+                                    href="https://max.ru/u/f9LHodD0cOJpxVina4POaWorB_iFOHaIWOB_hVCMqBZT5lketcgqeZcBwAc"
+                                    target="_blank">
+                                    <img src="<?php echo get_template_directory_uri(); ?>/img/ico/max-ico.svg" />
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </nav>
+    <header id="sliding-header" class="shadow">
+        <!-- Header nav bottom -->
+        <nav class="header-nav-bottom navbar navbar-expand-lg navbar-light py-1 py-lg-0">
+            <div class="container">
+                <a class="navbar-brand" href="archive-product-portfolio.html#">
+                    <img src="<?php echo get_template_directory_uri(); ?>/img/ico/logo-dark-theme.svg" />
+                </a>
+                <div class="d-lg-none">
+                    <a class="top-menu-tel pt-1 pb-0" style="font-size: 14px" href="tel:89856445775">
+                        8 (985) 644-57-75
+                    </a>
+                    <div style="font-size: 10px;  font-family: Gilroy-Light;  text-transform: none;">
+                        <img src="<?php echo get_template_directory_uri(); ?>/img/ico/clock-ico.svg"
+                            style="width: 12px; position: relative; top: -1px" class="me-1" />
+                        Пн-Вс 8:00-22:00
+                    </div>
+                </div>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#sliding-header-collapse" aria-controls="sliding-header-collapse"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="sliding-header-collapse">
+                    <?php
+                    wp_nav_menu(array(
+                        'theme_location' => 'sliding-header-collapse',
+                        'container' => false,
+                        'menu_class' => '',
+                        'fallback_cb' => '__return_false',
+                        'items_wrap' => '
+											<ul id="%1$s" class="navbar-nav ms-auto mb-2 mb-lg-0 %2$s">%3$s
+												<!-- Mobile menu -->
+												<li class="nav-item d-lg-none mobile-item">
+													<a  class="nav-link active modal-link"  href="#"  data-bs-toggle="modal"  data-bs-target="#callback-measurer">
+														Вызов замерщика (Бесплатно)
+													</a>
+												</li>
+												<li  class="nav-item d-lg-none mobile-item mobile-schedule mb-md-2">
+													<div class="location-block">
+														<img  src="' . get_template_directory_uri() . '/img/ico/location-ico.svg"  style="width: 10px" class="me-1"/>
+														<span>' . $address . '</span>
+													</div>
+													<a  class="nav-link top-menu-tel pt-1 pb-1"  href="tel:89856445775">
+														8 (985) 644-57-75
+													</a>
+													<img  src="' . get_template_directory_uri() . '/img/ico/clock-ico.svg"  style="width: 10px; position: relative; top: 2px"  class="me-1 mb-2"/>
+													Ежедневно с 8:00 до 22:00
+												</li>
+												<li class="nav-item d-lg-none pt-2 pb-4">
+													<a class="ico-button pe-2 text-decoration-none" href="https://wa.me/79856445775?web=1&app_absent=1" target="blank">
+														<img src="' . get_template_directory_uri() . '/img/ico/whatsapp-ico.svg" />
+													</a>
+													<a class="ico-button pe-2 text-decoration-none" href="https://t.me/+79856445775" target="blank">
+														<img src="' . get_template_directory_uri() . '/img/ico/telegram-ico.svg" />
+													</a>
+													<a class="ico-button pe-0 text-decoration-none" href="https://max.ru/u/f9LHodD0cOJpxVina4POaWorB_iFOHaIWOB_hVCMqBZT5lketcgqeZcBwAc" target="blank">
+														<img src="' . get_template_directory_uri() . '/img/ico/max-ico.svg" />
+													</a>
+												</li>
+												<!-- End mobile menu -->
+											</ul>
+										',
+                        'depth' => 2,
+                        'walker' => new bootstrap_5_wp_nav_menu_walker()
+                    ));
+                    ?>
+                </div>
+            </div>
+        </nav>
+        <!-- /Header nav bottom -->
+    </header>
 </div><!-- /.col-md-12 -->
 <!-- /Header 1 -->
 
 <!-- Header 2 -->
 <div class="col-md-12 bottom-nav" id="archive-portfolio-header-light">
-	<nav class="header-nav-bottom navbar navbar-expand-lg navbar-light header-bottom" style="background-color: #fff">
-		<div class="container bottom-container">
-			<a class="navbar-brand" href="#">
-				<img src="<?php echo get_template_directory_uri(); ?>/img/ico/logo-dark-theme.svg" />
-			</a>
-			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mobail-header-collapse"
-				aria-controls="mobail-header-collapse" aria-expanded="false" aria-label="Toggle navigation">
-				<span class="navbar-toggler-icon"></span>
-			</button>
-			<div class="collapse navbar-collapse" id="mobail-header-collapse">
-				<?php
-				wp_nav_menu(array(
-					'theme_location' => 'mobail-header-collapse',
-					'container' => false,
-					'menu_class' => '',
-					'fallback_cb' => '__return_false',
-					'items_wrap' => '
+    <nav class="header-nav-bottom navbar navbar-expand-lg navbar-light header-bottom" style="background-color: #fff">
+        <div class="container bottom-container">
+            <a class="navbar-brand" href="#">
+                <img src="<?php echo get_template_directory_uri(); ?>/img/ico/logo-dark-theme.svg" />
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#mobail-header-collapse" aria-controls="mobail-header-collapse" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="mobail-header-collapse">
+                <?php
+                wp_nav_menu(array(
+                    'theme_location' => 'mobail-header-collapse',
+                    'container' => false,
+                    'menu_class' => '',
+                    'fallback_cb' => '__return_false',
+                    'items_wrap' => '
 												<ul id="%1$s" class="navbar-nav align-items-center ms-auto mb-2 mb-lg-0 %2$s">%3$s
 													<!-- Mobile menu -->
 													<li class="nav-item d-lg-none mobile-item">
@@ -157,16 +237,16 @@ include 'header.php';
 													<!-- End mobile menu -->
 												</ul>
 											',
-					'depth' => 2,
-					'walker' => new bootstrap_5_wp_nav_menu_walker()
-				));
-				?>
-			</div><!-- /.collapse -->
-		</div><!-- /.container -->
-	</nav>
+                    'depth' => 2,
+                    'walker' => new bootstrap_5_wp_nav_menu_walker()
+                ));
+                ?>
+            </div><!-- /.collapse -->
+        </div><!-- /.container -->
+    </nav>
 </div><!-- /.col-md-12 -->
 <!-- /Header 2 -->
-
+ 
 <header id="archive-portfolio-header" class="home-section home-section-shafy-cupe woocommerce-products-header"
 	style="background-position: center;">
 	<div class="container">
