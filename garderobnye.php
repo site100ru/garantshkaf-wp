@@ -230,7 +230,7 @@ include 'header.php';
 						<form method="post" action="<?php echo get_stylesheet_directory_uri(); ?>/mails/get_calculate.php"
 							enctype="multipart/form-data">
 							<textarea type="text" rows="3" name="mes" class="form-control"
-								placeholder="Например: длина, ширина, глубина, количество дверей, материал дверей, форма, вид шкафа и т.д."
+								placeholder="Например: длина, ширина помещения, количество, форма и материал шкафов, полок и т.д"
 								style="height: auto; margin-top: 15px; margin-bottom: 15px"></textarea>
 							<p class="input-group custom-file-button">
 								<label class="input-group-text" for="inputGroupFile">
