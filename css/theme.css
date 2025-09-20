@@ -3146,6 +3146,7 @@ li.nav-item:first-child a.nav-link {
 	.header-nav-bottom .navbar-nav {
 		gap: 12px;
 	}
+    .navbar-light .navbar-nav .menu-item .nav-link,
 	.navbar-light .navbar-nav .nav-link {
 		font-size: 10px;
 	}
