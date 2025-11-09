@@ -108,7 +108,7 @@ include 'header.php';
             </nav>
         </div>
     </nav>
-     <header id="sliding-header" class="shadow">
+    <header id="sliding-header" class="shadow">
         <!-- Header nav bottom -->
         <nav class="header-nav-bottom navbar navbar-expand-lg navbar-light py-1 py-lg-0">
             <div class="container">
@@ -205,34 +205,7 @@ include 'header.php';
 												<ul id="%1$s" class="navbar-nav align-items-center ms-auto mb-2 mb-lg-0 %2$s">%3$s
 													<!-- Mobile menu -->
 													<li class="nav-item d-lg-none mobile-item">
-														<a  class="nav-link active"  href="#" data-bs-toggle="modal" data-bs-target="#callback-measurer">
-															Вызов замерщика (Бесплатно)
-														</a>
-													</li>
-													<li class="nav-item d-lg-none mobile-item">
-														<div>
-															<img  src="' . get_template_directory_uri() . '/img/ico/location-ico.svg"  style="width: 10px" class="me-1"/>
-															<span><?php echo $address; ?></span>
-														</div>
-														<a  class="nav-link top-menu-tel pt-1 pb-1"  href="tel:89856445775">
-															8 (985) 644-57-75
-														</a>
-														<div  class="mb-2"  style="font-size: 12px;  font-family: Gilroy-Light;  text-transform: none;">
-															<img  src="' . get_template_directory_uri() . '/img/ico/clock-ico.svg"  style="width: 10px; position: relative; top: 3px"  class="me-1 mb-2"/>
-															Ежедневно с 8:00 до 22:00
-														</div>
-													</li>
-													<li class="nav-item d-lg-none pb-4">
-														<a class="ico-button pe-2" href="https://wa.me/79856445775?web=1&app_absent=1" target="blank">
-															<img src="' . get_template_directory_uri() . '/img/ico/whatsapp-ico.svg"/>
-														</a>
-														<a class="ico-button pe-2" href="https://t.me/+79856445775" target="blank">
-															<img src="' . get_template_directory_uri() . '/img/ico/telegram-ico.svg" />
-														</a>
-														<a class="ico-button pe-0" href="https://max.ru/u/f9LHodD0cOJpxVina4POaWorB_iFOHaIWOB_hVCMqBZT5lketcgqeZcBwAc" target="blank">
-															<img src="' . get_template_directory_uri() . '/img/ico/max-ico.svg" />
-														</a>
-													</li>
+	@@ -157,16 +237,16 @@
 													<!-- End mobile menu -->
 												</ul>
 											',
@@ -702,7 +675,7 @@ include 'header.php';
             <div class="col">
                 <p class="font-weight-bold text-center mb-0">©<?php echo date('Y'); ?>г. Мебельная фабрика «Гарантшкаф»
                 </p>
-                <p class="font-weight-light m-0 text-center fs-16">Создание и продвижение: <a href="https://site100.ru"
+				<p class="font-weight-light m-0 text-center fs-16">Создание, продвижение и поддержка сайтов: <a href="https://site100.ru"
                         target="_blank">site<span class="text-danger">100</span>.ru</a></p>
             </div>
         </div>
