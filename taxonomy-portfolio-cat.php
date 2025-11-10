@@ -686,7 +686,7 @@ include 'header.php';
 		<div id="footer1" class="row align-items-center">
 			<div class="col">
 				<p class="font-weight-bold text-center mb-0">©<?php echo date('Y'); ?>г. Мебельная фабрика «Гарантшкаф»</p>
-				<p class="font-weight-light m-0 text-center fs-16">Создание, продвижение и поддержка сайтов: : <a href="https://site100.ru"
+				<p class="font-weight-light m-0 text-center fs-16">Создание, продвижение и поддержка сайтов: <a href="https://site100.ru"
 						target="_blank">site<span class="text-danger">100</span>.ru</a></p>
 			</div>
 		</div>

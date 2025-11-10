@@ -31,7 +31,7 @@ $bg_color = $args['bg_color'] ?? 'bg-light';
                             <i class="star-filled"><img src="<?php echo get_template_directory_uri(); ?>/img/ico/star.svg"
                                     alt="stars"></i>
                         </div>
-                        <p class="mb-0" style="font-size: 18px;     line-height: 1;">4,9 из 5</p>
+                        <p class="mb-0" style="font-size: 18px;     line-height: 1;">4,6 из 5</p>
                     </div>
                 </div>
             </div>
@@ -70,7 +70,9 @@ $bg_color = $args['bg_color'] ?? 'bg-light';
 
                         <!-- Текст отзыва -->
                         <div class="review-text">
-                            <p class="review-description">Нужен был шкаф в спальню. Обзвонил множество контор. Остановился на гарантшкаф. По телефону все подробно объяснили по стоимости,срокам. В этот же день связался замерщик,договорились о встрече. У замерщика в наличии все образцы материалов, их множество,очень большой выбор. Померяли,заключили договор. В назначенное время приехали сборщики,все собрали. Качественно,профессионально, всё как нужно было. Очень рекомендую!</p>
+                            <p class="review-description">Нужен был шкаф в спальню. Обзвонил множество контор. Остановился на гарантшкаф. По телефону все подробно объяснили по стоимости,срокам. В этот же день связался замерщик,договорились о встрече. У замерщика в наличии все ...
+                                <a href="https://yandex.kz/maps/org/garantshkaf/43131278671/?ll=37.475504%2C56.017226&z=17" style="text-decoration: none; color: #323232; font-weight: 500; font-family: 'Gilroy-Medium';">читать еще</a>
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -107,9 +109,8 @@ $bg_color = $args['bg_color'] ?? 'bg-light';
                         <!-- Текст отзыва -->
                         <div class="review-text">
                             <p class="review-description">Я счастливая обладательница красивого шкафа! Запланировала шкаф в прихожей, чтобы не потерять пространство.
-                                В браузере набрала шкаф купе, вышла компания Гарантшкаф, оставила номер телефона, перезвонили через 10 минут, на следующий день был сделал замер, <a href="https://yandex.kz/maps/org/garantshkaf/43131278671/?ll=37.475504%2C56.017226&z=17"
-                                    style="text-decoration: none; color: #323232; font-weight: 500; font-family: 'Gilroy-Medium';">читать
-                                    еще</a>
+                                В браузере набрала шкаф купе, вышла компания Гарантшкаф, оставила номер телефона, перезвонили через 10 минут, ...
+                                <a href="https://yandex.kz/maps/org/garantshkaf/43131278671/?ll=37.475504%2C56.017226&z=17" style="text-decoration: none; color: #323232; font-weight: 500; font-family: 'Gilroy-Medium';">читать еще</a>
                             </p>
                         </div>
                     </div>
@@ -146,9 +147,7 @@ $bg_color = $args['bg_color'] ?? 'bg-light';
 
                         <!-- Текст отзыва -->
                         <div class="review-text">
-                            <p class="review-description">Хочу поблагодарить компанию Гарантшкаф. Сделали за 2 недели чудесный шкаф. Особо хочу поблагодарить Михаила за хорошее отношение, все объяснил, посоветовал, рассказал про все тонкости. Большое спасибо! <a href="https://yandex.kz/maps/org/garantshkaf/43131278671/?ll=37.475504%2C56.017226&z=17"
-                                    style="text-decoration: none; color: #323232; font-weight: 500; font-family: 'Gilroy-Medium';">читать
-                                    еще</a></p>
+                            <p class="review-description">Хочу поблагодарить компанию Гарантшкаф. Сделали за 2 недели чудесный шкаф. Особо хочу поблагодарить Михаила за хорошее отношение, все объяснил, посоветовал, рассказал про все тонкости. Большое спасибо! </p>
                         </div>
                     </div>
                 </div>
