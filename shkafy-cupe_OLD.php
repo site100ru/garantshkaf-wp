@@ -333,9 +333,7 @@ include 'header.php';
 				<div class="row justify-content-center">
 					<div class="col-md-10">
 						<div style="position: relative">
-							<video id="video-player" style="width: 100%; overflow: hidden; border-radius: 25px;"
-								playsinline="playsinline" loop="loop"
-								poster="https://garantshkaf.ru/wp-content/themes/garantshkaf-3/img/video-poster.jpg">
+							<video  id="video-player" playsinline="playsinline"  loop="loop" poster="https://garantshkaf.ru/wp-content/themes/garantshkaf-3/img/video-poster.jpg">
 								<!-- muted="muted" autoplay="autoplay" -->
 								<!-- <source src="header-bg.ogv" type='video/ogg; codecs="theora, vorbis"'> -->
 								<source src="<?php echo get_template_directory_uri(); ?>/videos/video.mp4"

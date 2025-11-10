@@ -23,7 +23,7 @@ input.btn.btn-danger {
 }
 button.btn.btn-danger, input.btn.btn-danger {
     background: linear-gradient(91.89deg, #FC4A1A -16.07%, #F7B733 124.94%);
-    border-radius: 30px;
+    border-radius: var(--border-radius-medium);
     border: none;
     padding: 15px;
     height: 60px;
@@ -41,7 +41,7 @@ button.btn.btn-danger, input.btn.btn-danger {
 
 input.btn.btn-corporate-color-outline-1 {
     border: 2px solid #FA8026;
-    border-radius: 30px;
+    border-radius: var(--border-radius-medium);
     padding: 15px;
     min-width: 150px;
     height: 60px;
@@ -57,7 +57,7 @@ input.btn.btn-corporate-color-outline-1 {
 
 input.btn.btn-corporate-color-outline-1:hover {
     background: linear-gradient(91.89deg, #FC4A1A -16.07%, #F7B733 124.94%);
-	border: none;
+	border-color: transparent;
     color: #F5F5F5;
 }
 /*** END BUTTONS ***/

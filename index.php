@@ -121,8 +121,8 @@
 	<body>
     
 		<div id="sp-home" class="scroll-points"></div>
-		<section id="main">
-			<div class="parallax-home-section"></div>
+		<section id="main" class="home-section">
+            <div class="parallax-home-section"></div>
 				<!-- <div class="divider-left"></div>
 				<div class="divider-right"></div> -->
 				<!-- style="max-width: 1700px; border-right: 1px solid rgba(153, 153, 153, 0.9); border-left: 1px solid rgba(153, 153, 153, 0.9);" -->
@@ -437,7 +437,7 @@
 				<div class="row justify-content-center">
 					<div class="col-md-8">
 						<div style="position: relative">
-							<video  id="video-player"  class="rounded"  style="width: 100%; overflow: hidden"  playsinline="playsinline"  loop="loop" poster="https://garantshkaf.ru/wp-content/themes/garantshkaf-3/img/video-poster.jpg">
+							<video  id="video-player" playsinline="playsinline"  loop="loop" poster="https://garantshkaf.ru/wp-content/themes/garantshkaf-3/img/video-poster.jpg">
 								<!-- muted="muted" autoplay="autoplay" -->
 								<!-- <source src="header-bg.ogv" type='video/ogg; codecs="theora, vorbis"'> -->
 								<source  src="<?php echo get_stylesheet_directory_uri(); ?>/videos/video.mp4"  type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'/>
@@ -1546,7 +1546,7 @@
 							Мебельная фабрика «ГАРАНТШКАФ» © <?php echo date('Y'); ?>г.
 						</p>
 						<p class="font-weight-light m-0 text-center fs-16">
-							Создание и продвижение сайтов: <a href="https://site100.ru" target="_blank">site<span class="text-danger">100</span>.ru</a>
+							Создание, продвижение и поддержка сайтов:  сайтов: <a href="https://site100.ru" target="_blank">site<span class="text-danger">100</span>.ru</a>
 						</p>
 					</div>
 				</div>

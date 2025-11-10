@@ -111,7 +111,7 @@
 		<link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/style.css" />
 		
 		<!-- Quiz CSS -->
-		<link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/css/quiz.css" />
+		<!-- <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/css/quiz.css" /> -->
 
 		<title><?php echo get_the_title(); ?> на&nbsp;заказ от&nbsp;производителя<?php echo $location; ?></title>
 		

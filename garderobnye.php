@@ -230,7 +230,7 @@ include 'header.php';
 						<form method="post" action="<?php echo get_stylesheet_directory_uri(); ?>/mails/get_calculate.php"
 							enctype="multipart/form-data">
 							<textarea type="text" rows="3" name="mes" class="form-control"
-								placeholder="Например: длина, ширина, глубина, количество дверей, материал дверей, форма, вид шкафа и т.д."
+								placeholder="Например: длина, ширина помещения, количество, форма и материал шкафов, полок и т.д"
 								style="height: auto; margin-top: 15px; margin-bottom: 15px"></textarea>
 							<p class="input-group custom-file-button">
 								<label class="input-group-text" for="inputGroupFile">
@@ -345,8 +345,7 @@ include 'header.php';
 				<div class="row justify-content-center">
 					<div class="col-md-10">
 						<div style="position: relative">
-							<video id="video-player" style="width: 100%; overflow: hidden; border-radius: 25px;"
-								playsinline="playsinline" loop="loop">
+							<video  id="video-player" playsinline="playsinline"  loop="loop" poster="https://garantshkaf.ru/wp-content/themes/garantshkaf-3/img/video-poster.jpg">
 								<!-- muted="muted" autoplay="autoplay" -->
 								<!-- <source src="header-bg.ogv" type='video/ogg; codecs="theora, vorbis"'> -->
 								<source src="<?php echo get_stylesheet_directory_uri(); ?>/videos/video.mp4"
@@ -1097,7 +1096,10 @@ wp_reset_postdata();
 
 <!-- Testimonials section -->
 <div id="sp-testimonials"></div>
-<section class="section-testimonials">
+<?php get_template_part('template-parts/reviews-section/reviews-section', null, array(
+    'bg_color' => 'bg-light', 
+)); ?>
+<!-- <section class="section-testimonials">
 	<div class="container"
 		style="max-width: 1700px; padding-top: 80px; padding-bottom: 50px; border-right: 1px solid rgba(153, 153, 153, 0.9);  border-left: 1px solid rgba(153, 153, 153, 0.9);">
 		<div class="row justify-content-center">
@@ -1119,7 +1121,7 @@ wp_reset_postdata();
 			</div>
 		</div>
 	</div>
-</section>
+</section> -->
 <!-- /Testimonials section -->
 
 
@@ -1542,7 +1544,7 @@ wp_reset_postdata();
 		<div id="footer1" class="row align-items-center">
 			<div class="col">
 				<p class="font-weight-bold text-center mb-0">©<?php echo date('Y'); ?>г. Мебельная фабрика «Гарантшкаф»</p>
-				<p class="font-weight-light m-0 text-center fs-16">Создание и продвижение: <a href="https://site100.ru"
+				<p class="font-weight-light m-0 text-center fs-16">Создание, продвижение и поддержка сайтов: <a href="https://site100.ru"
 						target="_blank">site<span class="text-danger">100</span>.ru</a></p>
 			</div>
 		</div>
