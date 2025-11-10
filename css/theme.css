@@ -2460,8 +2460,10 @@ h5#modalOrderLabel {
 }
 div#footer1 p,
 div#footer1 a {
-	font-family: inherit;
-	font-weight: normal;
+	font-family: Akrobat;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
 }
 div#footer1 a {
 	display: inline;
@@ -2532,14 +2534,20 @@ span.text-danger {
 	display: inline-block !important;
 }
 #footer hr {
-	background: white;
-	opacity: 0.25;
+    border-top: 1px solid #7d7d7d;
+    /* background: rgba(153, 153, 153, 0.9); */
+	opacity: 1;
 	margin: 0;
 }
+#footer1 p span,
 div#footer1 p span {
-	font-size: 18px;
+	/* font-size: 18px; */
 	line-height: 0;
-	padding-top: 17px;
+	padding-top: 0;
+}
+#footer1 .col p:nth-of-type(2),
+#footer1 p:nth-of-type(2) a {
+  font-weight: 300;
 }
 /*new*/
 .navbar-expand-lg .navbar-nav {

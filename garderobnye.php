@@ -1097,7 +1097,7 @@ wp_reset_postdata();
 <!-- Testimonials section -->
 <div id="sp-testimonials"></div>
 <?php get_template_part('template-parts/reviews-section/reviews-section', null, array(
-    'bg_color' => 'bg-light', 
+    'bg_color' => ' ', 
 )); ?>
 <!-- <section class="section-testimonials">
 	<div class="container"

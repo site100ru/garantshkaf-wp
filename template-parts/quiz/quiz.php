@@ -1,10 +1,12 @@
-<section id="quiz" class="quiz-section py-5">
+<section id="quiz" class="quiz-section">
     <div class="container" style="max-width: 1700px; padding-top: 80px; padding-bottom: 50px; border-right: 1px solid rgba(153, 153, 153, 0.9);  border-left: 1px solid rgba(153, 153, 153, 0.9);">
         <div class="row justify-content-center">
             <div class="col-md-9">
-                <h3 class="text-center title"> Узнайте примерную стоимость Вашего шкафа на нашей фабрике</h3>
-                <div class="section-title-decoration"></div>
-                <p class="text-center mb-5 subtitle">Воспользуйтесь конфигуратором. Пришлем стоимость любым удобным способом.</p>
+                <div class="section-title-wrapper text-center">
+                    <h2 class="section-title">Узнайте примерную стоимость Вашего шкафа-купе на нашей фабрике</h2>
+                    <p class="section-subtitle">Ответьте на 5 коротких вопроса.</p>
+                    <img class="text-center" src="<?php echo get_template_directory_uri(); ?>/img/ico/points.svg" alt="Точки" class="img-fluid" />
+                </div>
 
                 <div class="quiz-question-container">
                     <div class="row text-start quiz-question-wrapper">

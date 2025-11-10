@@ -1540,16 +1540,13 @@
 						<hr class="" />
 					</div>
 				</div>
-				<div id="footer1" class="row align-items-center pb-3">
-					<div class="col">
-						<p class="font-weight-bold text-center mb-0">
-							Мебельная фабрика «ГАРАНТШКАФ» © <?php echo date('Y'); ?>г.
-						</p>
-						<p class="font-weight-light m-0 text-center fs-16">
-							Создание, продвижение и поддержка сайтов:  сайтов: <a href="https://site100.ru" target="_blank">site<span class="text-danger">100</span>.ru</a>
-						</p>
-					</div>
-				</div>
+				<div id="footer1" class="row align-items-center">
+                    <div class="col">
+                        <p class="font-weight-bold text-center mb-0">©<?php echo date('Y'); ?>г. Мебельная фабрика «Гарантшкаф»</p>
+                        <p class="font-weight-light m-0 text-center fs-16">Создание, продвижение и поддержка сайтов: <a href="https://site100.ru"
+                                target="_blank">site<span class="text-danger">100</span>.ru</a></p>
+                    </div>
+                </div>
 			</div>
 		</footer>
 		
