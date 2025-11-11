@@ -9,7 +9,7 @@
 	--light-color: #e1e1e1;
 	--border-radius-30: 30px;
 	--border-radius-small: 5px;
-	--border-radius-medium: 20px;
+	--border-radius-medium: 15px;
 	--border-radius-large: 25px;
 }
 
@@ -297,6 +297,12 @@ a.btn.btn-danger {
 	color: #f5f5f5;
 	text-transform: uppercase;
 	transition: 0.25s;
+}
+
+button.btn.btn-danger.reviews-btn,
+a.btn.btn-danger.reviews-btn {
+	height: auto;
+	line-height: normal;
 }
 
 button.btn.btn-sm.btn-danger {
@@ -2458,12 +2464,15 @@ h5#modalOrderLabel {
 	font-weight: bold;
 	font-size: 35px;
 }
+#footer1 {
+	padding-bottom: 1rem;
+}
 div#footer1 p,
 div#footer1 a {
 	font-family: Akrobat;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 14px;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 14px;
 }
 div#footer1 a {
 	display: inline;
@@ -2534,8 +2543,8 @@ span.text-danger {
 	display: inline-block !important;
 }
 #footer hr {
-    border-top: 1px solid #7d7d7d;
-    /* background: rgba(153, 153, 153, 0.9); */
+	border-top: 1px solid #7d7d7d;
+	/* background: rgba(153, 153, 153, 0.9); */
 	opacity: 1;
 	margin: 0;
 }
@@ -2547,7 +2556,7 @@ div#footer1 p span {
 }
 #footer1 .col p:nth-of-type(2),
 #footer1 p:nth-of-type(2) a {
-  font-weight: 300;
+	font-weight: 300;
 }
 /*new*/
 .navbar-expand-lg .navbar-nav {
@@ -3492,4 +3501,51 @@ section#uznat-stoimost label.form-check-label,
 
 #archive-portfolio-header-light .navbar-light .navbar-nav .menu-item .nav-link:hover {
 	color: rgb(255, 230, 0) !important;
+}
+
+@media (max-width: 768px) {
+	#archive-portfolio-header {
+		padding-top: 40px;
+	}
+}
+
+.home-section h1.calculator-title {
+	margin-top: 0;
+}
+
+.advantage-section h3,
+.advantage-section p {
+	font-family: Gilroy;
+	font-weight: 600;
+	font-size: 20px;
+	color: #fff;
+	display: inline;
+	text-transform: inherit;
+	text-align: start;
+	line-height: normal;
+}
+
+.advantage-section p {
+	color: #ffe600;
+	margin-bottom: 0;
+}
+
+button.btn.btn-danger.calculate-btn {
+	font-weight: 700;
+	font-size: 16px;
+	text-align: center;
+	min-width: auto;
+	height: auto;
+	font-family: var(--font-family);
+	text-transform: none;
+	line-height: normal;
+	letter-spacing: inherit;
+	border-radius: var(--border-radius-small);
+}
+
+
+@media (min-width: 575.98px) {
+    .home-section.calculator {
+        background-position: center;
+    }
 }

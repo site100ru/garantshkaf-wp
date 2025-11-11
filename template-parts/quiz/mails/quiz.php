@@ -2,7 +2,13 @@
 session_start();
 $win = "true";
 
-$answer1 = $_POST['form-answer-1'];
+$answer1 = isset($_POST['form-answer-1']) ? $_POST['form-answer-1'] : '';
+$answer2 = isset($_POST['form-answer-2']) ? $_POST['form-answer-2'] : '';
+$answer3 = isset($_POST['form-answer-3']) ? $_POST['form-answer-3'] : '';
+$answer4 = isset($_POST['form-answer-4']) ? $_POST['form-answer-4'] : '';
+$answer5 = isset($_POST['form-answer-5']) ? $_POST['form-answer-5'] : '';
+$answer6 = isset($_POST['form-answer-6']) ? $_POST['form-answer-6'] : '';
+
 $answer2 = $_POST['form-answer-2'];
 $answer3 = $_POST['form-answer-3'];
 $answer4 = $_POST['form-answer-4'];
@@ -50,7 +56,7 @@ if ($_POST) {
 			Имя: " . $name . "<br><br>
 			Телефон: " . $phone . "<br><br>
 			Способы связи: " . $answer7 . "<br><br>
-			Тип мебели: " . $answer1 . "<br><br>
+            Тип мебели: " . ($answer1 ?: 'Не указано') . "<br><br>
 			Тип конструкции: " . $answer2 . "<br><br>
 			Материал фасада: " . $answer3 . "<br><br>
 			Ширина шкафа: " . $answer4 . "<br><br>
