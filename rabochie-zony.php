@@ -1505,6 +1505,7 @@ wp_reset_postdata();
 							<li><a href="/shkafy-raspashnye">Шкафы распашные</a></li>
 							<li><a href="/garderobnye">Гардеробные</a></li>
 							<li><a href="/rabochie-zony" class="active">Рабочие зоны</a></li>
+                            <li><a href="/calculator">Рассчитать стоимость</a></li>
 						</ul>
 					</div>
 				</div>

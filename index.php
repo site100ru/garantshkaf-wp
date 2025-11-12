@@ -1504,6 +1504,7 @@
 									<li><a href="<?php echo site_url('/shkafy-raspashnye/'); ?>">Шкафы распашные</a></li>
 									<li><a href="<?php echo site_url('/garderobnye/'); ?>">Гардеробные</a></li>
 									<li><a href="<?php echo site_url('/rabochie-zony/'); ?>">Рабочие зоны</a></li>
+                                    <li><a href="<?php echo site_url('/calculator/'); ?>">Рассчитать стоимость</a></li>
 								</ul>
 							</div>
 						</div>
