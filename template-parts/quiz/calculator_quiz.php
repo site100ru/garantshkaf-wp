@@ -11,8 +11,114 @@
                 <div class="quiz-question-container">
                     <div class="row text-start quiz-question-wrapper">
                         <!-- Шаг 1 -->
-                        <div class="col-xl-9" id="question-2">
-                            <h3 class="quiz-section-subtitle mb-4 text-start"><span>1/5</span> Какой тип шкафа Вам нужен?</h3>
+                        <div class="col-xl-9" id="question-1">
+                            <h3 class="quiz-section-subtitle mb-4 text-start"><span>1/5</span> Какой шкаф Вы хотите?</h3>
+
+                            <div class="row quiz-questions-container">
+                                <div class="col-6 col-sm-4 col-xl-3">
+                                    <label class="option_item mb-3" for="answer-1-1">
+                                        <input type="radio" id="answer-1-1" name="question-1" class="checkbox" value="Шкаф-купе" />
+                                        <div class="option_inner">
+                                            <div class="shadow-wrapper">
+                                                <div class="shadow-wrapper-decoration"></div>
+                                            </div>
+                                            <img loading="lazy" src="<?php echo get_template_directory_uri(); ?>/template-parts/quiz/img/1-1.webp"
+                                                style="width: 100%" />
+                                        </div>
+                                    </label>
+                                    <h6 class="quiz-section-h3 mb-4">Шкаф-купе</h6>
+                                </div>
+                                <div class="col-6 col-sm-4 col-xl-3">
+                                    <label class="option_item mb-3" for="answer-1-2">
+                                        <input type="radio" id="answer-1-2" name="question-1" class="checkbox" value="Распашной шкаф" />
+                                        <div class="option_inner">
+                                            <div class="shadow-wrapper">
+                                                <div class="shadow-wrapper-decoration"></div>
+                                            </div>
+                                            <img loading="lazy" src="<?php echo get_template_directory_uri(); ?>/template-parts/quiz/img/1-2.webp"
+                                                style="width: 100%" />
+                                        </div>
+                                    </label>
+                                    <h6 class="quiz-section-h3 mb-4">Распашной шкаф</h6>
+                                </div>
+                                <div class="col-6 col-sm-4 col-xl-3">
+                                    <label class="option_item mb-3" for="answer-1-3">
+                                        <input type="radio" id="answer-1-3" name="question-1" class="checkbox" value="Гардеробная" />
+                                        <div class="option_inner">
+                                            <div class="shadow-wrapper">
+                                                <div class="shadow-wrapper-decoration"></div>
+                                            </div>
+                                            <img loading="lazy" src="<?php echo get_template_directory_uri(); ?>/template-parts/quiz/img/1-3.webp"
+                                                style="width: 100%" />
+                                        </div>
+                                    </label>
+                                    <h6 class="quiz-section-h3 mb-4">Гардеробная</h6>
+                                </div>
+                                <div class="col-6 col-sm-4 col-xl-3">
+                                    <label class="option_item mb-3" for="answer-1-4">
+                                        <input type="radio" id="answer-1-4" name="question-1" class="checkbox" value="Двери-купе" />
+                                        <div class="option_inner">
+                                            <div class="shadow-wrapper">
+                                                <div class="shadow-wrapper-decoration"></div>
+                                            </div>
+                                            <img loading="lazy" src="<?php echo get_template_directory_uri(); ?>/template-parts/quiz/img/1-4.webp"
+                                                style="width: 100%" />
+                                        </div>
+                                    </label>
+                                    <h6 class="quiz-section-h3">Двери-купе</h6>
+                                </div>
+                                <div class="col-6 col-sm-4 col-xl-3">
+                                    <label class="option_item mb-3" for="answer-1-5">
+                                        <input type="radio" id="answer-1-5" name="question-1" class="checkbox" value="Рабочая зона" />
+                                        <div class="option_inner">
+                                            <div class="shadow-wrapper">
+                                                <div class="shadow-wrapper-decoration"></div>
+                                            </div>
+                                            <img loading="lazy" src="<?php echo get_template_directory_uri(); ?>/template-parts/quiz/img/1-5.webp"
+                                                style="width: 100%" />
+                                        </div>
+                                    </label>
+                                    <h6 class="quiz-section-h3 mb-4">Рабочая зона</h6>
+                                </div>
+                                <div class="col-6 col-sm-4 col-xl-3">
+                                    <label class="option_item mb-3" for="answer-1-6">
+                                        <input type="radio" id="answer-1-6" name="question-1" class="checkbox" value="Другая" />
+                                        <div class="option_inner">
+                                            <div class="shadow-wrapper">
+                                                <div class="shadow-wrapper-decoration"></div>
+                                            </div>
+                                            <img loading="lazy" src="<?php echo get_template_directory_uri(); ?>/template-parts/quiz/img/1-6.webp"
+                                                style="width: 100%" />
+                                        </div>
+                                    </label>
+                                    <h6 class="quiz-section-h3 mb-4">Другая</h6>
+                                </div>
+                            </div>
+                            <div class="row align-items-center">
+                                <div class="col-3 col-lg-1 mb-3 mb-lg-0">
+                                    <div class="progress-title">Готово:</div>
+                                </div>
+
+                                <div class="col-9 col-lg-5 mb-3 mb-lg-0">
+                                    <div class="progress" role="progressbar" aria-label="Progress" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
+                                        <div class="progress-bar" style="width: 0%">0%</div>
+                                    </div>
+                                </div>
+
+                                <div class="col-12 col-sm-6 col-lg-3 mb-3 mb-sm-0">
+                                    <input type="button" value="Предыдущий" class="btn btn-corporate-color-outline-1" disabled />
+                                </div>
+
+                                <div class="col-12 col-sm-6 col-lg-3 mb-3 mb-sm-0">
+                                    <input type="button" id="btn-next-question-1" value="Следующий" class="btn btn-danger" onclick="nextQuostion('question-1');" />
+                                </div>
+                            </div>
+                        </div>
+                        <!-- /Шаг 1 -->
+
+                        <!-- Шаг 2 -->
+                        <div class="col-xl-9" id="question-2" style="display: none">
+                            <h3 class="quiz-section-subtitle mb-4 text-start"><span>2/5</span> Какой тип шкафа Вам нужен?</h3>
 
                             <div class="row quiz-questions-container">
                                 <div class="col-6 col-sm-4 col-xl-3">
@@ -115,11 +221,11 @@
                                 </div>
                             </div>
                         </div>
-                        <!-- /Шаг 1 -->
+                        <!-- /Шаг 2 -->
 
-                        <!-- Шаг 2 -->
+                        <!-- Шаг 3 -->
                         <div class="col-xl-9" id="question-3" style="display: none;">
-                            <h3 class="quiz-section-subtitle mb-4 text-start"><span>2/5</span> Какой материал фасада Вы хотите?</h3>
+                            <h3 class="quiz-section-subtitle mb-4 text-start"><span>3/5</span> Какой материал фасада Вы хотите?</h3>
 
                             <div class="row quiz-questions-container">
                                 <div class="col-6 col-sm-4 col-xl-3">
@@ -204,11 +310,11 @@
                                 </div>
                             </div>
                         </div>
-                        <!-- /Шаг 2 -->
+                        <!-- /Шаг 3 -->
 
-                        <!-- Шаг 3 -->
+                        <!-- Шаг 4 -->
                         <div class="col-xl-9" id="question-4" style="display: none">
-                            <h3 class="quiz-section-subtitle mb-4 text-start"><span>3/5</span> Какая ориентировочная ширина шкафа планируется?</h3>
+                            <h3 class="quiz-section-subtitle mb-4 text-start"><span>4/5</span> Какая ориентировочная ширина шкафа планируется?</h3>
 
                             <div class="row quiz-questions-container">
                                 <div class="col-12 col-md-8 col-lg-3">
@@ -363,11 +469,11 @@
                                 </div>
                             </div>
                         </div>
-                        <!-- /Шаг 3 -->
+                        <!-- /Шаг 4 -->
 
-                        <!-- Шаг 4 -->
+                        <!-- Шаг 5 -->
                         <div class="col-xl-9" id="question-5" style="display: none">
-                            <h3 class="quiz-section-subtitle mb-4 text-start"><span>4/5</span> Какое количество дверей Вы предполагаете?</h3>
+                            <h3 class="quiz-section-subtitle mb-4 text-start"><span>5/5</span> Какое количество дверей Вы предполагаете?</h3>
 
                             <div class="row quiz-questions-container">
                                 <div class="col-6 col-sm-4 col-xl-3">
@@ -470,11 +576,11 @@
                                 </div>
                             </div>
                         </div>
-                        <!-- /Шаг 4 -->
+                        <!-- /Шаг 5 -->
 
-                        <!-- Шаг 5 -->
+                        <!-- Шаг 6 -->
                         <div class="col-xl-9" id="question-6" style="display: none">
-                            <h3 class="quiz-section-subtitle mb-4 text-start"><span>5/5</span> Какой подарок Вы хотели бы получить в случае заказа?</h3>
+                            <h3 class="quiz-section-subtitle mb-4 text-start">Какой подарок Вы хотели бы получить в случае заказа?</h3>
 
                             <div class="row quiz-questions-container">
                                 <div class="col-6 col-sm-4 col-xl-3">
@@ -556,7 +662,7 @@
                             </div>
 
                         </div>
-                        <!-- /Шаг 5 -->
+                        <!-- /Шаг 6 -->
 
                         <!-- Шаг 7 -->
                         <div class="col-xl-9" id="question-7" style="display: none">
@@ -689,7 +795,6 @@
                                 </div>
 
                                 <!-- Скрытые поля для передачи ответов квиза -->
-                                <input type="hidden" id="form-answer-1" name="form-answer-1" />
                                 <input type="hidden" id="form-answer-2" name="form-answer-2" />
                                 <input type="hidden" id="form-answer-3" name="form-answer-3" />
                                 <input type="hidden" id="form-answer-4" name="form-answer-4" />

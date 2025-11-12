@@ -9,7 +9,7 @@ include 'header.php';
 
 ?>
 <!-- SECTION HOME -->
-<<div id="sp-home"></div>
+<div id="sp-home"></div>
 <!-- Header 1 -->
 <div class="col-md-12 d-flex justify-content-end col-nav"
     style="background-color:#F5F5F5; border-bottom: 1px solid #E1E1E1;">
@@ -183,7 +183,7 @@ include 'header.php';
 <!-- /Header 1 -->
 
 <!-- Header 2 -->
-<div class="col-md-12 bottom-nav" id="archive-portfolio-header-light">
+<div class="col-md-12 bottom-nav d-none d-md-block" id="top-menu-2">
     <nav class="header-nav-bottom navbar navbar-expand-lg navbar-light header-bottom" style="background-color: #fff">
         <div class="container bottom-container">
             <a class="navbar-brand" href="#">
@@ -202,13 +202,12 @@ include 'header.php';
                     'menu_class' => '',
                     'fallback_cb' => '__return_false',
                     'items_wrap' => '
-												<ul id="%1$s" class="navbar-nav align-items-center ms-auto mb-2 mb-lg-0 %2$s">%3$s
-													<!-- Mobile menu -->
-													<li class="nav-item d-lg-none mobile-item">
-	@@ -157,16 +237,16 @@
-													<!-- End mobile menu -->
-												</ul>
-											',
+                        <ul id="%1$s" class="navbar-nav align-items-center ms-auto mb-2 mb-lg-0 %2$s">%3$s
+                            <!-- Mobile menu -->
+                            <li class="nav-item d-lg-none mobile-item">
+                            <!-- End mobile menu -->
+                        </ul>
+                    ',
                     'depth' => 2,
                     'walker' => new bootstrap_5_wp_nav_menu_walker()
                 ));
@@ -220,14 +219,14 @@ include 'header.php';
 <!-- /Header 2 -->
 
 <header id="archive-portfolio-header" class="home-section home-section-shafy-cupe woocommerce-products-header"
-	style="background-position: center;">
-	<div class="container">
-		<div class="row align-items-center text-start" style="min-height: 200px;">
-			<div class="col py-5">
-				<h1 class="my-5">Наши работы</h1>
-			</div>
-		</div>
-	</div>
+    style="background-position: center;">
+    <div class="container">
+        <div class="row align-items-center text-start" >
+            <div class="col py-5">
+                <h1 class="my-5">Наши работы</h1>
+            </div>
+        </div>
+    </div>
 </header>
 <!-- END SECTION HOME -->
 
@@ -713,4 +712,4 @@ include 'header.php';
 	document.addEventListener('DOMContentLoaded', replaceAnchorLinks);
 </script>
 
-<?php include 'footer.php'; ?>
+<?php include 'footer-2.php'; ?>
