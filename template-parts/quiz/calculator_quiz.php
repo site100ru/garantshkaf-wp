@@ -676,7 +676,7 @@
                                 <input type="hidden" name="button-context" value="quiz-configurator">
 
                                 <div class="row quiz-questions-container align-items-center">
-                                    <div class="col-6 col-sm-4 col-xl-3 mb-3">
+                                    <div class="col-6 col-sm-4 col-md-6 col-xl-3 mb-3">
                                         <label class="option_item" for="answer-7-1">
                                             <div class="d-flex quiz-chek gap-2 align-items-center ">
                                                 <input type="checkbox" id="answer-7-1" name="answer-7-1" class="checkbox"
@@ -692,7 +692,7 @@
                                     </div>
 
 
-                                    <div class="col-6 col-sm-4 col-xl-3 mb-3">
+                                    <div class="col-6 col-sm-4 col-md-6 col-xl-3 mb-3">
                                         <label class="option_item" for="answer-7-2">
                                             <div class="d-flex quiz-chek gap-2 align-items-center">
                                                 <input type="checkbox" id="answer-7-2" name="answer-7-2" class="checkbox" value="Отправить в Whatsapp" />
@@ -706,7 +706,7 @@
                                         </label>
                                     </div>
 
-                                    <div class="col-6 col-sm-4 col-xl-3 mb-3">
+                                    <div class="col-6 col-sm-4 col-md-6 col-xl-3 mb-3">
                                         <label class="option_item" for="answer-7-3">
                                             <div class="d-flex quiz-chek gap-2 align-items-center">
                                                 <input type="checkbox" id="answer-7-3" name="answer-7-3" class="checkbox" value="Отправить в Telegram" />
@@ -720,7 +720,7 @@
                                         </label>
                                     </div>
 
-                                    <div class="col-6 col-sm-4 col-xl-3 mb-3">
+                                    <div class="col-6 col-sm-4 col-md-6 col-xl-3 mb-3">
                                         <label class="option_item" for="answer-7-4">
                                             <div class="d-flex quiz-chek gap-2 align-items-center">
                                                 <input type="checkbox" id="answer-7-4" name="answer-7-4" class="checkbox" value="Отправить в Max" />
@@ -795,6 +795,7 @@
                                 </div>
 
                                 <!-- Скрытые поля для передачи ответов квиза -->
+                                <input type="hidden" id="form-answer-1" name="form-answer-1" />
                                 <input type="hidden" id="form-answer-2" name="form-answer-2" />
                                 <input type="hidden" id="form-answer-3" name="form-answer-3" />
                                 <input type="hidden" id="form-answer-4" name="form-answer-4" />
