@@ -107,7 +107,7 @@
                                 </div>
 
                                 <div class="col-12 col-sm-6 col-lg-3 mb-3 mb-sm-0">
-                                    <input type="button" value="Предыдущий" class="btn btn-corporate-color-outline-1" onclick="previousQuostion('question-2');" />
+                                    <input type="button" disabled value="Предыдущий" class="btn btn-corporate-color-outline-1" onclick="previousQuostion('question-2');" />
                                 </div>
 
                                 <div class="col-12 col-sm-6 col-lg-3 mb-3 mb-sm-0">
