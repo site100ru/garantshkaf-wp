@@ -148,7 +148,7 @@
 	font-size: 16px;
 	text-align: center;
 	min-width: auto;
-	height: auto;
+	height: 48px;
 	width: 100%;
 	font-family: var(--font-family);
 	text-transform: none;

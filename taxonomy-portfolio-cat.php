@@ -183,7 +183,7 @@ include 'header.php';
 <!-- /Header 1 -->
 
 <!-- Header 2 -->
-<div class="col-md-12 bottom-nav d-none d-md-block" id="top-menu-2">
+<div class="col-md-12 bottom-nav d-none d-md-block navbar-light-light" id="top-menu-2">
     <nav class="header-nav-bottom navbar navbar-expand-lg navbar-light header-bottom" style="background-color: #fff">
         <div class="container bottom-container">
             <a class="navbar-brand" href="#">

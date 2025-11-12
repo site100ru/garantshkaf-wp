@@ -437,8 +437,8 @@ a.btn.btn-danger:focus {
 	text-transform: uppercase;
 }
 
-.header-nav-bottom.navbar-light a.nav-link.dropdown-toggle,
-.header-nav-bottom.navbar-light a.nav-link {
+.navbar-light-light .header-nav-bottom.navbar-light a.nav-link.dropdown-toggle,
+.navbar-light-light .header-nav-bottom.navbar-light a.nav-link {
     --bs-text-opacity: 1;
     color: rgba(var(--bs-dark-rgb), var(--bs-text-opacity)) !important;
     transition: color 0.3s;
@@ -893,6 +893,10 @@ a.btn.btn-danger:focus {
 	transform: scale(1);
 	object-fit: cover;
 	object-position: center;
+}
+
+.img-wrapper.gallery-2691 img {
+    --bs-border-radius : var(--border-radius-medium);
 }
 
 .portfolio-section .light {
