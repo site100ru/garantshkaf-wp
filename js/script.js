@@ -9,25 +9,19 @@ $(window).scroll(function(e){
 
 /* Функция "Выезжало */	
 function vyezjalo() {
-    onscroll = function() {
-        var prokrutka = window.pageYOffset;
-        
-        var slidingHeader = document.getElementById('sliding-header');
-        if (slidingHeader) {
-            if (window.screen.width >= 992) {
-                if (prokrutka > 400) {
-                    slidingHeader.style.top = '0px';
-                } else if (prokrutka <= 400) {
-                    slidingHeader.style.top = '-100px';
-                }
-            }
-        }
-
-        var slidingHeaderCollapse = document.getElementById('sliding-header-collapse');
-        if (slidingHeaderCollapse) {
-            slidingHeaderCollapse.classList.remove('show');
-        }
-    }
+	onscroll = function() {
+		var prokrutka = window.pageYOffset;
+		if ( window.screen.width >= 992 ) {
+			if ( prokrutka > 400) {
+				document.getElementById('sliding-header').style.top = '0px';
+			} else if ( prokrutka <= 400 ) {
+				document.getElementById('sliding-header').style.top = '-100px';
+			}
+		}
+		/* Убираем меню при прокрутке */
+		document.getElementById( 'sliding-header-collapse' ).classList.remove('show');
+	}
+	
 }
 
 /* Функция "Прилипало" */
@@ -66,31 +60,20 @@ function prilipalo() {
         
         // Оригинальная логика прилипания
         if (window.innerWidth >= 769) {
-            const topMenu = document.getElementById('top-menu-2');
-            const archiveHeader = document.getElementById('archive-portfolio-header');
-
-            if (topMenu) {
-                if (prokrutka > 50) {
-                    topMenu.classList.add('fixed-top');
-                    topMenu.style.position = 'fixed';
-                    topMenu.style.top = 0;
-                } else {
-                    topMenu.classList.remove('fixed-top');
-                    topMenu.style.position = 'absolute';
-                    topMenu.style.top = '57px';
-                    
-                    if (archiveHeader) {
-                        archiveHeader.style.paddingTop = '70px';
-                    }
-                }
+            if (prokrutka > 50) {
+                document.getElementById('top-menu-2').classList.add('fixed-top');
+                document.getElementById('top-menu-2').style.position = 'fixed';
+                document.getElementById('top-menu-2').style.top = 0;
+            } else {
+                document.getElementById('top-menu-2').classList.remove('fixed-top');
+                document.getElementById('top-menu-2').style.position = 'absolute';
+                document.getElementById('top-menu-2').style.top = '57px';
+                document.getElementById('archive-portfolio-header').style.paddingTop = '70px';
             }
         } else {
-            const topMenu = document.getElementById('top-menu-2');
-            if (topMenu) {
-                topMenu.style.position = '';
-                topMenu.style.top = 0;
-                topMenu.classList.add('fixed-top');
-            }
+            document.getElementById('top-menu-2').style.position = '';
+            document.getElementById('top-menu-2').style.top = 0;
+            document.getElementById('top-menu-2').classList.add('fixed-top');
         }
     });
 }

@@ -455,4 +455,4 @@ include 'header.php';
     document.addEventListener('DOMContentLoaded', replaceAnchorLinks);
 </script>
 
-<?php include 'footer-2.php'; ?>
+<?php include 'footer.php'; ?>
