@@ -42,7 +42,7 @@ button.btn.btn-danger, input.btn.btn-danger {
 input.btn.btn-corporate-color-outline-1 {
     border: 2px solid #FA8026;
     border-radius: var(--border-radius-medium);
-    padding: 15px;
+    padding: 13px;
     min-width: 150px;
     height: 60px;
     font-style: normal;
