@@ -213,7 +213,7 @@
                                 </div>
 
                                 <div class="col-12 col-sm-6 col-lg-3 mb-3 mb-sm-0">
-                                    <input type="button" disabled value="Предыдущий" class="btn btn-corporate-color-outline-1" onclick="previousQuostion('question-2');" />
+                                    <input type="button" value="Предыдущий" class="btn btn-corporate-color-outline-1" onclick="previousQuostion('question-2');" />
                                 </div>
 
                                 <div class="col-12 col-sm-6 col-lg-3 mb-3 mb-sm-0">
@@ -590,7 +590,7 @@
                                             <div class="shadow-wrapper">
                                                 <div class="shadow-wrapper-decoration"></div>
                                             </div>
-                                            <img loading="lazy" src="<?php echo get_template_directory_uri(); ?>/template-parts/quiz/img/5-1.webp"
+                                            <img loading="lazy" src="<?php echo get_template_directory_uri(); ?>/template-parts/quiz/img/6-1.webp"
                                                 style="width: 100%" />
                                         </div>
                                     </label>
@@ -603,7 +603,7 @@
                                             <div class="shadow-wrapper">
                                                 <div class="shadow-wrapper-decoration"></div>
                                             </div>
-                                            <img loading="lazy" src="<?php echo get_template_directory_uri(); ?>/template-parts/quiz/img/5-2.webp"
+                                            <img loading="lazy" src="<?php echo get_template_directory_uri(); ?>/template-parts/quiz/img/6-2.webp"
                                                 style="width: 100%" />
                                         </div>
                                     </label>
@@ -616,7 +616,7 @@
                                             <div class="shadow-wrapper">
                                                 <div class="shadow-wrapper-decoration"></div>
                                             </div>
-                                            <img loading="lazy" src="<?php echo get_template_directory_uri(); ?>/template-parts/quiz/img/5-3.webp"
+                                            <img loading="lazy" src="<?php echo get_template_directory_uri(); ?>/template-parts/quiz/img/6-3.webp"
                                                 style="width: 100%" />
                                         </div>
                                     </label>
@@ -631,7 +631,7 @@
                                             <div class="shadow-wrapper">
                                                 <div class="shadow-wrapper-decoration"></div>
                                             </div>
-                                            <img loading="lazy" src="<?php echo get_template_directory_uri(); ?>/template-parts/quiz/img/5-4.webp"
+                                            <img loading="lazy" src="<?php echo get_template_directory_uri(); ?>/template-parts/quiz/img/6-4.webp"
                                                 style="width: 100%" />
                                         </div>
                                     </label>
@@ -734,15 +734,15 @@
                                         </label>
                                     </div>
 
-                                    <div class="col-12 col-md-6 col-xl-3">
-                                        <label for="feedback-phone mb-1">Ваш телефон <span class="form__required">*</span></label>
+                                    <div class="col-12 col-md-6 col-xl-3 mt-4">
+                                        <label for="feedback-phone" class="mb-1">Ваш телефон <span class="form__required">*</span></label>
                                         <div>
                                             <input type="text" class="form-control telMask" id="feedback-phone" name="form-phone" placeholder="Ваш телефон" inputmode="text" />
                                         </div>
                                     </div>
 
-                                    <div class="col-12 col-md-6 col-md-5">
-                                        <label for="feedback-name mb-1">Как Вас зовут? <span class="form__required">*</span></label>
+                                    <div class="col-12 col-md-6 col-md-5 mt-4">
+                                        <label for="feedback-name" class="mb-1">Как Вас зовут? <span class="form__required">*</span></label>
                                         <div>
                                             <input type="text" class="form-control" id="feedback-name" name="form-name"
                                                 placeholder="Как Вас зовут" required="" />

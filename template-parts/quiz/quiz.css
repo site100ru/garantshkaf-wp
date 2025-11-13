@@ -299,3 +299,11 @@ h3.quiz-section-subtitle {
 .form-floating > .form-control::placeholder .form-control::placeholder {
 	color: inherit;
 }
+
+.form-control::placeholder {
+    opacity: 0.8;
+}
+
+#quiz .quiz-chek h6.quiz-section-h3 {
+    text-align: start;
+}

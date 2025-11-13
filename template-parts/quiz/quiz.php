@@ -484,7 +484,7 @@
                                             <div class="shadow-wrapper">
                                                 <div class="shadow-wrapper-decoration"></div>
                                             </div>
-                                            <img loading="lazy" src="<?php echo get_template_directory_uri(); ?>/template-parts/quiz/img/5-1.webp"
+                                            <img loading="lazy" src="<?php echo get_template_directory_uri(); ?>/template-parts/quiz/img/6-1.webp"
                                                 style="width: 100%" />
                                         </div>
                                     </label>
@@ -497,7 +497,7 @@
                                             <div class="shadow-wrapper">
                                                 <div class="shadow-wrapper-decoration"></div>
                                             </div>
-                                            <img loading="lazy" src="<?php echo get_template_directory_uri(); ?>/template-parts/quiz/img/5-2.webp"
+                                            <img loading="lazy" src="<?php echo get_template_directory_uri(); ?>/template-parts/quiz/img/6-2.webp"
                                                 style="width: 100%" />
                                         </div>
                                     </label>
@@ -510,7 +510,7 @@
                                             <div class="shadow-wrapper">
                                                 <div class="shadow-wrapper-decoration"></div>
                                             </div>
-                                            <img loading="lazy" src="<?php echo get_template_directory_uri(); ?>/template-parts/quiz/img/5-3.webp"
+                                            <img loading="lazy" src="<?php echo get_template_directory_uri(); ?>/template-parts/quiz/img/6-3.webp"
                                                 style="width: 100%" />
                                         </div>
                                     </label>
@@ -525,7 +525,7 @@
                                             <div class="shadow-wrapper">
                                                 <div class="shadow-wrapper-decoration"></div>
                                             </div>
-                                            <img loading="lazy" src="<?php echo get_template_directory_uri(); ?>/template-parts/quiz/img/5-4.webp"
+                                            <img loading="lazy" src="<?php echo get_template_directory_uri(); ?>/template-parts/quiz/img/6-4.webp"
                                                 style="width: 100%" />
                                         </div>
                                     </label>
@@ -558,7 +558,7 @@
                         </div>
                         <!-- /Шаг 5 -->
 
-                        <!-- Шаг 7 -->
+                        <!-- Шаг 6 -->
                         <div class="col-xl-9" id="question-7" style="display: none">
                             <h3 class="quiz-section-subtitle mb-4 text-start">Куда отправить расчет?</h3>
 
@@ -628,15 +628,15 @@
                                         </label>
                                     </div>
 
-                                    <div class="col-12 col-md-6 col-xl-3">
-                                        <label for="feedback-phone mb-1">Ваш телефон <span class="form__required">*</span></label>
+                                    <div class="col-12 col-md-6 col-xl-3 mt-4">
+                                        <label for="feedback-phone" class="mb-1">Ваш телефон <span class="form__required">*</span></label>
                                         <div>
                                             <input type="text" class="form-control telMask" id="feedback-phone" name="form-phone" placeholder="Ваш телефон" inputmode="text" />
                                         </div>
                                     </div>
 
-                                    <div class="col-12 col-md-6 col-md-5">
-                                        <label for="feedback-name mb-1">Как Вас зовут? <span class="form__required">*</span></label>
+                                    <div class="col-12 col-md-6 col-md-5 mt-4">
+                                        <label for="feedback-name" class="mb-1">Как Вас зовут? <span class="form__required">*</span></label>
                                         <div>
                                             <input type="text" class="form-control" id="feedback-name" name="form-name"
                                                 placeholder="Как Вас зовут" required="" />
@@ -701,7 +701,7 @@
                                 <input type="hidden" id="form-answer-7-4" name="form-answer-7-4" />
                             </form>
                         </div>
-                        <!-- /Шаг 7 -->
+                        <!-- /Шаг 6 -->
 
                         <!-- Quiz director -->
                         <div class="col-xl-3">
