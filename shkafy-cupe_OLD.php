@@ -1592,7 +1592,7 @@ include 'header.php';
 		style=" max-width: 1700px; padding-top: 80px; border-right: 1px solid rgba(153, 153, 153, 0.9);  border-left: 1px solid rgba(153, 153, 153, 0.9);">
 		<div class="row justify-content-center">
 			<div class="col-md-9">
-				<h2><span>07</span> / Процесс заказа, оплаты и установки шкафа-купе</h2>
+				<h2><span>06</span> / Процесс заказа, оплаты и установки шкафа-купе</h2>
 				<div class="row">
 					<div class="col-lg-3 text-center step">
 						<img src="<?php echo get_template_directory_uri(); ?>/img/ico/step-1.png" class="img-fluid" />
@@ -1642,7 +1642,7 @@ include 'header.php';
 		style="max-width: 1700px; padding-top: 80px; border-right: 1px solid rgba(153, 153, 153, 0.9);  border-left: 1px solid rgba(153, 153, 153, 0.9);">
 		<div class="row justify-content-center">
 			<div class="col-md-9">
-				<h2><span>08</span> / Наши ответы на часто задаваемые вопросы</h2>
+				<h2><span>07</span> / Наши ответы на часто задаваемые вопросы</h2>
 				<div class="row">
 					<div class="col-lg-5 offset-lg-1 order-2 order-lg-1">
 						<div class="accordion" id="accordionExample">
