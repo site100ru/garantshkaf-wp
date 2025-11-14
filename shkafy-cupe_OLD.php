@@ -755,8 +755,8 @@ include 'header.php';
 <!-- /Archive-portfolio section -->
 
 <div id="galleryModal"
-	style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.9); z-index: 9999;">
-	<div id="mainGallery" class="carousel slide h-100" data-bs-ride="carousel" data-bs-interval="999999999">
+	style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.9); z-index: 99999999999;">
+	<div id="mainGallery" class="carousel slide h-100" data-bs-ride="carousel" data-bs-interval="99999999999">
 		<div class="carousel-indicators">
 			<?php foreach ($all_images as $index => $image): ?>
 				<button type="button" data-bs-target="#mainGallery" data-bs-slide-to="<?php echo $index; ?>"
@@ -766,7 +766,7 @@ include 'header.php';
 
 		<div class="carousel-inner h-100">
 			<?php foreach ($all_images as $index => $image): ?>
-				<div class="carousel-item h-100" data-bs-interval="999999999">
+				<div class="carousel-item h-100" data-bs-interval="99999999999">
 					<div class="d-flex align-items-center justify-content-center h-100">
 						<img src="<?php echo $image['url']; ?>" class="img-fluid" style="max-width: 90vw; max-height: 90vh;"
 							alt="<?php echo $image['portfolio_title']; ?>">

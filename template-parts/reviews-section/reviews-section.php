@@ -6,19 +6,29 @@
  * Описание: Отдельная секция для отображения отзывов клиентов салона
  */
 $bg_color = $args['bg_color'] ?? 'bg-light';
+$reviews_type = $args['reviews_type'] ?? 'old-reviews';
 ?>
 
 <!-- Reviews section -->
 <section class="section-testimonials <?php echo esc_attr($bg_color); ?>">
     <div class="container"
         style="max-width: 1700px; padding-top: 80px; padding-bottom: 50px; border-right: 1px solid rgba(153, 153, 153, 0.9);  border-left: 1px solid rgba(153, 153, 153, 0.9);">
+        <?php if ($reviews_type === 'new-reviews'): ?>
+            <div class="section-title-wrapper text-center">
+                <h2 class="section-title">Отзывы о нас в Яндексе</h2>
+                <img src="<?php echo get_template_directory_uri(); ?>/img/ico/points.svg" alt="Точки" class="img-fluid">
+            </div>
+        <?php endif; ?>
+
         <div class="row justify-content-center">
             <div class="col-md-9">
-                <h2><span>06</span> / Отзывы о нас в Яндексе</h2>
+                <?php if ($reviews_type === 'old-reviews'): ?>
+                    <h2><span>06</span> / Отзывы о нас в Яндексе</h2>
+                <?php endif; ?>
 
                 <div class="col text-md-center pb-4">
-                    <img src="<?php echo get_template_directory_uri(); ?>/img/ico/yandex-logo.svg" class="mb-3">
-                    <div class="review-rating mb-3 d-flex align-items-md-end justify-content-md-center gap-4">
+                    <img src="<?php echo get_template_directory_uri(); ?>/img/ico/yandex-logo.svg" class="mb-3 yandex-logo">
+                    <div class="review-rating mb-3 d-flex align-items-md-end justify-content-md-center gap-4 align-items-center">
                         <div>
                             <i class="star-filled"><img src="<?php echo get_template_directory_uri(); ?>/img/ico/star.svg"
                                     alt="stars"></i>

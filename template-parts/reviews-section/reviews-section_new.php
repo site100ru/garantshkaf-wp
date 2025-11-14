@@ -2,7 +2,7 @@
 
 /**
  * Template: Секция "Отзывы о нас в независимых источниках"
- * Файл: template-parts/reviews-section/reviews-section.php
+ * Файл: template-parts/reviews-section/reviews-section_new.php
  * Описание: Отдельная секция для отображения отзывов клиентов салона
  */
 $bg_color = $args['bg_color'] ?? 'bg-light';
@@ -13,7 +13,7 @@ $bg_color = $args['bg_color'] ?? 'bg-light';
     <div class="container"
         style="max-width: 1700px; padding-top: 80px; padding-bottom: 50px; border-right: 1px solid rgba(153, 153, 153, 0.9);  border-left: 1px solid rgba(153, 153, 153, 0.9);">
         <div class="section-title-wrapper text-center">
-            <h2 class="section-title">Акции от нашей фабрики</h2>
+            <h2 class="section-title">Отзывы о нас в независимых источниках</h2>
             <img src="<?php echo get_template_directory_uri(); ?>/img/ico/points.svg" alt="Точки" class="img-fluid">
         </div>
 
@@ -21,8 +21,8 @@ $bg_color = $args['bg_color'] ?? 'bg-light';
         <div class="row justify-content-center">
             <div class="col-md-9">
                 <div class="col text-md-center pb-4">
-                    <img src="<?php echo get_template_directory_uri(); ?>/img/ico/yandex-logo.svg" class="mb-3">
-                    <div class="review-rating mb-3 d-flex align-items-md-end justify-content-md-center gap-4">
+                    <img src="<?php echo get_template_directory_uri(); ?>/img/ico/yandex-logo.svg" class="mb-3 yandex-logo">
+                    <div class="review-rating mb-3 d-flex align-items-md-end justify-content-md-center gap-4 align-items-center">
                         <div>
                             <i class="star-filled">
                                 <img src="<?php echo get_template_directory_uri(); ?>/img/ico/star.svg" alt="stars">
