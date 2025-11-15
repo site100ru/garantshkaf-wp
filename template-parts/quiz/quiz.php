@@ -101,8 +101,8 @@
                                 </div>
 
                                 <div class="col-9 col-lg-5 mb-3 mb-lg-0">
-                                    <div class="progress" role="progressbar" aria-label="Progress" aria-valuenow="17" aria-valuemin="0" aria-valuemax="100">
-                                        <div class="progress-bar" style="width: 17%">17%</div>
+                                    <div class="progress" role="progressbar" aria-label="Progress" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
+                                        <div class="progress-bar" style="width: 0%">0%</div>
                                     </div>
                                 </div>
 

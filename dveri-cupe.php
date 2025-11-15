@@ -763,8 +763,8 @@ wp_reset_postdata();
 
 <!-- Единое модальное окно для всех изображений -->
 <div id="galleryModal"
-	style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.9); z-index: 9999;">
-	<div id="mainGallery" class="carousel slide h-100" data-bs-ride="carousel" data-bs-interval="999999999">
+	style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.9); z-index: 99999999999;">
+	<div id="mainGallery" class="carousel slide h-100" data-bs-ride="carousel" data-bs-interval="99999999999">
 		<div class="carousel-indicators">
 			<?php foreach ($all_images as $index => $image): ?>
 				<button type="button" data-bs-target="#mainGallery" data-bs-slide-to="<?php echo $index; ?>"
@@ -774,7 +774,7 @@ wp_reset_postdata();
 
 		<div class="carousel-inner h-100">
 			<?php foreach ($all_images as $index => $image): ?>
-				<div class="carousel-item h-100" data-bs-interval="999999999">
+				<div class="carousel-item h-100" data-bs-interval="99999999999">
 					<div class="d-flex align-items-center justify-content-center h-100">
 						<img src="<?php echo $image['url']; ?>" class="img-fluid" style="max-width: 90vw; max-height: 90vh;"
 							alt="<?php echo $image['portfolio_title']; ?>">
@@ -1105,7 +1105,7 @@ wp_reset_postdata();
 
 
 <!-- Testimonials section -->
-<?php get_template_part('template-parts/reviews-section/reviews-section', null, array(
+<?php get_template_part('template-parts/reviews-section/reviews-section_new', null, array(
     'bg_color' => ' ', 
 )); ?>
 <!-- <section class="section-testimonials">
@@ -1136,11 +1136,11 @@ wp_reset_postdata();
 <!--process zakaza-->
 <div id="sp-kak-zakazat"></div>
 <section id="process">
-	<div class="container bg-light"
+	<div class="container"
 		style=" max-width: 1700px;  border-right: 1px solid rgba(153, 153, 153, 0.9);  border-left: 1px solid rgba(153, 153, 153, 0.9); padding-top: 80px; padding-bottom: 50px;">
 		<div class="row justify-content-center">
 			<div class="col-md-9">
-				<h2><span>07</span> / Процесс заказа, оплаты и установки дверей-купе</h2>
+				<h2><span>06</span> / Процесс заказа, оплаты и установки дверей-купе</h2>
 				<div class="row">
 					<div class="col-lg-3 text-center step">
 						<img src="<?php echo get_stylesheet_directory_uri(); ?>/img/ico/step-1.png" class="img-fluid" />
@@ -1190,7 +1190,7 @@ wp_reset_postdata();
 		style="max-width: 1700px; padding-top: 80px; border-right: 1px solid rgba(153, 153, 153, 0.9);  border-left: 1px solid rgba(153, 153, 153, 0.9);">
 		<div class="row justify-content-center">
 			<div class="col-md-9">
-				<h2><span>08</span> / Наши ответы на часто задаваемые вопросы</h2>
+				<h2><span>07</span> / Наши ответы на часто задаваемые вопросы</h2>
 				<div class="row">
 					<div class="col-lg-5 offset-lg-1 order-2 order-lg-1">
 						<div class="accordion" id="accordionExample">

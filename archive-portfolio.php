@@ -12,7 +12,7 @@ include 'header.php';
 <div id="sp-home"></div>
 <!-- Header 1 -->
 <div class="col-md-12 d-flex justify-content-end col-nav"
-    style="background-color:#F5F5F5; border-bottom: 1px solid #E1E1E1;">
+    style="background-color:#F5F5F5;">
     <nav class="navbar navbar-expand-lg navbar-dark d-none d-lg-block py-0">
         <div class="container-fluid px-0">
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -183,7 +183,7 @@ include 'header.php';
 <!-- /Header 1 -->
 
 <!-- Header 2 -->
-<div class="col-md-12 bottom-nav d-none d-md-block navbar-light-light" id="top-menu-2">
+<div class="col-md-12 bottom-nav d-none d-md-block navbar-light-light" style="border-top: 1px solid #E1E1E1;" id="top-menu-2">
     <nav class="header-nav-bottom navbar navbar-expand-lg navbar-light header-bottom" style="background-color: #fff">
         <div class="container bottom-container">
             <a class="navbar-brand" href="#">

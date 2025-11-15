@@ -347,7 +347,7 @@ include 'header.php';
 					<div class="single-image-wrapper">
 						<div class="approximation img-wrapper position-relative gallery-2691">
 							<img src="<?php echo get_template_directory_uri(); ?>/img/card/action-card.jpg"
-								class="d-block w-100 single-product-img rounded" loading="lazy"
+								class="d-block w-100 single-product-img rounded-25" loading="lazy"
 								alt="Беспроцентная рассрочка на 1 год. Акция до 30 августа">
 						</div>
 					</div>
@@ -357,7 +357,7 @@ include 'header.php';
 					<div class="single-image-wrapper">
 						<div class="approximation img-wrapper position-relative gallery-2691">
 							<img src="<?php echo get_template_directory_uri(); ?>/img/card/action-card-2.jpg"
-								class="d-block w-100 single-product-img rounded" loading="lazy" alt="Скидка до 25%. Акция до 31 июля">
+								class="d-block w-100 single-product-img rounded-25" loading="lazy" alt="Скидка до 25%. Акция до 31 июля">
 						</div>
 					</div>
 				</div>
@@ -553,8 +553,8 @@ include 'header.php';
 <!-- /Archive-portfolio section -->
 
 <div id="galleryModal"
-	style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.9); z-index: 9999;">
-	<div id="mainGallery" class="carousel slide h-100" data-bs-ride="carousel" data-bs-interval="999999999">
+	style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.9); z-index: 99999999999;">
+	<div id="mainGallery" class="carousel slide h-100" data-bs-ride="carousel" data-bs-interval="99999999999">
 		<div class="carousel-indicators">
 			<?php foreach ($all_images as $index => $image): ?>
 				<button type="button" data-bs-target="#mainGallery" data-bs-slide-to="<?php echo $index; ?>"
@@ -564,7 +564,7 @@ include 'header.php';
 
 		<div class="carousel-inner h-100">
 			<?php foreach ($all_images as $index => $image): ?>
-				<div class="carousel-item h-100" data-bs-interval="999999999">
+				<div class="carousel-item h-100" data-bs-interval="99999999999">
 					<div class="d-flex align-items-center justify-content-center h-100">
 						<img src="<?php echo $image['url']; ?>" class="img-fluid" style="max-width: 90vw; max-height: 90vh;"
 							alt="<?php echo $image['portfolio_title']; ?>">
@@ -668,6 +668,51 @@ include 'header.php';
 	});
 </script>
 
+<!-- SECTION ORDER 1 -->
+<?php get_template_part('template-parts/quiz/quiz'); ?>
+<!-- /SECTION ORDER 1 -->
+
+<!-- SECTION ABOUT -->
+<div id="sp-about"></div>
+<section class="section-about">
+	<div class="container"
+		style="max-width: 1700px;  padding-top: 80px; padding-bottom: 50px; border-right: 1px solid rgba(153, 153, 153, 0.9);  border-left: 1px solid rgba(153, 153, 153, 0.9);">
+		<div class="row justify-content-center">
+			<div class="section-title-wrapper text-center">
+				<h2 class="section-title">Узнайте о нас больше</h2>
+				<!-- <p class="text-center mb-5">Это бесплатно и ни к чему Вас не обязывает</p> -->
+
+				<img src="<?php echo get_template_directory_uri(); ?>/img/ico/points.svg" alt="Точки" class="img-fluid" />
+			</div>
+		</div>
+		<div class="row justify-content-end">
+			<div class="col-md-7">
+				<h3>ГАРАНТШКАФ</h3>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-8 offset-md-2">
+				<div class="row">
+					<div class="col-lg-6 order-2 order-lg-1">
+						<p>Мебельная фабрика <strong>«Гарантшкаф»</strong> вот уже более 14 лет изготавливает шкафы-купе и другую
+							корпусную мебель. За это время мы научились разбираться в качестве материалов и технологий, применяя в
+							своей работе только лучшие из них. Поэтому мы производим прочную и функциональную мебель по выгодным
+							ценам.</p>
+						<p>Мы работаем по индивидуальным эскизам, учитываем особенности помещений, используем современные и
+							качественные материалы, подбирая их исходя из дизайна Вашего помещения.</p>
+						<p>Количество благодарных клиентов непрестанно растет, как и наша репутация, а положительные отзывы о нас
+							множатся. На то есть несколько причин:</p>
+					</div>
+					<div class="col-lg-6 text-right order-1 order-lg-2">
+						<img src="<?php echo get_template_directory_uri(); ?>/img/about.jpg" class="img-fluid garantshaf" />
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<!-- /SECTION ABOUT -->
+
 <!-- Video section -->
 <div id="sp-video"></div>
 <section class="section-video">
@@ -716,125 +761,6 @@ include 'header.php';
 	</div>
 </section>
 <!-- End video section -->
- 
-
-<!-- SECTION ORDER 1 -->
-<?php get_template_part('template-parts/quiz/quiz'); ?>
-<!-- /SECTION ORDER 1 -->
-
-
-
-
-<!-- SECTION ORDER 1 -->
-<section class="section-order-1 pt-md-0">
-	<div class="container"
-		style="max-width: 1700px;  padding-top: 80px; padding-bottom: 50px; border-right: 1px solid rgba(153, 153, 153, 0.9);  border-left: 1px solid rgba(153, 153, 153, 0.9);">
-		<div class="row">
-			<div class="section-title-wrapper text-center">
-				<h2 class="section-title">Рассчитаем точную стоимость шкафа-купе за 15 минут!</h2>
-				<!-- <p class="text-center ">Это бесплатно и ни к чему Вас не обязывает</p> -->
-
-				<img src="<?php echo get_template_directory_uri(); ?>/img/ico/points.svg" alt="Точки" class="img-fluid" />
-			</div>
-
-			<div class="col-md-8 offset-md-2">
-				<div class="row">
-					<div class="col-lg-6">
-						<div class="row">
-							<div class="col-2">
-								<img src="<?php echo get_stylesheet_directory_uri(); ?>/img/ico/question.png" class="img-fluid" />
-							</div>
-							<div class="col-10">
-								<p class="mb-2">Для расчета опишите шкаф-купе своими словами. При возможности прикрепите изображение
-								</p>
-								<form method="post" action="<?php echo get_stylesheet_directory_uri(); ?>/mails/get_calculate.php"
-									enctype="multipart/form-data">
-									<textarea type="text" rows="3" name="mes" class="form-control"
-										placeholder="Например: длина, ширина, глубина, количество дверей, материал дверей, форма, вид шкафа и т.д."
-										style="height: auto;  margin-top: 15px;  margin-bottom: 15px;"></textarea>
-									<p class="input-group custom-file-button">
-										<label class="input-group-text" for="inputGroupFile3">
-											Прикрепить
-										</label>
-										<input type="file" name="file[]" class="form-control" style="border: none" id="inputGroupFile3"
-											accept=".jpg,.jpeg,.png,.pdf,.heic" multiple="" />
-									</p>
-
-									<p>
-										<input type="text" name="name" class="form-control" style="margin-top: 15px"
-											placeholder="Ваше Имя" />
-									</p>
-
-									<p>
-										<input type="text" name="tel" id="phone_mask_3" class="form-control telMask"
-											style="margin-top: 15px" placeholder="Ваш телефон" required />
-									</p>
-									<label class="form-check-label" for="exampleCheck11">
-										<input type="checkbox" class="form-check-input" id="exampleCheck11" checked>
-										Я согласен на обработку моих <a href="index.html">персональных данных</a>.
-									</label>
-
-									<input type="hidden" id="g-recaptcha-response-order-2" name="g-recaptcha-response">
-									<button type="submit" class="btn btn-danger" style="width: 100%">
-										Отправить
-									</button>
-								</form>
-							</div>
-						</div>
-					</div>
-					<div class="col-lg-6 text-center">
-						<img src="<?php echo get_stylesheet_directory_uri(); ?>/img/question-shkaf.png"
-							class="question-img img-fluid" />
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-</section>
-<!-- /SECTION ORDER 1 -->
-
-
-<!-- SECTION ABOUT -->
-<div id="sp-about"></div>
-<section class="section-about">
-	<div class="container"
-		style="max-width: 1700px;  padding-top: 80px; padding-bottom: 50px; border-right: 1px solid rgba(153, 153, 153, 0.9);  border-left: 1px solid rgba(153, 153, 153, 0.9);">
-		<div class="row justify-content-center">
-			<div class="section-title-wrapper text-center">
-				<h2 class="section-title">Узнайте о нас больше</h2>
-				<!-- <p class="text-center mb-5">Это бесплатно и ни к чему Вас не обязывает</p> -->
-
-				<img src="<?php echo get_template_directory_uri(); ?>/img/ico/points.svg" alt="Точки" class="img-fluid" />
-			</div>
-		</div>
-		<div class="row justify-content-end">
-			<div class="col-md-7">
-				<h3>ГАРАНТШКАФ</h3>
-			</div>
-		</div>
-		<div class="row">
-			<div class="col-md-8 offset-md-2">
-				<div class="row">
-					<div class="col-lg-6 order-2 order-lg-1">
-						<p>Мебельная фабрика <strong>«Гарантшкаф»</strong> вот уже более 14 лет изготавливает шкафы-купе и другую
-							корпусную мебель. За это время мы научились разбираться в качестве материалов и технологий, применяя в
-							своей работе только лучшие из них. Поэтому мы производим прочную и функциональную мебель по выгодным
-							ценам.</p>
-						<p>Мы работаем по индивидуальным эскизам, учитываем особенности помещений, используем современные и
-							качественные материалы, подбирая их исходя из дизайна Вашего помещения.</p>
-						<p>Количество благодарных клиентов непрестанно растет, как и наша репутация, а положительные отзывы о нас
-							множатся. На то есть несколько причин:</p>
-					</div>
-					<div class="col-lg-6 text-right order-1 order-lg-2">
-						<img src="<?php echo get_template_directory_uri(); ?>/img/about.jpg" class="img-fluid garantshaf" />
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-</section>
-<!-- /SECTION ABOUT -->
-
 
 <!-- SECTION ADVANTAGES -->
 <section class="section-about">
@@ -918,7 +844,6 @@ include 'header.php';
 </section>
 <!-- /SECTION ADVANTAGES -->
 
-
 <!-- DERECTOR SECTION -->
 <section class="section-director">
 	<div class="container"
@@ -944,10 +869,9 @@ include 'header.php';
 </section>
 <!-- /DERECTOR SECTION -->
 
-
 <!-- Testimonials section -->
 <div id="sp-testimonials"></div>
-<?php get_template_part('template-parts/reviews-section/reviews-section', null, array(
+<?php get_template_part('template-parts/reviews-section/reviews-section_new', null, array(
     'bg_color' => ' ', 
 )); ?>
 <!-- <section class="section-testimonials">
@@ -979,6 +903,88 @@ include 'header.php';
 	</div>
 </section> -->
 <!-- /Testimonials section -->
+
+<!-- SECTION ORDER 1 -->
+<section class="section-order-1 pt-md-0">
+	<div class="container"
+		style="max-width: 1700px;  padding-top: 80px; padding-bottom: 50px; border-right: 1px solid rgba(153, 153, 153, 0.9);  border-left: 1px solid rgba(153, 153, 153, 0.9);">
+		<div class="row">
+			<div class="section-title-wrapper text-center">
+				<h2 class="section-title">Рассчитаем точную стоимость шкафа-купе за 15 минут!</h2>
+				<!-- <p class="text-center ">Это бесплатно и ни к чему Вас не обязывает</p> -->
+
+				<img src="<?php echo get_template_directory_uri(); ?>/img/ico/points.svg" alt="Точки" class="img-fluid" />
+			</div>
+
+			<div class="col-md-8 offset-md-2">
+				<div class="row">
+					<div class="col-lg-6">
+						<div class="row">
+							<div class="col-2">
+								<img src="<?php echo get_stylesheet_directory_uri(); ?>/img/ico/question.png" class="img-fluid" />
+							</div>
+							<div class="col-10">
+								<p class="mb-2">Для расчета опишите шкаф-купе своими словами. При возможности прикрепите изображение
+								</p>
+								<form method="post" action="<?php echo get_stylesheet_directory_uri(); ?>/mails/get_calculate.php"
+									enctype="multipart/form-data">
+									<textarea type="text" rows="3" name="mes" class="form-control"
+										placeholder="Например: длина, ширина, глубина, количество дверей, материал дверей, форма, вид шкафа и т.д."
+										style="height: auto;  margin-top: 15px;  margin-bottom: 15px;"></textarea>
+									<p class="input-group custom-file-button">
+										<label class="input-group-text" for="inputGroupFile3">
+											Прикрепить
+										</label>
+										<input type="file" name="file[]" class="form-control" style="border: none" id="inputGroupFile3"
+											accept=".jpg,.jpeg,.png,.pdf,.heic" multiple="" />
+									</p>
+
+									<p>
+										<input type="text" name="name" class="form-control" style="margin-top: 15px"
+											placeholder="Ваше Имя" />
+									</p>
+
+									<p>
+										<input type="text" name="tel" id="phone_mask_3" class="form-control telMask"
+											style="margin-top: 15px" placeholder="Ваш телефон" required />
+									</p>
+									<label class="form-check-label" for="exampleCheck11">
+										<input type="checkbox" class="form-check-input" id="exampleCheck11" checked>
+										Я согласен на обработку моих <a href="index.html">персональных данных</a>.
+									</label>
+
+									<input type="hidden" id="g-recaptcha-response-order-2" name="g-recaptcha-response">
+									<button type="submit" class="btn btn-danger" style="width: 100%">
+										Отправить
+									</button>
+								</form>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-6 text-center">
+						<img src="<?php echo get_stylesheet_directory_uri(); ?>/img/question-shkaf.png"
+							class="question-img img-fluid" />
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<!-- /SECTION ORDER 1 -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 <!-- PROCESS SECTION -->
