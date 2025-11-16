@@ -1,9 +1,19 @@
 <section id="quiz" class="quiz-section">
-    <div class="container" style="max-width: 1700px; padding-top: 80px; padding-bottom: 50px; border-right: 1px solid rgba(153, 153, 153, 0.9);  border-left: 1px solid rgba(153, 153, 153, 0.9);">
+    <div class="container" style="max-width: 1700px; padding-top: 40px; padding-bottom: 50px; border-right: 1px solid rgba(153, 153, 153, 0.9);  border-left: 1px solid rgba(153, 153, 153, 0.9);">
         <div class="row justify-content-center">
             <div class="col-md-9">
+                <div class="breadcrumbs pb-0">
+                    <nav class="woocommerce-breadcrumb" itemprop="breadcrumb">
+                        <a href="/">
+                            <img src="<?php echo get_template_directory_uri(); ?>/img/ico/breadcrumbs-ico.svg">
+                        </a> / <a href="#">Калькулятор стоимости</a>
+                    </nav>
+                </div>
+            </div>
+        
+            <div class="col-md-9" style="padding-top: 60px">
                 <div class="section-title-wrapper text-center">
-                    <h2 class="section-title">Узнайте примерную стоимость Вашего шкафа-купе на нашей фабрике</h2>
+                    <h2 class="section-title">Рассчитайте примерную стоимость корпусной мебели</h2>
                     <p class="section-subtitle">Ответьте на 5 коротких вопроса.</p>
                     <img class="text-center" src="<?php echo get_template_directory_uri(); ?>/img/ico/points.svg" alt="Точки" class="img-fluid" />
                 </div>
@@ -12,7 +22,7 @@
                     <div class="row text-start quiz-question-wrapper">
                         <!-- Шаг 1 -->
                         <div class="col-xl-9" id="question-1">
-                            <h3 class="quiz-section-subtitle mb-4 text-start"><span>1/5</span> Какой шкаф Вы хотите?</h3>
+                            <h3 class="quiz-section-subtitle mb-4 text-start"><span>1/5</span> Какая мебель Вам нужна?</h3>
 
                             <div class="row quiz-questions-container">
                                 <div class="col-6 col-sm-4 col-xl-3">
