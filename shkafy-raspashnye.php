@@ -460,7 +460,7 @@ include 'header.php';
 <!-- /Archive-portfolio section -->
 
 <!-- Gallery wrapper-->
-<!-- <div id="galleryWrapper" style="background: rgba(0,0,0,0.85); display: none; position: fixed; top: 0; bottom: 0; left: 0; right: 0; z-index: 9999;">
+<!-- <div id="galleryWrapper" style="background: rgba(0,0,0,0.85); display: none; position: fixed; top: 0; bottom: 0; left: 0; right: 0; z-index: 999999999;">
 			<?php
 			$posts = get_posts(array(
 				'numberposts' => 999,

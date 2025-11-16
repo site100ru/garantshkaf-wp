@@ -870,6 +870,12 @@ a.btn.btn-danger:focus {
 	border-radius: var(--bs-border-radius) !important;
 }
 
+.portfolio-section > div {
+    --bs-border-radius: var(--border-radius-large);
+	overflow: hidden;
+	border-radius: var(--bs-border-radius) !important;
+}
+
 .portfolio-section .single-product-img {
 	height: 500px;
 }
@@ -902,7 +908,17 @@ a.btn.btn-danger:focus {
 	border-radius: var(--border-radius-medium);
 }
 
-.img-wrapper.gallery-2691 img.rounded-25 {
+.section-stock .img-wrapper.gallery-2691 img {
+    border-radius: var(--border-radius-large);
+}
+
+.img-wrapper.gallery-2691 img.rounded-large,
+#portfolio img.rounded-large {
+    border-radius: var(--border-radius-large);
+}
+
+#portfolio .carousel-inner.rounded.rounded-large {
+    overflow: hidden;
     border-radius: var(--border-radius-large);
 }
 

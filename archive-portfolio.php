@@ -323,7 +323,7 @@ include 'header.php';
                                     }
                                     ?>
                                 </div>
-                                <div class="carousel-inner rounded">
+                                <div class="carousel-inner rounded-large">
                                     <?php
                                     $count2 = 0;
                                     for ($i = 1; $i <= 9; $i++) {
@@ -334,7 +334,7 @@ include 'header.php';
                                                     onClick="galleryOn('gallery-<?php echo $post->ID; ?>','img-<?php echo $post->ID; ?>-<?php echo $count2; ?>');">
                                                     <div class="single-product-img approximation">
                                                         <img src="<?php echo get_post_meta($post->ID, '_img-' . $i)[0]; ?>"
-                                                            class="shadow rounded" alt="..." loading="lazy">
+                                                            class="shadow rounded-large" alt="..." loading="lazy">
                                                         <div class="magnifier"></div>
                                                     </div>
                                                 </a>
@@ -373,7 +373,7 @@ include 'header.php';
 
 <!-- Gallery wrapper-->
 <div id="galleryWrapper"
-    style="background: rgba(0,0,0,0.85); display: none; position: fixed; top: 0; bottom: 0; left: 0; right: 0; z-index: 9999;">
+    style="background: rgba(0,0,0,0.85); display: none; position: fixed; top: 0; bottom: 0; left: 0; right: 0; z-index: 999999999;">
 
 
     <?php

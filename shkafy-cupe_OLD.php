@@ -452,7 +452,7 @@ include 'header.php';
 
 <!-- Gallery wrapper-->
 <!-- <div id="galleryWrapper"
-	style="background: rgba(0,0,0,0.85); display: none; position: fixed; top: 0; bottom: 0; left: 0; right: 0; z-index: 9999;">
+	style="background: rgba(0,0,0,0.85); display: none; position: fixed; top: 0; bottom: 0; left: 0; right: 0; z-index: 999999999;">
 	<?php
 	// параметры по умолчанию
 	$posts = get_posts(array(

@@ -497,8 +497,8 @@
 									
 									<div class="col-md-5 mb-5">
 										<h3 class="mb-3"><?php the_title(); ?></h3>
-										<div id="carousel-<?php echo $post_id; ?>" class="carousel slide mb-3" data-bs-ride="false"  data-bs-interval="false">
-											<div class="carousel-inner shadow rounded">
+										<div id="carousel-<?php echo $post_id; ?>" class="carousel slide mb-3" data-bs-ride="false"  data-bs-interval="false" style="overflow: hidden">
+											<div class="carousel-inner shadow rounded-large">
 												<?php
 													$images = get_post_gallery_images();
 													$count = 0;
@@ -507,7 +507,7 @@
 														<div class="carousel-item<?php if ( $count == 0 ) echo ' active'; ?>">
 															<a onClick="galleryOn('gallery-<?php echo $post->ID; ?>','img-<?php echo $post->ID; ?>-<?php echo $count; ?>');">	
 																<div class="light">
-																	<img data-src="<?php echo $image; ?>" class="d-block w-100 lazyload" loading="lazy" alt="...">
+																	<img data-src="<?php echo $image; ?>" class="d-block w-100 lazyload rounded-large" loading="lazy" alt="...">
 																	<div class="magnifier"></div>
 																</div>
 															</a>
@@ -1744,7 +1744,7 @@
 
 		
 		<!-- Gallery wrapper-->
-		<div id="galleryWrapper" style="background: rgba(0,0,0,0.85); display: none; position: fixed; top: 0; bottom: 0; left: 0; right: 0; z-index: 9999;">
+		<div id="galleryWrapper" style="background: rgba(0,0,0,0.85); display: none; position: fixed; top: 0; bottom: 0; left: 0; right: 0; z-index: 999999999;">
 			<?php
 				/* параметры по умолчанию */
 				$posts = get_posts( array(
