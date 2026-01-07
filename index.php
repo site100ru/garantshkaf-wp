@@ -115,6 +115,8 @@
         
 		<title><?php echo $product; ?> и&nbsp;другая корпусная&nbsp;мебель на&nbsp;заказ от&nbsp;производителя<?php echo $location; ?></title>
 		
+        <link rel="shortcut icon" href="<?php echo get_template_directory_uri(); ?>/img/ico/favicon-light-1.svg" type="image/x-icon" id="favicon">
+        
 		<?php if ( $counter_head = get_theme_mod( 'mytheme_counter_head' ) ) : ?>
 			<!-- Код счетчика (head) -->
 			<?php echo $counter_head; ?>

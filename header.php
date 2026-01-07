@@ -112,6 +112,8 @@
 
         <link rel="shortcut icon" href="<?php echo get_template_directory_uri(); ?>/img/ico/favicon-light-1.svg" type="image/x-icon" id="favicon">
 		
+        <link rel="shortcut icon" href="<?php echo get_template_directory_uri(); ?>/img/ico/favicon-light-1.svg" type="image/x-icon" id="favicon">
+
 		<!-- Quiz CSS -->
 		<!-- <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/css/quiz.css" /> -->
 
