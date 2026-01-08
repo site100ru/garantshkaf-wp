@@ -327,7 +327,7 @@ include 'header.php';
 						<div class="approximation img-wrapper position-relative gallery-2691">
 							<img src="<?php echo get_template_directory_uri(); ?>/img/card/action-card.jpg"
 								class="d-block w-100 single-product-img rounded-large" loading="lazy"
-								alt="Скидка до 25%. Акция до 31 декабря">
+								alt="Скидка до 25%. Акция до 31 января">
 						</div>
 					</div>
 				</div>
@@ -336,7 +336,7 @@ include 'header.php';
 					<div class="single-image-wrapper">
 						<div class="approximation img-wrapper position-relative gallery-2691">
 							<img src="<?php echo get_template_directory_uri(); ?>/img/card/action-card-2.jpg"
-								class="d-block w-100 single-product-img rounded-large" loading="lazy" alt="Беспроцентная рассрочка на 1 год. Акция до 31 декабря">
+								class="d-block w-100 single-product-img rounded-large" loading="lazy" alt="Беспроцентная рассрочка на 1 год. Акция до 31 января">
 						</div>
 					</div>
 				</div>
