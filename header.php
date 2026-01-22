@@ -46,9 +46,9 @@
 			case 'troitsk': $location = ' в&nbsp;Троицке'; $address = 'гор. Троицк'; break;
 			case 'himki': $location = ' в&nbsp;Химках'; $address = 'гор. Химки'; break;
 			case 'schelkovo': $location = ' в&nbsp;Щелково'; $address = 'гор. Щелково'; break;
+			case 'balashiha': $location = ' в&nbsp;Балашихе'; $address = 'гор. Балашиха'; break;
 			
 			// Локации которые не добавлены в директе
-			case 'balashiha': $location = ' в&nbsp;Балашихе'; break;
 			case 'bibirevo': $location = ' в&nbsp;Бибирево'; break;
 			case 'bronnicy': $location = ' в&nbsp;Бронницах'; break;
 			case 'chehov': $location = ' в&nbsp;Чехове'; break;
