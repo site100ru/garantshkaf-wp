@@ -14,7 +14,7 @@ $reviews_type = $args['reviews_type'] ?? 'old-reviews';
     <div class="container"
         style="max-width: 1700px; padding-top: 80px; padding-bottom: 50px; border-right: 1px solid rgba(153, 153, 153, 0.9);  border-left: 1px solid rgba(153, 153, 153, 0.9);">
         <?php if ($reviews_type === 'new-reviews'): ?>
-            <div class="section-title-wrapper text-center">
+            <div class="section-title-wrapper text-md-center">
                 <h2 class="section-title">Отзывы о нас в Яндексе</h2>
                 <img src="<?php echo get_template_directory_uri(); ?>/img/ico/points.svg" alt="Точки" class="img-fluid">
             </div>
