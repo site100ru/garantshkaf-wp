@@ -12,7 +12,7 @@ $bg_color = $args['bg_color'] ?? 'bg-light';
 <section class="section-testimonials <?php echo esc_attr($bg_color); ?>">
     <div class="container"
         style="max-width: 1700px; padding-top: 80px; padding-bottom: 50px; border-right: 1px solid rgba(153, 153, 153, 0.9);  border-left: 1px solid rgba(153, 153, 153, 0.9);">
-        <div class="section-title-wrapper text-center">
+        <div class="section-title-wrapper text-md-center">
             <h2 class="section-title">Отзывы о нас в независимых источниках</h2>
             <img src="<?php echo get_template_directory_uri(); ?>/img/ico/points.svg" alt="Точки" class="img-fluid">
         </div>
