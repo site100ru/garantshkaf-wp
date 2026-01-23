@@ -339,7 +339,7 @@ include 'header.php';
 		style="max-width: 1700px;  padding-top: 80px; padding-bottom: 50px; border-right: 1px solid rgba(153, 153, 153, 0.9);  border-left: 1px solid rgba(153, 153, 153, 0.9);">
 		<div class="container">
 			<div class="row justify-content-center">
-				<div class="section-title-wrapper text-center">
+				<div class="section-title-wrapper text-md-center">
 					<h2 class="section-title">Акции от нашей фабрики</h2>
 					<img src="<?php echo get_template_directory_uri(); ?>/img/ico/points.svg" alt="Точки" class="img-fluid" />
 				</div>
@@ -683,7 +683,7 @@ include 'header.php';
 	<div class="container"
 		style="max-width: 1700px;  padding-top: 80px; padding-bottom: 50px; border-right: 1px solid rgba(153, 153, 153, 0.9);  border-left: 1px solid rgba(153, 153, 153, 0.9);">
 		<div class="row justify-content-center">
-			<div class="section-title-wrapper text-center">
+			<div class="section-title-wrapper text-md-center">
 				<h2 class="section-title">Узнайте о нас больше</h2>
 				<!-- <p class="text-center mb-5">Это бесплатно и ни к чему Вас не обязывает</p> -->
 
@@ -724,7 +724,7 @@ include 'header.php';
 	<div class="container"
 		style="max-width: 1700px;  padding-top: 80px; padding-bottom: 50px; border-right: 1px solid rgba(153, 153, 153, 0.9);  border-left: 1px solid rgba(153, 153, 153, 0.9);">
 		<div class="row justify-content-center">
-			<div class="section-title-wrapper text-center">
+			<div class="section-title-wrapper text-md-center">
 				<h2 class="section-title">Посмотрите нашу видеопрезентацию</h2>
 				<img src="<?php echo get_template_directory_uri(); ?>/img/ico/points.svg" alt="Точки" class="img-fluid" />
 			</div>
@@ -772,7 +772,7 @@ include 'header.php';
 	<div class="container"
 		style="max-width: 1700px;  padding-top: 80px; padding-bottom: 50px; border-right: 1px solid rgba(153, 153, 153, 0.9);  border-left: 1px solid rgba(153, 153, 153, 0.9);">
 		<div class="row justify-content-center">
-			<div class="section-title-wrapper text-center">
+			<div class="section-title-wrapper text-md-center">
 				<h2 class="section-title">За что нас выбирают</h2>
 
 				<img src="<?php echo get_template_directory_uri(); ?>/img/ico/points.svg" alt="Точки" class="img-fluid" />
@@ -854,7 +854,7 @@ include 'header.php';
 	<div class="container"
 		style="max-width: 1700px;  padding-top: 80px; padding-bottom: 50px; border-right: 1px solid rgba(153, 153, 153, 0.9);  border-left: 1px solid rgba(153, 153, 153, 0.9);">
 		<div class="row justify-content-center">
-			<div class="section-title-wrapper text-center">
+			<div class="section-title-wrapper text-md-center">
 				<h2 class="section-title">Обращение руководителя фабрики</h2>
 
 				<img src="<?php echo get_template_directory_uri(); ?>/img/ico/points.svg" alt="Точки" class="img-fluid" />
@@ -914,7 +914,7 @@ include 'header.php';
 	<div class="container"
 		style="max-width: 1700px;  padding-top: 80px; padding-bottom: 50px; border-right: 1px solid rgba(153, 153, 153, 0.9);  border-left: 1px solid rgba(153, 153, 153, 0.9);">
 		<div class="row">
-			<div class="section-title-wrapper text-center">
+			<div class="section-title-wrapper text-md-center">
 				<h2 class="section-title">Рассчитаем точную стоимость шкафа-купе за 15 минут!</h2>
 				<!-- <p class="text-center ">Это бесплатно и ни к чему Вас не обязывает</p> -->
 
@@ -998,7 +998,7 @@ include 'header.php';
 	<div class="container"
 		style=" max-width: 1700px;  padding-top: 80px; padding-bottom: 50px; border-right: 1px solid rgba(153, 153, 153, 0.9);  border-left: 1px solid rgba(153, 153, 153, 0.9);">
 		<div class="row justify-content-center">
-			<div class="section-title-wrapper text-center">
+			<div class="section-title-wrapper text-md-center">
 				<h2 class="section-title">Процесс заказа, оплаты и установки шкафа-купе</h2>
 
 				<img src="<?php echo get_template_directory_uri(); ?>/img/ico/points.svg" alt="Точки" class="img-fluid" />
@@ -1053,7 +1053,7 @@ include 'header.php';
 	<div class="container"
 		style="max-width: 1700px;  padding-top: 80px; padding-bottom: 50px; border-right: 1px solid rgba(153, 153, 153, 0.9);  border-left: 1px solid rgba(153, 153, 153, 0.9);">
 		<div class="row justify-content-center">
-			<div class="section-title-wrapper text-center">
+			<div class="section-title-wrapper text-md-center">
 				<h2 class="section-title">Наши ответы на часто задаваемые вопросы</h2>
 
 				<img src="<?php echo get_template_directory_uri(); ?>/img/ico/points.svg" alt="Точки" class="img-fluid" />
@@ -1177,7 +1177,7 @@ include 'header.php';
 	<div class="container"
 		style="max-width: 1700px; padding-top: 80px; padding-bottom: 80px; border-right: 1px solid rgba(153, 153, 153, 0.9);  border-left: 1px solid rgba(153, 153, 153, 0.9);">
 		<div class="row">
-			<div class="section-title-wrapper text-center">
+			<div class="section-title-wrapper text-md-center">
 				<h2 class="section-title">Рассчитаем точную стоимость шкафа-купе за 15 минут!</h2>
 				<!-- <p class="text-center ">Это бесплатно и ни к чему Вас не обязывает</p> -->
 

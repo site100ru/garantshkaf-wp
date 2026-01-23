@@ -81,7 +81,7 @@ if (!empty($link)) {
 }
 ?>
 
-<div class="default-card <?php echo esc_attr($card_class); ?> mb-4 pb-0 pb-md-3">
+<div class="default-card <?php echo esc_attr($card_class); ?>">
     <?php if ($card_type === 'hover-image' && !empty($image_hover)) : ?>
         <!-- Тип hover-image: Две картинки со сменой при наведении -->
         <div class="image-wrapper">
