@@ -2,7 +2,7 @@
     <div class="container" style="max-width: 1700px; padding-top: 80px; padding-bottom: 50px; border-right: 1px solid rgba(153, 153, 153, 0.9);  border-left: 1px solid rgba(153, 153, 153, 0.9);">
         <div class="row justify-content-center">
             <div class="col-md-9">
-                <div class="section-title-wrapper text-center">
+                <div class="section-title-wrapper text-md-center">
                     <h2 class="section-title">Узнайте примерную стоимость Вашего шкафа-купе на нашей фабрике</h2>
                     <p class="section-subtitle">Ответьте на 5 коротких вопроса.</p>
                     <img class="text-center" src="<?php echo get_template_directory_uri(); ?>/img/ico/points.svg" alt="Точки" class="img-fluid" />

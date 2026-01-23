@@ -21,7 +21,7 @@ $post_ids = isset($args['post_ids']) ? $args['post_ids'] : null;
 ?>
 
 <!-- Gallery wrapper -->
-<div id="galleryWrapper" style="background: rgba(0,0,0,0.85); display: none; position: fixed; top: 0; bottom: 0; left: 0; right: 0; z-index: 99999999;">
+<div id="galleryWrapper" style="background: rgba(0,0,0,0.85); display: none; position: fixed; top: 0; bottom: 0; left: 0; right: 0; z-index: 9999999999;">
     
     <!-- Единая галерея для всех изображений -->
     <div id="gallery-all" class="carousel slide" data-bs-ride="carousel" style="display: none; position: fixed; top: 0; height: 100%; width: 100%;">

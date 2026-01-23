@@ -174,7 +174,7 @@ if (!empty($category) && $category !== 'all') {
                                 if ($first_img) :
                         ?>
                                     <div class="col-md-6 col-lg-3">
-                                        <div class="mb-4 ">
+                                        <div class="mb-4 pb-0 pb-md-3">
                                             <a class="text-decoration-none" href="#" onClick="modalGalleryOn('img-<?php echo get_the_ID(); ?>-0'); return false;">
                                                 <?php
                                                 get_template_part('template-parts/cards/card', null, array(

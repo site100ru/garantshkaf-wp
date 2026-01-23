@@ -3675,4 +3675,17 @@ img.yandex-logo {
 	color: var(--subtitle-color);
 }
 
+.zoom-card {
+    border-radius: var(--border-radius-large);
+    overflow: hidden;
+    height: 100%;
+}
+    
+.zoom-card img {
+    transition: all;
+    transition-duration: 0.3s;
+}
 
+.zoom-card:hover img {
+    transform: scale(1.05);
+}
