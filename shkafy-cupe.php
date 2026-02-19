@@ -339,7 +339,7 @@ include 'header.php';
 		style="max-width: 1700px;  padding-top: 80px; padding-bottom: 50px; border-right: 1px solid rgba(153, 153, 153, 0.9);  border-left: 1px solid rgba(153, 153, 153, 0.9);">
 		<div class="container">
 			<div class="row justify-content-center">
-				<div class="section-title-wrapper text-center">
+				<div class="section-title-wrapper text-md-center">
 					<h2 class="section-title">Акции от нашей фабрики</h2>
 					<img src="<?php echo get_template_directory_uri(); ?>/img/ico/points.svg" alt="Точки" class="img-fluid" />
 				</div>
@@ -366,8 +366,19 @@ include 'header.php';
 <!-- End video section -->
 
 
+<?php get_template_part('template-parts/portfolio-masonry-gallery/portfolio-masonry-gallery', null, [
+    'background_color' => '',
+    'category' => '021-шкафы-купе',
+    'section_title' => 'Наши последние работы и цены',
+    'section_description' => '',
+    'posts_count' => 12,
+    'card_type' => 'zoom-card',
+    'show_button' => true,
+    'button_text' => 'Смотреть все'
+]); ?>
+
 <!-- Archive portfolio section -->
-<div id="sp-portfolio"></div>
+<!-- <div id="sp-portfolio"></div>
 <section class="portfolio-section">
 	<div class="container"
 		style="max-width: 1700px;  padding-top: 80px; padding-bottom: 50px; border-right: 1px solid rgba(153, 153, 153, 0.9);  border-left: 1px solid rgba(153, 153, 153, 0.9);">
@@ -469,7 +480,6 @@ include 'header.php';
 				}
 				?>
 
-				<!-- Отображение портфолио в 3 равные колонки -->
 				<div class="row portfolio-columns">
 					<?php foreach ($columns as $column_posts): ?>
 						<?php if (!empty($column_posts)): ?>
@@ -479,10 +489,8 @@ include 'header.php';
 										<?php $image_count = count($portfolio['images']); ?>
 
 										<?php if ($image_count > 1): ?>
-											<!-- Карусель для нескольких изображений -->
 											<div id="carousel-<?php echo $portfolio['id']; ?>" class="carousel slide" data-bs-ride="carousel"
 												data-bs-interval="999999999">
-												<!-- Индикаторы показываем только если больше 1 изображения -->
 												<div class="carousel-indicators" style="bottom: 5%;">
 													<?php for ($i = 0; $i < $image_count; $i++): ?>
 														<button type="button" data-bs-target="#carousel-<?php echo $portfolio['id']; ?>"
@@ -514,7 +522,6 @@ include 'header.php';
 												</button>
 											</div>
 										<?php else: ?>
-											<!-- Одно изображение без карусели и индикаторов -->
 											<div>
 												<a href="#" onclick="openGallery(<?php echo $portfolio['start_index']; ?>); return false;">
 													<div class="single-product-img approximation position-relative">
@@ -540,7 +547,7 @@ include 'header.php';
 			</div>
 		</div>
 	</div>
-</section>
+</section> -->
 
 <!-- CSS стили для выравнивания колонок -->
 <style>
@@ -551,7 +558,7 @@ include 'header.php';
 <!-- /Archive-portfolio section -->
 
 <div id="galleryModal"
-	style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.9); z-index: 99999999999;">
+	style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.9); z-index: 999999999999;">
 	<div id="mainGallery" class="carousel slide h-100" data-bs-ride="carousel" data-bs-interval="99999999999">
 		<div class="carousel-indicators">
 			<?php foreach ($all_images as $index => $image): ?>
@@ -676,7 +683,7 @@ include 'header.php';
 	<div class="container"
 		style="max-width: 1700px;  padding-top: 80px; padding-bottom: 50px; border-right: 1px solid rgba(153, 153, 153, 0.9);  border-left: 1px solid rgba(153, 153, 153, 0.9);">
 		<div class="row justify-content-center">
-			<div class="section-title-wrapper text-center">
+			<div class="section-title-wrapper text-md-center">
 				<h2 class="section-title">Узнайте о нас больше</h2>
 				<!-- <p class="text-center mb-5">Это бесплатно и ни к чему Вас не обязывает</p> -->
 
@@ -717,7 +724,7 @@ include 'header.php';
 	<div class="container"
 		style="max-width: 1700px;  padding-top: 80px; padding-bottom: 50px; border-right: 1px solid rgba(153, 153, 153, 0.9);  border-left: 1px solid rgba(153, 153, 153, 0.9);">
 		<div class="row justify-content-center">
-			<div class="section-title-wrapper text-center">
+			<div class="section-title-wrapper text-md-center">
 				<h2 class="section-title">Посмотрите нашу видеопрезентацию</h2>
 				<img src="<?php echo get_template_directory_uri(); ?>/img/ico/points.svg" alt="Точки" class="img-fluid" />
 			</div>
@@ -765,7 +772,7 @@ include 'header.php';
 	<div class="container"
 		style="max-width: 1700px;  padding-top: 80px; padding-bottom: 50px; border-right: 1px solid rgba(153, 153, 153, 0.9);  border-left: 1px solid rgba(153, 153, 153, 0.9);">
 		<div class="row justify-content-center">
-			<div class="section-title-wrapper text-center">
+			<div class="section-title-wrapper text-md-center">
 				<h2 class="section-title">За что нас выбирают</h2>
 
 				<img src="<?php echo get_template_directory_uri(); ?>/img/ico/points.svg" alt="Точки" class="img-fluid" />
@@ -847,7 +854,7 @@ include 'header.php';
 	<div class="container"
 		style="max-width: 1700px;  padding-top: 80px; padding-bottom: 50px; border-right: 1px solid rgba(153, 153, 153, 0.9);  border-left: 1px solid rgba(153, 153, 153, 0.9);">
 		<div class="row justify-content-center">
-			<div class="section-title-wrapper text-center">
+			<div class="section-title-wrapper text-md-center">
 				<h2 class="section-title">Обращение руководителя фабрики</h2>
 
 				<img src="<?php echo get_template_directory_uri(); ?>/img/ico/points.svg" alt="Точки" class="img-fluid" />
@@ -907,7 +914,7 @@ include 'header.php';
 	<div class="container"
 		style="max-width: 1700px;  padding-top: 80px; padding-bottom: 50px; border-right: 1px solid rgba(153, 153, 153, 0.9);  border-left: 1px solid rgba(153, 153, 153, 0.9);">
 		<div class="row">
-			<div class="section-title-wrapper text-center">
+			<div class="section-title-wrapper text-md-center">
 				<h2 class="section-title">Рассчитаем точную стоимость шкафа-купе за 15 минут!</h2>
 				<!-- <p class="text-center ">Это бесплатно и ни к чему Вас не обязывает</p> -->
 
@@ -991,7 +998,7 @@ include 'header.php';
 	<div class="container"
 		style=" max-width: 1700px;  padding-top: 80px; padding-bottom: 50px; border-right: 1px solid rgba(153, 153, 153, 0.9);  border-left: 1px solid rgba(153, 153, 153, 0.9);">
 		<div class="row justify-content-center">
-			<div class="section-title-wrapper text-center">
+			<div class="section-title-wrapper text-md-center">
 				<h2 class="section-title">Процесс заказа, оплаты и установки шкафа-купе</h2>
 
 				<img src="<?php echo get_template_directory_uri(); ?>/img/ico/points.svg" alt="Точки" class="img-fluid" />
@@ -1046,7 +1053,7 @@ include 'header.php';
 	<div class="container"
 		style="max-width: 1700px;  padding-top: 80px; padding-bottom: 50px; border-right: 1px solid rgba(153, 153, 153, 0.9);  border-left: 1px solid rgba(153, 153, 153, 0.9);">
 		<div class="row justify-content-center">
-			<div class="section-title-wrapper text-center">
+			<div class="section-title-wrapper text-md-center">
 				<h2 class="section-title">Наши ответы на часто задаваемые вопросы</h2>
 
 				<img src="<?php echo get_template_directory_uri(); ?>/img/ico/points.svg" alt="Точки" class="img-fluid" />
@@ -1170,7 +1177,7 @@ include 'header.php';
 	<div class="container"
 		style="max-width: 1700px; padding-top: 80px; padding-bottom: 80px; border-right: 1px solid rgba(153, 153, 153, 0.9);  border-left: 1px solid rgba(153, 153, 153, 0.9);">
 		<div class="row">
-			<div class="section-title-wrapper text-center">
+			<div class="section-title-wrapper text-md-center">
 				<h2 class="section-title">Рассчитаем точную стоимость шкафа-купе за 15 минут!</h2>
 				<!-- <p class="text-center ">Это бесплатно и ни к чему Вас не обязывает</p> -->
 

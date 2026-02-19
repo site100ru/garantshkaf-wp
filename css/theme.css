@@ -864,10 +864,35 @@ a.btn.btn-danger:focus {
 /*** END RASSCHET ***/
 
 /*** PORTFOLIO SECTION ***/
-.portfolio-section .carousel-item {
+.portfolio-section .carousel-item,
+.default-card img {
     --bs-border-radius: var(--border-radius-large);
 	overflow: hidden;
 	border-radius: var(--bs-border-radius) !important;
+}
+
+.card-text-title {
+    font-family: 'Helvetica Neue';
+    font-size: 20px;
+}
+
+@media (max-width: 575.98px) {
+    .card-text-title {
+        font-size: 0.9rem;
+    }
+
+    .card-price {
+        font-size: 0.9rem;
+    }
+
+}
+
+.card-price {
+    font-family: 'HelveticaNeueCyr';
+    font-weight: 400;
+    font-size: 20px;
+    color: #4B4B4B;
+    line-height: 1;
 }
 
 .portfolio-section > div {
@@ -3650,4 +3675,17 @@ img.yandex-logo {
 	color: var(--subtitle-color);
 }
 
+.zoom-card {
+    border-radius: var(--border-radius-large);
+    overflow: hidden;
+    height: 100%;
+}
+    
+.zoom-card img {
+    transition: all;
+    transition-duration: 0.3s;
+}
 
+.zoom-card:hover img {
+    transform: scale(1.05);
+}

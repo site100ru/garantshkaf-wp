@@ -412,4 +412,24 @@
 	add_action( 'customize_register', 'mytheme_customize_register' );
 	/*** END ДОБАВЛЯЕМ ВОЗМОЖНОСТЬ В НАСТРОЙКАХ ТЕМЫ ДОБАВИТЬ КОД СЧЕТЧИКА ***/
 	
+    add_action('add_meta_boxes', function () {
+        add_meta_box(
+            'portfolio_price',
+            'Цена',
+            function ($post) {
+                $value = get_post_meta($post->ID, 'price', true);
+                echo '<input type="text" name="price" value="' . esc_attr($value) . '" style="width:100%">';
+            },
+            'portfolio',
+            'side',
+            'default'
+        );
+    });
+
+    add_action('save_post', function ($post_id) {
+        if (isset($_POST['price'])) {
+            update_post_meta($post_id, 'price', sanitize_text_field($_POST['price']));
+        }
+    });
+
 ?>
