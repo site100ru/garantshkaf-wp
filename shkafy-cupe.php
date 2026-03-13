@@ -374,7 +374,8 @@ include 'header.php';
     'posts_count' => 12,
     'card_type' => 'zoom-card',
     'show_button' => true,
-    'button_text' => 'Смотреть все'
+    'button_text' => 'Смотреть все',
+    'show_card_title' => true,
 ]); ?>
 
 <!-- Archive portfolio section -->
@@ -849,30 +850,45 @@ include 'header.php';
 </section>
 <!-- /SECTION ADVANTAGES -->
 
-<!-- DERECTOR SECTION -->
+<!-- DIRECTOR SECTION -->
 <section class="section-director">
-	<div class="container"
-		style="max-width: 1700px;  padding-top: 80px; padding-bottom: 50px; border-right: 1px solid rgba(153, 153, 153, 0.9);  border-left: 1px solid rgba(153, 153, 153, 0.9);">
-		<div class="row justify-content-center">
-			<div class="section-title-wrapper text-md-center">
-				<h2 class="section-title">Обращение руководителя фабрики</h2>
+    <div class="container" style="max-width: 1700px;  padding-top: 80px; padding-bottom: 50px; border-right: 1px solid rgba(153, 153, 153, 0.9);  border-left: 1px solid rgba(153, 153, 153, 0.9);">
+        <div class="container">
+            <div class="row align-items-center justify-content-center">
 
-				<img src="<?php echo get_template_directory_uri(); ?>/img/ico/points.svg" alt="Точки" class="img-fluid" />
-			</div>
+                <div class="d-none d-xl-block col-xl-1"></div>
+                <!-- Фото -->
+                <div class="col-lg-6 col-xl-4 text-center mb-3 mb-lg-0">
+                    <div class="d-lg-none section-title-wrapper text-start">
+                        <h2 class="section-title">Обращение руководителя фабрики</h2>
+                        <img src="<?php echo get_template_directory_uri(); ?>/img/ico/points.svg" alt="Точки" class="img-fluid mb-0" />
+                    </div>
 
-			<div class="col-lg-4 offset-lg-2 text-center"> <img
-					src="<?php echo get_template_directory_uri(); ?>/img/director.jpg" class="img-fluid question-img" />
-			</div>
-			<div class="col-lg-4 offset-lg-1">
-				<p class="text-director"><i>«Мы производим шкафы-купе и другую корпусную мебель с 2011 года. Нам нравится наша
-						работа, нравится делать красивые вещи, нравится получать слова благодарности от наших клиентов. Приятно,
-						когда твоя работа радует людей».<br><br>«Каждому нашему клиенту мы гарантируем: качественную и красивую
-						продукцию и индивидуальный подход».</i><br><br>Орлов Игорь Львович</p>
-			</div>
-		</div>
-	</div>
+                    <img src="<?php echo get_template_directory_uri(); ?>/img/director.png" alt="Орлов Игорь Львович" class="img-fluid director-photo" />
+                </div>
+
+                <div class="d-none d-xl-block col-xl-1"></div>
+
+                <!-- Текст -->
+                <div class="col-lg-6 col-xl-5">
+
+                    <div class="d-none d-lg-block section-title-wrapper">
+                        <h2 class="section-title">Обращение руководителя фабрики</h2>
+                        <img src="<?php echo get_template_directory_uri(); ?>/img/ico/points.svg" alt="Точки" class="img-fluid mb-0" />
+                    </div>
+
+                    <p class="director-quote">«Мы производим шкафы, гардеробные и другую корпусную мебель с 2011 года. Нам нравится наша работа, нравится делать красивые вещи, нравится получать слова благодарности от наших клиентов. Приятно, когда твоя работа радует людей.<br><br>Каждому нашему клиенту мы гарантируем: качественную и красивую продукцию без наценок посредников и индивидуальный подход.»</p>
+
+                    <p class="director-name">Орлов Игорь Львович</p>
+                </div>
+
+                <div class="d-none d-xl-block col-xl-1"></div>
+
+            </div>
+        </div>
+    </div>
 </section>
-<!-- /DERECTOR SECTION -->
+<!-- /DIRECTOR SECTION -->
 
 <!-- Testimonials section -->
 <div id="sp-testimonials"></div>
