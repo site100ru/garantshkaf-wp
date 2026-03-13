@@ -97,6 +97,8 @@ if (!empty($link)) {
             <div class="magnifier"></div>
         <?php endif; ?>
     <?php endif; ?>
+</div>
+
 
     <?php if (!empty($title)) : ?>
         <h3 class="card-text-title text-start my-3 lh-1" <?php if (!$show_title) echo 'style="display: none;"'; ?>><?php echo esc_html($title); ?></h3>
@@ -108,7 +110,6 @@ if (!empty($link)) {
         </div>
     <?php endif; ?>
 
-</div>
 
 <?php
 // Закрываем ссылку если она есть

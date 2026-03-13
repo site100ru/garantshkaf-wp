@@ -180,9 +180,9 @@ if (!empty($category) && $category !== 'all') {
                                                 get_template_part('template-parts/cards/card', null, array(
                                                     'image' => $first_img,
                                                     'image_hover' => $second_img,
-                                                    // 'title' => get_the_title(), // ВКЛЮЧИТЬ КОГДА НАДО БУДЕТ ВЫВЕСТИ 
+                                                    'title' => get_the_title(), // ВКЛЮЧИТЬ КОГДА НАДО БУДЕТ ВЫВЕСТИ 
                                                     'show_title' => $show_card_title,
-                                                    // 'price' => $price, // ВКЛЮЧИТЬ КОГДА НАДО БУДЕТ ВЫВЕСТИ 
+                                                    'price' => $price, // ВКЛЮЧИТЬ КОГДА НАДО БУДЕТ ВЫВЕСТИ 
                                                     'card_type' => $card_type,
                                                     'link' => ''
                                                 ));
