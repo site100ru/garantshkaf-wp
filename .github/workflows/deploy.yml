@@ -19,10 +19,10 @@ jobs:
             cd ~/garantshkaf.ru/public_html/wp-content/themes/site100garantshkaf
             
             #Клинируем репозиторий в папку (только для первой выгрузки!!!)
-            git clone https://github.com/site100ru/garantshkaf.git .
+            #git clone https://github.com/site100ru/garantshkaf.git .
             
             #Клинируем репозиторий в папку
-            #git pull
+            git pull
             
             #Если кто то изменил файлы на сервере минуя GitHub, перезаписываем версию на сервере из GitHub
             #git reset --hard HEAD
