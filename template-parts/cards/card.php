@@ -123,7 +123,7 @@ if (!empty($link)) {
     <?php if ($show_modal_button) : ?>
         <button
             type="button"
-            class="btn btn-corporate-color-outline-1 mt-2"
+            class="btn btn-corporate-color-outline-1"
             data-bs-toggle="modal"
             data-bs-target="#calculatePriceWithoutDownloadModal"
             data-title="<?php echo esc_attr($title); ?>"

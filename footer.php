@@ -39,7 +39,7 @@
         var btn = e.relatedTarget;
         var title = btn.getAttribute('data-title');
         var category = btn.getAttribute('data-category');
-        var value = category ? category + ' — ' + title : title;
+        var value = title;
 
         document.getElementById('modalProductName').value = value;
         document.getElementById('modalProductDisplay').textContent = value;
