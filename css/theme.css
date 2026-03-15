@@ -3708,3 +3708,43 @@ img.yandex-logo {
     font-size: 24px;
     color: #4b4b4b;
 }
+
+.btn-corporate-color-outline-1 {
+    border: 1px solid #fc4a1a;
+    border-radius: var(--border-radius-large);
+    padding: 10px 20px;
+
+    font-family: var(--font-family);
+    font-weight: 700;
+    font-size: 12px;
+    text-transform: uppercase;
+    text-align: center;
+    color: #fc4a1a;
+    transition: all 0.3s ease;
+}
+
+.btn-corporate-color-outline-1:focus-visible,
+.btn-corporate-color-outline-1:focus,
+.btn-corporate-color-outline-1:active,
+.btn-corporate-color-outline-1:hover {
+    background: linear-gradient(91.89deg, #FC4A1A -16.07%, #F7B733 124.94%);
+    color: #F5F5F5 !important;
+    border: 1px solid #fc4a1a;
+}
+
+
+#calculatePriceWithoutDownloadModal textarea.form-control {
+    height: auto;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+#calculatePriceWithoutDownloadModal .title {
+    margin-bottom: 0;
+    font-size: 20px;
+}
+
+#calculatePriceWithoutDownloadModal .form-control {
+    margin: 0;
+    text-align: start;
+}
