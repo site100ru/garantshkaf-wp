@@ -879,7 +879,10 @@ a.btn.btn-danger:focus {
 
 .card-text-title {
     font-family: 'Helvetica Neue';
+    font-weight: 700;
     font-size: 20px;
+    color: #4B4B4B;
+    text-transform: inherit;
 }
 
 @media (max-width: 575.98px) {
