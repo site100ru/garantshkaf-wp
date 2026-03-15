@@ -1,3 +1,52 @@
+<!-- Рассчитать стоимость без загрузки изображения -->
+<div class="modal fade" id="calculatePriceWithoutDownloadModal" tabindex="-1" aria-labelledby="calculatePriceWithoutDownloadLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <form method="post" action="<?php echo get_stylesheet_directory_uri(); ?>/mails/gal-callback.php"
+            class="modal-content" enctype="multipart/form-data">
+            <div class="modal-header">
+                <h5 class="modal-title" id="calculatePriceWithoutDownloadLabel">Рассчитать стоимость</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="row pb-2">
+                    <div class="col-12">
+                        <p class="title"><input type="hidden" name="product" id="modalProductName">
+                        <span id="modalProductDisplay"></span></p>
+                    </div>
+                    <div class="col-12 mb-0">
+                        <textarea type="text" rows="3" name="mes" class="form-control"
+                            placeholder="При желании укажите форму, размеры, материалы или другую информацию"></textarea>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <input type="text" name="name" class="form-control" placeholder="Ваше имя">
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <input type="text" name="tel" class="form-control telMask"
+                            placeholder="Ваш телефон*" required>
+                    </div>
+                    <div class="col-12">
+                        <input type="hidden" id="g-recaptcha-response-calculatePriceWithoutDownload" name="g-recaptcha-response">
+                        <button type="submit" class="btn btn-danger" style="width: 100%">Отправить</button>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+<script>
+    document.getElementById('calculatePriceWithoutDownloadModal').addEventListener('show.bs.modal', function (e) {
+        var btn = e.relatedTarget;
+        var title = btn.getAttribute('data-title');
+        var category = btn.getAttribute('data-category');
+        var value = category ? category + ' — ' + title : title;
+
+        document.getElementById('modalProductName').value = value;
+        document.getElementById('modalProductDisplay').textContent = value;
+    });
+</script>
+<!-- /Рассчитать стоимость без загрузки изображения -->
+
 <!-- Callback button HTML -->
 <div class="callback-button-wrapper">
 	<div id="callbackBtn" class="callback-button" onclick="callbackButtonClick();">
@@ -317,6 +366,10 @@
 
 			if (document.getElementById('g-recaptcha-response-calculate')) {
 				document.getElementById('g-recaptcha-response-calculate').value = token;
+			}
+
+            if (document.getElementById('g-recaptcha-response-calculatePriceWithoutDownload')) {
+				document.getElementById('g-recaptcha-response-calculatePriceWithoutDownload').value = token;
 			}
 		});
 	});

@@ -376,6 +376,7 @@ include 'header.php';
     'show_button' => true,
     'button_text' => 'Смотреть все',
     'show_card_title' => true,
+    'show_modal_button'  => true,    
 ]); ?>
 
 <!-- Archive portfolio section -->

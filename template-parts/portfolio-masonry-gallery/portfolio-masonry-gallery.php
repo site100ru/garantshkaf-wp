@@ -16,7 +16,8 @@
  * $args['show_breadcrumbs']    - показывать хлебные крошки (bool), по умолчанию false
  * $args['breadcrumbs_items']   - массив элементов хлебных крошек (см. breadcrumbs.php)
  * $args['show_filter']         - показывать фильтр категорий (bool), по умолчанию false
- * 
+ * $args['show_modal_button']   - показывать кнопку Узнать стоимость (bool), по умолчанию false
+ *
  * Примеры использования:
  * 
  * // Все работы с фильтром категорий
@@ -54,6 +55,7 @@ $show_button = isset($args['show_button']) ? $args['show_button'] : false;
 $button_text = isset($args['button_text']) ? $args['button_text'] : 'Смотреть еще';
 $show_filter = isset($args['show_filter']) ? $args['show_filter'] : false;
 $show_card_title = isset($args['show_card_title']) ? $args['show_card_title'] : true;
+$show_modal_button = isset($args['show_modal_button']) ? $args['show_modal_button'] : false;
 
 // Автоматическое определение ссылки кнопки
 if (!empty($category) && $category !== 'all') {
@@ -182,9 +184,11 @@ if (!empty($category) && $category !== 'all') {
                                                     'image_hover' => $second_img,
                                                     'title' => get_the_title(), // ВКЛЮЧИТЬ КОГДА НАДО БУДЕТ ВЫВЕСТИ 
                                                     'show_title' => $show_card_title,
-                                                    'price' => $price, // ВКЛЮЧИТЬ КОГДА НАДО БУДЕТ ВЫВЕСТИ 
+                                                    // 'price' => $price, // ВКЛЮЧИТЬ КОГДА НАДО БУДЕТ ВЫВЕСТИ 
                                                     'card_type' => $card_type,
-                                                    'link' => ''
+                                                    'link' => '',
+                                                    'show_modal_button' => $show_modal_button,
+                                                    'current_category'  => $category,
                                                 ));
                                                 ?>
                                             </a>

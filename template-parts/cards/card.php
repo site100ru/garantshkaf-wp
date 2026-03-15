@@ -14,6 +14,7 @@
  * $args['card_type']           - тип карточки: 'approximation' (увеличение), 'zoom-card' (зум), 'hover-image' (смена изображения), 'magnifier' (с лупой), по умолчанию 'approximation'
  * $args['default_image']       - URL изображения по умолчанию (если image не указан)
  * $args['price']               - ТОЛЬКО ДЛЯ ЭТОГО ПРОЕКТА ГАРАНТШКАФ ПОЛЕ ДЛЯ ЦЕНЫ
+ * $args['show_modal_button ']  - показать кнопку Узнать стоимость (только для массонри сетки)
  * 
  * Пример использования:
  * // Дефолтная карточка 
@@ -57,6 +58,15 @@ $show_title = isset($args['show_title']) ? $args['show_title'] : true;
 $card_type = isset($args['card_type']) ? $args['card_type'] : 'approximation';
 $default_image = isset($args['default_image']) ? $args['default_image'] : get_template_directory_uri() . '/img/default-placeholder.webp';
 $price = isset($args['price']) ? $args['price'] : '';
+$show_modal_button = isset($args['show_modal_button']) ? $args['show_modal_button'] : false;
+$current_category = isset($args['current_category']) ? $args['current_category'] : '';
+$category_name = '';
+if (!empty($current_category)) {
+    $term = get_term_by('slug', $current_category, 'portfolio-cat');
+    if ($term) {
+        $category_name = $term->name;
+    }
+}
 
 // Если изображение не указано, используем дефолтное
 if (empty($image)) {
@@ -108,6 +118,20 @@ if (!empty($link)) {
         <div class="card-price" style="color: #4B4B4B">
             <?php echo esc_html($price); ?>
         </div>
+    <?php endif; ?>
+
+    <?php if ($show_modal_button) : ?>
+        <button
+            type="button"
+            class="btn btn-corporate-color-outline-1 mt-2"
+            data-bs-toggle="modal"
+            data-bs-target="#calculatePriceWithoutDownloadModal"
+            data-title="<?php echo esc_attr($title); ?>"
+            data-category="<?php echo esc_attr($category_name); ?>"
+            onclick="event.preventDefault(); event.stopPropagation();"
+        >
+            Узнать стоимость
+        </button>
     <?php endif; ?>
 
 
