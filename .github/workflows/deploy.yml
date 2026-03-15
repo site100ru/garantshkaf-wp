@@ -11,9 +11,19 @@ jobs:
       - name: Connect to server
         uses: appleboy/ssh-action@v0.1.10
         with:
-          host: ${{ secrets.REGRU_HOST }}
-          username: ${{ secrets.REGRU_USER }}
-          key: ${{ secrets.REGRU_KEY }}
+          host: ${{ secrets.GARANTSHKAF_HOST }}
+          username: ${{ secrets.GARANTSHKAF_USER }}
+          key: ${{ secrets.GARANTSHKAF_KEY }}
           script: |
-            cd /var/www/u1538455/data/www/garantshkaf.ru/wp-content/themes/garantshkaf-5
+            #Переключаемся в нужную папку
+            cd ~/garantshkaf.ru/public_html/wp-content/themes/site100garantshkaf
+            
+            #Клинируем репозиторий в папку (только для первой выгрузки!!!)
+            #git clone https://github.com/site100ru/garantshkaf.git .
+            
+            #Клинируем репозиторий в папку
             git pull
+            
+            #Если кто то изменил файлы на сервере минуя GitHub, перезаписываем версию на сервере из GitHub
+            #git reset --hard HEAD
+            #git pull origin main
